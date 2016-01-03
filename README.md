@@ -1,7 +1,7 @@
 # Projekt „Roboter-Fangen“
 
-Bei dem Projekt „Roboter-Fangen“ für das Modul IT-Projektmanagement besteht unsere Aufgabe als eines von zwei Teams in der Programmierung einer Steuerungssoftware für das Fischertechnik ROBOTICS TXT Discovery Set.
-Bestandteile sind Benutzeroberfläche, Positionsdatenverarbeitung, KI etc.
+Bei dem Projekt „Roboter-Fangen“ für das Modul IT-Projektmanagement besteht unsere Aufgabe als eines von zwei Teams in der Programmierung einer Steuerungssoftware für das Fischertechnik ROBOTICS TXT Discovery Set. Das Gemeinziel ist ein lauffähiges Fangen-Spiel zu erstellen bei dem vier Roboter pro Team von der jeweiligen Software gesteuert werden. Dabei werden die Positionsdaten aller Roboter von einem Schiedsrichter-Server mit Hilfe einer Kamera berechnet und an Steuersoftware der beiden Teams geschickt.
+Hauptbestandteile der Steuersoftware sind Benutzeroberfläche, Positionsdatenverarbeitung und die KI.
 
 Benutzeroberfläche:
 * Kamerabilder
