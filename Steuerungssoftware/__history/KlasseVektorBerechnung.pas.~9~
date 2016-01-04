@@ -17,17 +17,9 @@ function VektorAddition(NVektor, OVektor: TVektor):TVektor;
 function VektorSubtraktion(NVektor, OVektor: TVektor):TVektor;
 
 ///VektorSkalarProdukt: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor)
-///der Funktion für die Berechnung übergeben. Es wird der erste Wert des NVektors
-///mit dem ersten Wert des OVektors multipliziert. Anschließend addiert man das
-///Produkt aus den nächsten Werten der Vektoren.
+///der Funktion für die Berechnung übergeben. Die
 function VektorSkalarProdukt(NVektor, OVektor: TVektor): Double;
 
-///VektorWinkel: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor)
-///der Funktion für die Berechnung übergeben. Als erstes wird das Skalarprodukt
-///aus den übergebenen Vektoren berechnet, dann jeweils die Zwei Norm und
-///anschließend wird aus der Division von dem Skalarprodukt durch das Produkt
-///der beiden Zwei Normen der Winkel mit der Funktion arccos berechnet.
-///Als Rückgabewert erhält man einen ganzzahligen Wert.
 function VektorWinkel(NVektor, OVektor: TVektor): Double;
 
 
@@ -71,18 +63,11 @@ begin
 end;
 
 function VektorWinkel(NVektor, OVektor: TVektor): Double;
-//Ganzzahlige Werte
+//Ein ganzzahliger Wert
 var Winkel, SkalarProdukt, ZweiNormN, ZweiNormO: Double;
 begin
-	//Zuerst wird das Skalarprodukt aus den beiden übergebenen Vektoren
-    //berechnet. Danach wird von den übergebenen Vektoren jeweils die Zwei Norm
-    //gebildet. Anschließend wird der Winkel mit der Funktion arccos berechnet.
-    //Zum Schluss wird der Winkel zurück gegeben.
     SkalarProdukt := VektorSkalarProdukt(NVektor, OVektor);
-    ZweiNormN := sqrt(sqr(NVektor[0])+sqr(NVektor[1]));
-    ZweiNormO := sqrt(sqr(OVektor[0])+sqr(OVektor[1]));
-    Winkel := arccos(SkalarProdukt/(ZweiNormN * ZweiNormO));
+    ZweiNormN := s
 
-    Result := Winkel;
 end;
 end.

@@ -17,17 +17,9 @@ function VektorAddition(NVektor, OVektor: TVektor):TVektor;
 function VektorSubtraktion(NVektor, OVektor: TVektor):TVektor;
 
 ///VektorSkalarProdukt: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor)
-///der Funktion für die Berechnung übergeben. Es wird der erste Wert des NVektors
-///mit dem ersten Wert des OVektors multipliziert. Anschließend addiert man das
-///Produkt aus den nächsten Werten der Vektoren.
+///der Funktion für die Berechnung übergeben. Die
 function VektorSkalarProdukt(NVektor, OVektor: TVektor): Double;
 
-///VektorWinkel: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor)
-///der Funktion für die Berechnung übergeben. Als erstes wird das Skalarprodukt
-///aus den übergebenen Vektoren berechnet, dann jeweils die Zwei Norm und
-///anschließend wird aus der Division von dem Skalarprodukt durch das Produkt
-///der beiden Zwei Normen der Winkel mit der Funktion arccos berechnet.
-///Als Rückgabewert erhält man einen ganzzahligen Wert.
 function VektorWinkel(NVektor, OVektor: TVektor): Double;
 
 
