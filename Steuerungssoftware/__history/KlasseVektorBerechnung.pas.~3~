@@ -1,0 +1,16 @@
+unit KlasseVektorBerechnung;
+
+interface
+
+///Vektoraddition:
+function AVektor(NVektor, OVektor: Array[0..1] of Integer):Array[1..2] of Integer;
+///Vektorsubtraktion:
+function SVektor(NVektor, OVektor: Array[0..1] of Integer):Array[1..2] of Integer;
+///Vektormultiplikation:
+function MVektor(NVektor, OVektor: Array[0..1] of Integer):Array[1..2] of Integer;
+///Vektordivision:
+function DVektor(NVektor, OVektor: Array[0..1] of Integer):Array[1..2] of Integer;
+
+implementation
+
+end.
