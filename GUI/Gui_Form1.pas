@@ -1,3 +1,16 @@
+//******************************************************************************
+{*
+ * @file Gui_Form1.pas
+ * @author Jonah
+ * @date 04.01.2016
+ * @brief Benutzeroberfläche
+ * @copyright Copyright © 2015 ITPM-Projektteam
+ *
+ * @license
+}
+//******************************************************************************
+
+
 unit Gui_Form1;
 
 interface
@@ -28,7 +41,7 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  Form1.Hide;
+  Form1.hide;
   Form2.show;
 end;
 

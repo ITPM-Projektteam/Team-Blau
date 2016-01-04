@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 280
+  ClientHeight = 341
   ClientWidth = 590
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -29,21 +29,13 @@ object Form2: TForm2
     Caption = 'Kamera Bilder'
     TabOrder = 0
   end
-  object Memo1: TMemo
-    Left = 365
-    Top = 26
-    Width = 217
-    Height = 217
-    ReadOnly = True
-    TabOrder = 1
-  end
   object CheckBox1: TCheckBox
     Left = 365
     Top = 249
     Width = 97
     Height = 17
     Caption = 'Bereit'
-    TabOrder = 2
+    TabOrder = 1
   end
   object Button1: TButton
     Left = 468
@@ -51,7 +43,7 @@ object Form2: TForm2
     Width = 114
     Height = 25
     Caption = 'Wiederverbinden'
-    TabOrder = 3
+    TabOrder = 2
     OnClick = Button1Click
   end
 end
