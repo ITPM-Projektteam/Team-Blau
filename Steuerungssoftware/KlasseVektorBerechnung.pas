@@ -2,59 +2,43 @@ unit KlasseVektorBerechnung;
 
 interface
 
-///Vektoraddition: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor) der
+type TVektor = Array[0..1] of Double;
+
+///VektorAddition: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor) der
 ///Funktion für die Berechnung übergeben. Diese werden addiert und
 ///man erhält einen neuen Vektor als Rückgabewert.
-function AVektorBerechnung(NVektor, OVektor: Array[0..1] of Integer):Array[0..1] of Integer;
+function VektorAddition(NVektor, OVektor: TVektor):TVektor;
 
-///Vektorsubtraktion: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor) der
+///VektorSubtraktion: Es werden zwei Vektoren(NVektor: NewVektor, OVektor: OldVektor) der
 ///Funktion für die Berechnung übergeben. Diese werden subtrahiert und
 ///man erhält einen neuen Vektor als Rückgabewert.
-function SVektorBerechnung(NVektor, OVektor: Array[0..1] of Integer):Array[0..1] of Integer;
+function VektorSubtraktion(NVektor, OVektor: TVektor):TVektor;
 
 
 implementation
-function AVektorBerechnung(NVektor, OVektor: Array[0..1] of Integer):Array[0..1] of Integer;
-///Ausgabevektor mit der Länge 2 mit ganzzahligen Werten
-var AVektor: Array[0..1] of Integer;
+function VektorAddition(NVektor, OVektor: TVektor):TVekotr;
+//Ausgabevektor mit der Länge 2 mit ganzzahligen Werten
+var AVektor: TVektor;
 begin
-	///Der erste Wert des Ausgabevektors(AVektor) wird berechnet:
-    ///Es wird von dem ersten Wert des NVektors(NewVektor)
-    ///der erste Wert des OVektors(OldVektor) hinzu addiert.
-    ///Davon wird mit abs() der Betrag gebildet und dem
-    ///ersten Wert vom AVektor zugewiesen.
-	AVektor[0] := abs(NVektor[0] + OVektor[0]);
+    //Zuerst wird der erste Wert des Ausgabevektors(AVektor) berechnet und
+    //anschließend der zweite Wert.
+    //Zum Schluss wird der Ausgabevektor(AVektor) zurück gegeben.
+	AVektor[0] := NVektor[0] + OVektor[0];
+    AVektor[1] := NVektor[1] + OVektor[1];
 
-    ///Der zweite Wert des Ausgabevektors(AVektor) wird berechnet:
-    ///Es wird von dem zweiten Wert des NVektors(NewVektor)
-    ///der zweite Wert des OVektors(OldVektor) hinzu addiert.
-    ///Davon wird mit abs() der Betrag gebildet und dem
-    ///zweiten Wert vom AVektor zugewiesen.
-    AVektor[1] := abs(NVektor[1] + OVektor[1]);
-
-    ///Der Ausgabevektor(SVektor) wird zurück gegeben.
     Result := AVektor;
 end;
 
-function SVektorBerechnung(NVektor, OVektor: Array[0..1] of Integer):Array[0..1] of Integer;
-///Ausgabevektor mit der Länge 2 mit ganzzahligen Werten
-var SVektor: Array[0..1] of Integer;
+function VektorSubtraktion(NVektor, OVektor: TVektor):TVektor;
+//Ausgabevektor mit der Länge 2 mit ganzzahligen Werten
+var SVektor: TVektor
 begin
-	///Der erste Wert des Ausgabevektors(SVektor) wird berechnet:
-    ///Es wird von dem ersten Wert des NVektors(NewVektor)
-    ///der erste Wert des OVektors(OldVektor) subtrahiert.
-    ///Davon wird mit abs() der Betrag gebildet und dem
-    ///ersten Wert vom SVektor zugewiesen.
-	SVektor[0] := abs(NVektor[0] - OVektor[0]);
+	//Zuerst wird der erste Wert des Ausgabevektors(SVektor) berechnet und
+    //anschließend der zweite Wert.
+    //Zum Schluss wird der Ausgabevektor(SVektor) zurück gegeben.
+	SVektor[0] := NVektor[0] - OVektor[0];
+    SVektor[1] := NVektor[1] - OVektor[1];
 
-    ///Der zweite Wert des Ausgabevektors(SVektor) wird berechnet:
-    ///Es wird von dem zweiten Wert des NVektors(NewVektor)
-    ///der zweite Wert des OVektors(OldVektor) subtrahiert.
-    ///Davon wird mit abs() der Betrag gebildet und dem
-    ///zweiten Wert vom SVektor zugewiesen.
-    SVektor[1] := abs(NVektor[1] - OVektor[1]);
-
-    ///Der Ausgabevektor(SVektor) wird zurück gegeben.
     Result := SVektor;
 end;
 
