@@ -19,7 +19,7 @@ type TVektor = record
     class operator SkalarProduct(const Vektor1,Vektor2: TVektor): Double;
 
     //Es wird der Winkel zwischen den zwei Vektoren berechnet.
-    class operator WinkelZwischenVektoren(const Vektor1,Vektor2: TVektor): Double;
+    class operator WinkelVektor(const Vektor1,Vektor2: TVektor): Double;
 end;
 
 implementation
@@ -52,7 +52,7 @@ begin
    Result.y := Subtrahend.y - Minuend.y;
 end;
 
-class operator TVektor.WinkelZwischenVektoren(const Vektor1, Vektor2: TVektor): Double;
+class operator TVektor.WinkelVektor(const Vektor1, Vektor2: TVektor): Double;
 var Skalar, Winkel, ZweiNorm1, ZweiNorm2: Double;
 begin
 	//Als erstes wird ein Skalarprodukt der beiden Vektoren gebildet.
