@@ -17,8 +17,10 @@ type TVektor = record
     ///Komponentenweise multiplikation eines Vektors mit einem Skalar
     class operator multiply(Skalar:Double; Vektor1:TVektor): TVektor;
 
-    //Gibt den Winkel zwischen dem Vektor und der X-Achse zurück
     function Winkel:Double;
+  private
+    class operator WinkelZwischenVektoren(const Vektor1,
+      Vektor2: TVektor): Double;
 end;
 
 implementation
@@ -35,8 +37,6 @@ end;
 
 class operator TVektor.multiply(Skalar: Double; Vektor: TVektor): TVektor;
 begin
-	//Es werden die einzelnen Komponenten des Vektors mit einem Skalar
-    //multipliziert und zurückgegeben
 	Result.x := Skalar * Vektor.x;
     Result.y := Skalar * Vektor.y;
 end;
@@ -51,8 +51,6 @@ end;
 
 function TVektor.Winkel: Double;
 begin
-	//Es wird der Winkel zwischen dem Vektor und der X-Achse berechnet und
-    //anschließend zurückgegeben.
 	Result := arctan(Self.y/Self.x);
 end;
 end.
