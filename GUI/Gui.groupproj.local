@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.573,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\ProjectGroup1.groupproj=C:\Users\Jonah\Desktop\GUI\Gui.groupproj</Transaction>
-  </Transactions>
-	<Default.Personality>
-		<Projects ActiveProject="C:\Users\Jonah\Documents\GitHub\Team-Blau\GUI\Gui_exe.dproj"/>
-	</Default.Personality>
-</BorlandProject>
