@@ -1,0 +1,67 @@
+% Erstellt mit http://pasdoc.sourceforge.net/PasDoc 0.14.0
+\documentclass{report}
+\usepackage{hyperref}
+% WARNING: THIS SHOULD BE MODIFIED DEPENDING ON THE LETTER/A4 SIZE
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\marginparsep 0cm
+\marginparwidth 0cm
+\parindent 0cm
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+
+
+% Conditional define to determine if pdf output is used
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse
+\else
+\pdfoutput=1
+\pdftrue
+\fi
+
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+
+% Write Document information for pdflatex/pdftex
+\ifpdf
+\pdfinfo{
+ /Author     (Pasdoc)
+ /Title      (Roboter-Fangen)
+}
+\fi
+
+
+\begin{document}
+\title{Roboter-Fangen}
+\author{Pasdoc}
+\maketitle
+\newpage
+\label{toc}\tableofcontents
+\newpage
+% special variable used for calculating some widths.
+\newlength{\tmplength}
+\chapter{Unit mBeispiel}
+\label{mBeispiel}
+\index{mBeispiel}
+\section{Beschreibung}
+******************************************************************************
+\section{Übersicht}
+\begin{description}
+\item[\texttt{\begin{ttfamily}TBeispiel\end{ttfamily} Klasse}]Kurze Beschreibung der Klasse \begin{ttfamily}TBeispiel\end{ttfamily}
+\end{description}
+\section{Klassen, Interfaces und Objects}
+\ifpdf
+\subsection*{\large{\textbf{TBeispiel Klasse}}\normalsize\hspace{1ex}\hrulefill}
+\else
+\subsection*{TBeispiel Klasse}
+\fi
+\label{mBeispiel.TBeispiel}
+\index{TBeispiel}
+\subsubsection*{\large{\textbf{Hierarchie}}\normalsize\hspace{1ex}\hfill}
+TBeispiel {$>$} TObject
+\subsubsection*{\large{\textbf{Beschreibung}}\normalsize\hspace{1ex}\hfill}
+Kurze Beschreibung der Klasse \begin{ttfamily}TBeispiel\end{ttfamily}\end{document}
