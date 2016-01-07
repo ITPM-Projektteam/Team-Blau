@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.698,=C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.286,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit1.pas=C:\Users\Jonah\Desktop\GUI\Gui_Form1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.907,=C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit2.pas=C:\Users\Jonah\Desktop\GUI\Gui_From2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit2.dfm=C:\Users\Jonah\Desktop\GUI\Gui_From2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.705,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Project1.dproj=C:\Users\Jonah\Desktop\GUI\Gui_exe.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.286,C:\Users\Jonah\Documents\Embarcadero\Studio\Projekte\Unit1.dfm=C:\Users\Jonah\Desktop\GUI\Gui_Form1.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Gui_Form1.pas"/>
+    <File Path="Gui_Form1.dfm"/>
+    <File Path="Gui_From2.pas"/>
+    <File Path="Gui_From2.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
