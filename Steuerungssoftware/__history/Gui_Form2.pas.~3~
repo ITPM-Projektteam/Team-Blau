@@ -38,9 +38,8 @@ type
     { Public-Deklarationen }
   end;
 
-const SPIELFELDBREITE = 3.0;
-			SPIELFELDHOEHE = 5.0;
-      LAENGESCHRITT = 0.004;
+const SPIELFELDBREITE = {};
+			SPIELFELDHOEHE = {};
 
 var
   Form2: TForm2;
