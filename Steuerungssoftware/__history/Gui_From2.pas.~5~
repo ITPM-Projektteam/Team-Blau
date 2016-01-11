@@ -63,46 +63,17 @@ end;
 //Form1 schließen wenn Form2 geschlossen wird
 procedure TForm2.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-//  Form1.close;
+  Form1.close;
 
 end;
 
 procedure TForm2.FormCreate(Sender: TObject);
-var
-  i,j: Integer;
-  hilf: String;
 begin
   Form2.Hide;
 
   // Log Datei erzeugen
   assignfile(Log_Datei, 'Log.txt');
   rewrite(Log_Datei);
-
-  // Config Datei erzeuen
-  assignfile(Ip_Config, 'IP_Config.txt');
-  reset(Ip_Config);
-
-  i:=1;
-  j:=1;
-
-  //IP Adressen anzeigen
-  while not eof(IP_Config) do
-  begin
-      readln(IP_Config, hilf);
-      if i=2 then
-      begin
-        Server_IP:=hilf;
-        Log_Schreiben('ServerIP ' + hilf, Hinweis);
-      end;
-
-      if i>3 then
-      begin
-        Log_Schreiben('Roboter ' + inttostr(j)+ ' ' + hilf, Hinweis);
-        IP_Adressen[j]:=hilf;
-        inc(j);
-      end;
-      inc(i);
-  end;
 
 end;
 
@@ -124,7 +95,6 @@ begin
   writeln(Log_Datei, Ausgabe);
 end;
 
-//Test
 procedure TForm2.Button2Click(Sender: TObject);
 begin
   Log_Schreiben('Meldung', Hinweis);

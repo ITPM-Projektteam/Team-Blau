@@ -2,8 +2,8 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 707
-  ClientWidth = 928
+  ClientHeight = 546
+  ClientWidth = 983
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,38 +18,38 @@ object Form2: TForm2
   object GroupBox1: TGroupBox
     Left = 8
     Top = 8
-    Width = 600
-    Height = 609
+    Width = 329
+    Height = 425
     Caption = 'Kamera Bilder'
     TabOrder = 0
     object Image1: TImage
       Left = 3
       Top = 19
-      Width = 290
-      Height = 290
+      Width = 105
+      Height = 105
     end
     object Image2: TImage
-      Left = 307
+      Left = 208
       Top = 19
-      Width = 290
-      Height = 290
+      Width = 105
+      Height = 105
     end
     object Image3: TImage
       Left = 3
-      Top = 315
-      Width = 290
-      Height = 290
+      Top = 150
+      Width = 105
+      Height = 105
     end
     object Image4: TImage
-      Left = 307
-      Top = 315
-      Width = 290
-      Height = 290
+      Left = 208
+      Top = 150
+      Width = 105
+      Height = 105
     end
   end
   object Button2: TButton
-    Left = 600
-    Top = 674
+    Left = 440
+    Top = 320
     Width = 75
     Height = 25
     Caption = 'test'
@@ -57,11 +57,10 @@ object Form2: TForm2
     OnClick = Button2Click
   end
   object GroupBox2: TGroupBox
-    Left = 624
-    Top = 8
+    Left = 600
+    Top = 27
     Width = 281
-    Height = 605
-    Caption = 'Steuerung'
+    Height = 310
     TabOrder = 2
     object Label1: TLabel
       Left = 33
@@ -71,16 +70,16 @@ object Form2: TForm2
       Caption = 'Log-Nachrichten'
     end
     object CheckBox1: TCheckBox
-      Left = 22
-      Top = 569
+      Left = 30
+      Top = 265
       Width = 97
       Height = 17
       Caption = 'Bereit'
       TabOrder = 0
     end
     object Button1: TButton
-      Left = 133
-      Top = 565
+      Left = 141
+      Top = 265
       Width = 114
       Height = 25
       Caption = 'Wiederverbinden'
@@ -88,10 +87,10 @@ object Form2: TForm2
       OnClick = Button1Click
     end
     object M_Log: TMemo
-      Left = 19
+      Left = 27
       Top = 43
       Width = 228
-      Height = 502
+      Height = 216
       TabOrder = 2
     end
   end
