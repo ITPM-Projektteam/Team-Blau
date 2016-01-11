@@ -87,7 +87,7 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Gui_From2.pas">
+        <DCCReference Include="Gui_Form2.pas">
             <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
@@ -113,13 +113,13 @@
                 </Source>
             </Delphi.Personality>
             <Deployment>
-                <DeployFile LocalName="Win32\Debug\Gui_exe.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\..\Desktop\GUI\Win32\Debug\Gui_exe.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Gui_exe.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\..\..\Desktop\GUI\Win32\Debug\Gui_exe.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="Win32\Debug\Gui_exe.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Gui_exe.exe</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -319,6 +319,11 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceInfoPList">
+                    <Platform Name="iOSDevice">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
                 <DeployClass Name="ProjectiOSInfoPList">
                     <Platform Name="iOSDevice">
                         <Operation>1</Operation>
@@ -331,6 +336,11 @@
                     <Platform Name="iOSDevice">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSSimulatorInfoPList">
                     <Platform Name="iOSSimulator">
                         <Operation>1</Operation>
                     </Platform>

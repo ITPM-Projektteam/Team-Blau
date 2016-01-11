@@ -30,7 +30,7 @@ program Gui_exe;
 uses
   Vcl.Forms,
   Gui_Form1 in 'Gui_Form1.pas' {Form1},
-  Gui_Form2 in 'Gui_Form2.pas' {Form2};
+  Gui_From2 in 'Gui_From2.pas' {Form2};
 
 {$R *.res}
 
