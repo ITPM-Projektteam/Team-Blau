@@ -1,0 +1,5 @@
+[Hinweis]  16:53:38  ServerIP test
+[Hinweis]  16:53:38  Roboter 1 192.168.1.5
+[Hinweis]  16:53:38  Roboter 2 test 
+[Hinweis]  16:53:38  Roboter 3 test
+[Hinweis]  16:53:38  Roboter 4 test

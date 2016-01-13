@@ -1,0 +1,18 @@
+  while not eof(IPConfig) do
+  begin
+      readln(IPConfig, hilf);
+      if i=2 then
+      begin
+//        Server_IP:=hilf;
+        Log_Schreiben('ServerIP ' + hilf, Hinweis);
+      end;
+
+      if i>3 then
+      begin
+        Log_Schreiben('Roboter ' + inttostr(j)+ ' ' + hilf, Hinweis);
+//        IP_Adressen[j]:=hilf;
+        inc(j);
+      end;
+      inc(i);
+  end;
+  closeFile(IPConfig);
