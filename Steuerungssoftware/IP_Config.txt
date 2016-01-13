@@ -1,7 +1,0 @@
-Serveradresse;
-test
-RoboterAdressen(4);
-192.168.1.5
-test 
-test
-test

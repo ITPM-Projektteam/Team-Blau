@@ -1,0 +1,122 @@
+//******************************************************************************
+{*
+ * @file Gui_Form2.pas
+ * @author Jonah
+ * @date 04.01.2016
+ * @brief Benutzeroberfläche
+ * @copyright Copyright © 2015 ITPM-Projektteam
+ *
+ * @license
+}
+//******************************************************************************
+unit Gui_From1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  Log_Art= (Hinweis, Warnung, Fehler);
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    Button2: TButton;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    CheckBox1: TCheckBox;
+    Button1: TButton;
+    M_Log: TMemo;
+    procedure FormCreate(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure Log_Schreiben(Meldung: string; Art: Log_Art);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private-Deklarationen }
+  public
+    Log_Datei, IPConfig: Textfile;
+    { Public-Deklarationen }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm1.FormCreate(Sender: TObject);
+var
+  i,j: Integer;
+  hilf: String;
+begin
+
+  // Log Datei erzeugen
+  assignfile(Log_Datei, 'Log.txt');
+  rewrite(Log_Datei);
+
+  // Config Datei erzeuen
+  assignfile(IpConfig, 'IP_Config.txt');
+  reset(IpConfig);
+
+  i:=1;
+  j:=1;
+
+  //IP Adressen anzeigen
+  while not eof(IPConfig) do
+  begin
+      readln(IPConfig, hilf);
+      if i=2 then
+      begin
+//        Server_IP:=hilf;
+        Log_Schreiben('ServerIP ' + hilf, Hinweis);
+      end;
+
+      if i>3 then
+      begin
+        Log_Schreiben('Roboter ' + inttostr(j)+ ' ' + hilf, Hinweis);
+//        IP_Adressen[j]:=hilf;
+        inc(j);
+      end;
+      inc(i);
+  end;
+  closeFile(IPConfig);
+
+
+end;
+
+
+
+/// Log Funktion, es wird eine Fehlermeldung als String und eine Priorität (0-3) als Integer Übergeben
+/// @param Meldung Beschreibung der Meldung
+/// @param Art Entwerder Hinweis Fehler oder Warnung
+procedure TForm1.Log_Schreiben(Meldung: string; Art: Log_Art);
+var Ausgabe: String;
+begin
+  case art of
+    Hinweis: Ausgabe:= '[Hinweis]  '+ Timetostr(now)+ '  ' +  Meldung ;
+    Warnung: Ausgabe:= '[Warnung]  '+ Timetostr(now)+ '  ' +  Meldung;
+    Fehler: Ausgabe := '[Fehler]   '+ Timetostr(now)+ '  ' +  Meldung;
+  end;
+
+  M_Log.Lines.Add(Ausgabe);
+  writeln(Log_Datei, Ausgabe);
+end;
+
+//Test
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  Log_Schreiben('Meldung', Hinweis);
+end;
+
+initialization
+
+finalization
+
+//CloseFile(Log_Datei);
+end.

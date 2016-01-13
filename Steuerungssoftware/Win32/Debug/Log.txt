@@ -1,10 +1,5 @@
-[Hinweis]  13:38:56  Meldung
-[Hinweis]  13:38:56  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:57  Meldung
-[Hinweis]  13:38:58  Meldung
+[Hinweis]  13:49:58  ServerIP 123325
+[Hinweis]  13:49:58  Roboter 0 192.168.58.2
+[Hinweis]  13:49:58  Roboter 1 234
+[Hinweis]  13:49:58  Roboter 2 234
+[Hinweis]  13:49:58  Roboter 3 234

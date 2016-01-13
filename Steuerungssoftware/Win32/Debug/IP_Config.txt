@@ -1,0 +1,4 @@
+Server Adresse
+123325
+Roboteradressen
+192.168.58.2
