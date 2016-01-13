@@ -226,3 +226,4 @@ pip-log.txt
 *.tvsconfig
 Steuerungssoftware/__history/
 Steuerungssoftware/Gui_exe.identcache
+Steuerungssoftware/Win32

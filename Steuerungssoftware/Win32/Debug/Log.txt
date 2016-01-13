@@ -1,3 +1,0 @@
-[Hinweis]  15:17:54  ServerIP 123325
-[Hinweis]  15:17:54  Roboter 0 192.168.58.2
-[Hinweis]  15:17:54  Roboter 1 192.168.68.2
