@@ -1,2 +1,4 @@
-[Hinweis]  14:32:40  ServerIP 123325
-[Hinweis]  14:32:40  Roboter 0 192.168.58.2
+[Hinweis]  14:51:07  ServerIP 123325
+[Hinweis]  14:51:07  Roboter 0 192.168.58.2
+[Hinweis]  14:51:07  Roboter 1 984298754398742987543987
+[Fehler]   14:51:15  Verbindung nicht möglich

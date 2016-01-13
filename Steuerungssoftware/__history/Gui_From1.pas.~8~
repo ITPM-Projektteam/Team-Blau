@@ -43,7 +43,6 @@ type
     Server_IP: String;
     IP_Adressen: Array of string;
     Anz_Roboter: Integer;
-    Roboter1: TTxtMobilRoboter;
     { Public-Deklarationen }
   end;
 
@@ -117,20 +116,8 @@ end;
 
 // Roboter Verbinden
 procedure TForm1.Roboterverbinden;
-var i: Integer;
 begin
-  for i:= 0 to length(IP_Adressen) do
-  begin
-    try
-        Roboter1:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
-        Roboter1.Start;
-    except
-        Log_Schreiben('Verbindung nicht möglich',Fehler);
-    end;
-  end;
-  Roboter1:=TTXTMobilRoboter.Create(Ip_Adressen[0]);
-  Roboter1.Start;
-  Roboter1.BewegenAlle(50,-50);
+
 end;
 
 //Test
