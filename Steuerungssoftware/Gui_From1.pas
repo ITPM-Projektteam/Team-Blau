@@ -118,19 +118,20 @@ end;
 // Roboter Verbinden
 procedure TForm1.Roboterverbinden;
 var i: Integer;
+    Roboter: array of TTXTMobilRoboter;
 begin
-  for i:= 0 to length(IP_Adressen) do
+  setlength(Roboter, length(IP_Adressen));
+  for i:= Low(Roboter) to High(Roboter) do
   begin
     try
-        Roboter1:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
-        Roboter1.Start;
+        Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
+        Roboter[i].Start;
     except
         Log_Schreiben('Verbindung nicht möglich',Fehler);
     end;
   end;
-  Roboter1:=TTXTMobilRoboter.Create(Ip_Adressen[0]);
-  Roboter1.Start;
-  Roboter1.BewegenAlle(50,-50);
+//  Roboter[0].BewegenAlle(50,-50);
+//  Roboter[1].BewegenAlle(50,-50);
 end;
 
 //Test
