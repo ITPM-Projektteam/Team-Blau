@@ -15,7 +15,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter;
 
 type
   Log_Art= (Hinweis, Warnung, Fehler);
@@ -31,6 +31,7 @@ type
     CheckBox1: TCheckBox;
     B_Verbinden: TButton;
     M_Log: TMemo;
+    procedure Roboterverbinden();
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
@@ -41,6 +42,7 @@ type
     IPConfig: Textfile;
     Server_IP: String;
     IP_Adressen: Array of string;
+    Anz_Roboter: Integer;
     { Public-Deklarationen }
   end;
 
@@ -88,6 +90,7 @@ begin
       end;
       inc(i);
   end;
+  Anz_Roboter:=Length(IP_Adressen)+1;
   closeFile(IPConfig);
 
 
@@ -111,6 +114,12 @@ begin
   writeln(Log_Datei, Ausgabe);
 end;
 
+// Roboter Verbinden
+procedure TForm1.Roboterverbinden;
+begin
+
+end;
+
 //Test
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -119,7 +128,7 @@ end;
 
 procedure TForm1.B_VerbindenClick(Sender: TObject);
 begin
-       //safdsfdsfsdf
+  Roboterverbinden();
 end;
 
 initialization
