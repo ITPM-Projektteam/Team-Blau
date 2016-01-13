@@ -25,11 +25,11 @@
  *}
 //******************************************************************************
 
-program Gui_exe;
+program RoboterFangen;
 
 uses
   Vcl.Forms,
-  Gui_From1 in 'Gui_From1.pas' {Form1};
+  Hauptformular in 'Hauptformular.pas' {Form1};
 
 {$R *.res}
 

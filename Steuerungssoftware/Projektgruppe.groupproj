@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5FB30554-AA28-49BC-8E14-583AC33A04F6}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="RoboterFangen.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RoboterFangen">
+        <MSBuild Projects="RoboterFangen.dproj"/>
+    </Target>
+    <Target Name="RoboterFangen:Clean">
+        <MSBuild Projects="RoboterFangen.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RoboterFangen:Make">
+        <MSBuild Projects="RoboterFangen.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RoboterFangen"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RoboterFangen:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RoboterFangen:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

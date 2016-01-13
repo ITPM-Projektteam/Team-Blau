@@ -9,7 +9,7 @@
  * @license
 }
 //******************************************************************************
-unit Gui_From1;
+unit Hauptformular;
 
 interface
 
