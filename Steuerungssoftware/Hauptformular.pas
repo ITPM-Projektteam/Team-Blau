@@ -36,6 +36,7 @@ type
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
+    procedure Gefangen_Melden;
   private
     { Private-Deklarationen }
   public
@@ -43,7 +44,7 @@ type
     Server_IP: String;
     IP_Adressen: Array of string;
     Anz_Roboter: Integer;
-    Roboter1: TTxtMobilRoboter;
+    Roboter: Array of TTxtMobilRoboter;
     { Public-Deklarationen }
   end;
 
@@ -97,8 +98,6 @@ begin
 
 end;
 
-
-
 /// Log Funktion, es wird eine Fehlermeldung als String und eine Priorität (0-3) als Integer Übergeben
 /// @param Meldung Beschreibung der Meldung
 /// @param Art Entwerder Hinweis Fehler oder Warnung
@@ -143,6 +142,17 @@ end;
 procedure TForm1.B_VerbindenClick(Sender: TObject);
 begin
   Roboterverbinden();
+end;
+
+procedure TForm1.Gefangen_Melden;
+var i: Integer;
+begin
+  for i := Low(Roboter) to High(Roboter) do
+  if Roboter[i].LiesDigital(5) or Roboter[i].LiesDigital(6) then
+  begin
+      //ToDo: Funktion zum Server senden einbauen
+  end;
+
 end;
 
 initialization
