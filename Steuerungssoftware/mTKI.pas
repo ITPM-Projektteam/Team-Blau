@@ -2,20 +2,21 @@ unit mTKI;
 
 interface
 
-uses mVektor, mTXTMobilRoboter, Client, ClientUndServer;
+uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular;
 
 type TAktion = (FANGEN,FLIEHEN);
 
 type TKI = class(TObject)
 	  strict private
+        class var Formular: THauptformular;
     	  //gegnerPositionen: Array of TQueue<TVektor>;
         //unserePositionen: Array of TQueue<TVektor>;
-        Positionen: Array[TTeam] of Array of TQueue<TVektor>;
-        Geschwindigkeiten: Array[TTeam] of TVektor;
+        //Positionen: Array[TTeam] of Array of TQueue<TVektor>;
+        class var Geschwindigkeiten: Array[TTeam] of TVektor;
         //gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
         //unsereGeschwindigkeiten: Array of TQueue<TVektor>;
-        roboter: Array of TTXTMobilRoboter;
-        spielfeld: TVektor;
+        class var Roboter: Array of TTXTMobilRoboter;
+        class var Spielfeld: TVektor;
 
         class function PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
         class function FangvektorBerechnen(index, ziel: Integer): TVektor;
@@ -26,7 +27,7 @@ type TKI = class(TObject)
         class procedure GeschwindigkeitenBerechnen;
 
     public
-    	  class procedure Init(anzahlRoboter: Integer; spielfeld: TVektor);
+    	  class procedure Init(spielfeld: TVektor; IP_Adressen: Array of String);
         class procedure Steuern(spielende: TDateTime);
 end;
 
@@ -57,9 +58,21 @@ begin
 
 end;
 
-class procedure TKI.Init(anzahlRoboter: Integer;
-  spielfeld: TVektor);
+class procedure TKI.Init(spielfeld: TVektor; IP_Adressen: Array of String);
+var i: Integer;
 begin
+  setlength(Roboter, Length(IP_Adressen));
+  for i:= Low(Roboter) to High(Roboter) do
+  begin
+    try
+        Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
+        Roboter[i].Start;
+    except
+        Formular.Log_Schreiben('Verbindung nicht möglich', Fehler);
+    end;
+  end;
+//  Roboter[0].BewegenAlle(50,-50);
+//  Roboter[1].BewegenAlle(50,-50);
 
 end;
 

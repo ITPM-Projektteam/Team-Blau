@@ -10,7 +10,7 @@ interface
         tcpClient: TIdTCPClient;
       public
         constructor Create(IP: String; Port: Integer);
-        function Anmelden(Teamwahl: Teams): Boolean;
+        function Anmelden(Teamwahl: TTeam): Boolean;
         function GefangenMelden(index: Integer): Boolean;
         function WarteAufSpielstart: Boolean;
     end;
@@ -25,7 +25,7 @@ begin
   tcpClient.Port := Port;
 end;
 
-function TServerVerbindung.Anmelden(Teamwahl: Teams): Boolean;
+function TServerVerbindung.Anmelden(Teamwahl: TTeam): Boolean;
 begin
   Try
     tcpClient.Connect;
@@ -54,7 +54,7 @@ var alterTimeout: Integer;
 begin
   alterTimeout := tcpClient.ReadTimeout;
   tcpClient.ReadTimeout := IdTimeoutInfinite;
-  Result := tcpClient.Socket.ReadByte = SPIELBEGINN;
+  Result := tcpClient.Socket.ReadByte = Byte(SPIELBEGINN);
   tcpClient.ReadTimeout := alterTimeout;
 end;
 
