@@ -14,7 +14,7 @@ type TKI = class(TObject)
         Geschwindigkeiten: Array[TTeam] of TVektor;
         //gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
         //unsereGeschwindigkeiten: Array of TQueue<TVektor>;
-        roboter: TTXTMobilRoboter;
+        roboter: Array of TTXTMobilRoboter;
         spielfeld: TVektor;
 
         class function PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
@@ -34,54 +34,54 @@ implementation
 
 { TKuenstlicheIntelligenz }
 
-class function TKuenstlicheIntelligenz.AusweichvektorBerechnen(index: Integer;
+class function TKI.AusweichvektorBerechnen(index: Integer;
   vektor: TVektor): TVektor;
 begin
 
 end;
 
-class function TKuenstlicheIntelligenz.FangvektorBerechnen(index,
+class function TKI.FangvektorBerechnen(index,
   ziel: Integer): TVektor;
 begin
 
 end;
 
-class function TKuenstlicheIntelligenz.FliehvektorBerechnen(index,
+class function TKI.FliehvektorBerechnen(index,
   ziel: Integer): TVektor;
 begin
 
 end;
 
-class procedure TKuenstlicheIntelligenz.GeschwindigkeitenBerechnen;
+class procedure TKI.GeschwindigkeitenBerechnen;
 begin
 
 end;
 
-class procedure TKuenstlicheIntelligenz.Init(anzahlRoboter: Integer;
+class procedure TKI.Init(anzahlRoboter: Integer;
   spielfeld: TVektor);
 begin
 
 end;
 
-class function TKuenstlicheIntelligenz.PrioritaetFestlegen(index: Integer;
+class function TKI.PrioritaetFestlegen(index: Integer;
   out ziel: Integer): TAktion;
 begin
 
 end;
 
-class function TKuenstlicheIntelligenz.RausfahrvektorBerechnen(
+class function TKI.RausfahrvektorBerechnen(
   index: Integer): TVektor;
 begin
 
 end;
 
-class procedure TKuenstlicheIntelligenz.SteuerbefehlSenden(index: Integer;
+class procedure TKI.SteuerbefehlSenden(index: Integer;
   vektor: TVektor);
 begin
 
 end;
 
-class procedure TKuenstlicheIntelligenz.Steuern(spielende: TDateTime);
+class procedure TKI.Steuern(spielende: TDateTime);
 begin
 
 end;
