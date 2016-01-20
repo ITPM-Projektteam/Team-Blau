@@ -2,7 +2,7 @@ unit mTKI;
 
 interface
 
-uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular;
+uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular, Generics.Collections;
 
 type TAktion = (FANGEN,FLIEHEN);
 
@@ -11,24 +11,24 @@ type TKI = class(TObject)
         class var Formular: THauptformular;
     	  //gegnerPositionen: Array of TQueue<TVektor>;
         //unserePositionen: Array of TQueue<TVektor>;
-        //Positionen: Array[TTeam] of Array of TQueue<TVektor>;
+        class var Positionen: Array[TTeam] of Array of TQueue<TVektor>;
         class var Geschwindigkeiten: Array[TTeam] of TVektor;
         //gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
         //unsereGeschwindigkeiten: Array of TQueue<TVektor>;
         class var Roboter: Array of TTXTMobilRoboter;
         class var Spielfeld: TVektor;
 
-        class function PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
-        class function FangvektorBerechnen(index, ziel: Integer): TVektor;
-        class function FliehvektorBerechnen(index, ziel: Integer): TVektor;
-        class function AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
+        class function PrioritaetFestlegen(index: Integer; out Ziel: Integer): TAktion;
+        class function FangvektorBerechnen(index, Ziel: Integer): TVektor;
+        class function FliehvektorBerechnen(index, Ziel: Integer): TVektor;
+        class function AusweichvektorBerechnen(index: Integer; Vektor: TVektor): TVektor;
         class function RausfahrvektorBerechnen(index: Integer): TVektor;
-        class procedure SteuerbefehlSenden(index: Integer; vektor: TVektor);
+        class procedure SteuerbefehlSenden(index: Integer; Vektor: TVektor);
         class procedure GeschwindigkeitenBerechnen;
 
     public
-    	  class procedure Init(spielfeld: TVektor; IP_Adressen: Array of String);
-        class procedure Steuern(spielende: TDateTime);
+    	  class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+        class procedure Steuern(Spielende: TDateTime);
 end;
 
 implementation
