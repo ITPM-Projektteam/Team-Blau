@@ -15,27 +15,29 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor;
 
 type
   Log_Art= (Hinweis, Warnung, Fehler);
   TForm1 = class(TForm)
-    GroupBox1: TGroupBox;
+    G_Bilder: TGroupBox;
     Button2: TButton;
-    Image1: TImage;
-    Image2: TImage;
-    Image3: TImage;
-    Image4: TImage;
-    GroupBox2: TGroupBox;
+    I_Roboter1: TImage;
+    I_Roboter2: TImage;
+    I_Roboter3: TImage;
+    I_Roboter4: TImage;
+    G_Steuerung: TGroupBox;
     Label1: TLabel;
-    CheckBox1: TCheckBox;
+    CB_Bereit: TCheckBox;
     B_Verbinden: TButton;
     M_Log: TMemo;
+    I_MiniMap: TImage;
     procedure Roboterverbinden();
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
+    procedure Visualisieren();
   private
     { Private-Deklarationen }
   public
@@ -94,6 +96,8 @@ begin
   Anz_Roboter:=Length(IP_Adressen)+1;
   closeFile(IPConfig);
 
+  Visualisieren();
+
 
 end;
 
@@ -134,6 +138,8 @@ begin
 //  Roboter[1].BewegenAlle(50,-50);
 end;
 
+
+
 //Test
 procedure TForm1.Button2Click(Sender: TObject);
 begin
@@ -143,6 +149,59 @@ end;
 procedure TForm1.B_VerbindenClick(Sender: TObject);
 begin
   Roboterverbinden();
+end;
+
+///Visualisierung der Bewegungen
+procedure TForm1.Visualisieren;
+var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
+  i,j: Integer;
+  x1,x2,y1,y2: Integer;
+begin
+  Positionen[1].x:=10;
+  Positionen[1].y:= 10;
+  Positionen[2].x:=100;
+  Positionen[2].y:= 100;
+  Positionen[3].x:=200;
+  Positionen[3].y:= 300;
+
+  Gegner[1].x:=400;
+  Gegner[1].y:=400;
+  Gegner[2].x:=300;
+  Gegner[2].y:=300;
+  Gegner[3].x:=350;
+  Gegner[3].y:=350;
+
+  for i := Low(Positionen) to High(Positionen) do
+  begin
+    x1:=Round(Positionen[i].x+10);
+    y1:=Round(Positionen[i].y+10);
+    x2:=Round(Positionen[i].x-10);
+    y2:=Round(Positionen[i].y-10);
+
+    I_MiniMap.Canvas.Brush.Color:=CLGreen;
+    I_MiniMap.Canvas.Rectangle(x1,y1,x2,y2);
+  end;
+
+  for j := Low(Gegner) to High(Gegner) do
+  begin
+    x1:=Round(Gegner[j].x+10);
+    y1:=Round(Gegner[j].y+10);
+    x2:=Round(Gegner[j].x-10);
+    y2:=Round(Gegner[j].y-10);
+
+    I_MiniMap.Canvas.Brush.Color:=CLRed;
+    I_MiniMap.Canvas.Rectangle(x1,y1,x2,y2);
+  end;
+
+  for k := Low(UnsereGewindigkeiten) to High(UnsereGewindigkeiten) do
+  begin
+  
+  end;
+    
+
+
+
+
 end;
 
 initialization
