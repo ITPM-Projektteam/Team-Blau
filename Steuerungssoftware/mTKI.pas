@@ -1,17 +1,19 @@
-unit TKI;
+unit mTKI;
 
 interface
 
-uses mVektor, mTXTMobilRoboter;
+uses mVektor, mTXTMobilRoboter, Client, ClientUndServer;
 
 type TAktion = (FANGEN,FLIEHEN);
 
-type TKuenstlicheIntelligenz = class(TObject)
-	strict private
-    	gegnerPositionen: Array of TQueue<TVektor>;
-        unserePositionen: Array of TQueue<TVektor>;
-        gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
-        unsereGeschwindigkeiten: Array of TQueue<TVektor>;
+type TKI = class(TObject)
+	  strict private
+    	  //gegnerPositionen: Array of TQueue<TVektor>;
+        //unserePositionen: Array of TQueue<TVektor>;
+        Positionen: Array[TTeam] of Array of TQueue<TVektor>;
+        Geschwindigkeiten: Array[TTeam] of TVektor;
+        //gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
+        //unsereGeschwindigkeiten: Array of TQueue<TVektor>;
         roboter: TTXTMobilRoboter;
         spielfeld: TVektor;
 
@@ -24,7 +26,7 @@ type TKuenstlicheIntelligenz = class(TObject)
         class procedure GeschwindigkeitenBerechnen;
 
     public
-    	class procedure Init(anzahlRoboter: Integer; spielfeld: TVektor);
+    	  class procedure Init(anzahlRoboter: Integer; spielfeld: TVektor);
         class procedure Steuern(spielende: TDateTime);
 end;
 
