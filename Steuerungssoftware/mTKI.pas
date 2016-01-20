@@ -58,7 +58,7 @@ begin
 
 end;
 
-class procedure TKI.Init(spielfeld: TVektor; IP_Adressen: Array of String);
+class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String);
 var i: Integer;
 begin
   setlength(Roboter, Length(IP_Adressen));
@@ -68,12 +68,9 @@ begin
         Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
         Roboter[i].Start;
     except
-        Formular.Log_Schreiben('Verbindung nicht möglich', Fehler);
+        Hauptformular.Log_Schreiben('Verbindung nicht möglich', Fehler);
     end;
   end;
-//  Roboter[0].BewegenAlle(50,-50);
-//  Roboter[1].BewegenAlle(50,-50);
-
 end;
 
 class function TKI.PrioritaetFestlegen(index: Integer;
