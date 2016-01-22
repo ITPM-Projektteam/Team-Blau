@@ -2,8 +2,8 @@ object Hauptformular: THauptformular
   Left = 0
   Top = 0
   Caption = 'Hauptformular'
-  ClientHeight = 707
-  ClientWidth = 928
+  ClientHeight = 671
+  ClientWidth = 1390
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,32 +14,38 @@ object Hauptformular: THauptformular
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object GroupBox1: TGroupBox
+  object I_MiniMap: TImage
+    Left = 928
+    Top = 8
+    Width = 440
+    Height = 640
+  end
+  object G_Bilder: TGroupBox
     Left = 8
     Top = 8
     Width = 600
     Height = 609
     Caption = 'Kamera Bilder'
     TabOrder = 0
-    object Image1: TImage
+    object I_Roboter1: TImage
       Left = 3
       Top = 19
       Width = 290
       Height = 290
     end
-    object Image2: TImage
+    object I_Roboter2: TImage
       Left = 299
       Top = 19
       Width = 290
       Height = 290
     end
-    object Image3: TImage
+    object I_Roboter3: TImage
       Left = 3
       Top = 315
       Width = 290
       Height = 290
     end
-    object Image4: TImage
+    object I_Roboter4: TImage
       Left = 299
       Top = 315
       Width = 290
@@ -47,15 +53,15 @@ object Hauptformular: THauptformular
     end
   end
   object Button2: TButton
-    Left = 600
-    Top = 674
+    Left = 624
+    Top = 623
     Width = 75
     Height = 25
     Caption = 'test'
     TabOrder = 1
     OnClick = Button2Click
   end
-  object GroupBox2: TGroupBox
+  object G_Steuerung: TGroupBox
     Left = 624
     Top = 8
     Width = 281
@@ -69,7 +75,7 @@ object Hauptformular: THauptformular
       Height = 13
       Caption = 'Log-Nachrichten'
     end
-    object CheckBox1: TCheckBox
+    object CB_Bereit: TCheckBox
       Left = 22
       Top = 569
       Width = 97

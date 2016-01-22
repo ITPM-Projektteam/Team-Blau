@@ -15,25 +15,27 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor, Math;
 
 type
   Log_Art= (Hinweis, Warnung, Fehler);
   THauptformular = class(TForm)
-    GroupBox1: TGroupBox;
     Button2: TButton;
-    Image1: TImage;
-    Image2: TImage;
-    Image3: TImage;
-    Image4: TImage;
-    GroupBox2: TGroupBox;
+    I_Roboter1: TImage;
+    I_Roboter2: TImage;
+    I_Roboter3: TImage;
+    I_Roboter4: TImage;
+    G_Steuerung: TGroupBox;
     Label1: TLabel;
-    CheckBox1: TCheckBox;
+    CB_Bereit: TCheckBox;
     B_Verbinden: TButton;
     M_Log: TMemo;
+    I_MiniMap: TImage;
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
+    procedure B_VerbindenClick(Sender: TObject);
+    procedure Visualisieren();
   private
     { Private-Deklarationen }
   public
@@ -93,6 +95,8 @@ begin
   Anz_Roboter:=Length(IP_Adressen)+1;
   closeFile(IPConfig);
 
+  Visualisieren();
+
 
 end;
 
@@ -116,6 +120,98 @@ end;
 procedure THauptformular.Button2Click(Sender: TObject);
 begin
   Log_Schreiben('Meldung', Hinweis);
+end;
+
+procedure THauptformular.B_VerbindenClick(Sender: TObject);
+begin
+  // Roboterverbinden();
+end;
+
+///Visualisierung der Bewegungen
+procedure THauptformular.Visualisieren;
+var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
+  i,j: Integer;
+  alphax, alphay, Vektorx, Vektory, hilf: Double;
+  x1,x2,y1,y2,r1,r2,r3,r4: Integer;
+begin
+  //Testdaten
+  Positionen[1].x:=10;
+  Positionen[1].y:= 10;
+  Positionen[2].x:=100;
+  Positionen[2].y:= 100;
+  Positionen[3].x:=200;
+  Positionen[3].y:= 300;
+
+  Gegner[1].x:=400;
+  Gegner[1].y:=400;
+  Gegner[2].x:=300;
+  Gegner[2].y:=300;
+  Gegner[3].x:=350;
+  Gegner[3].y:=350;
+
+  UnsereGewindigkeiten[1].x:=50;
+  UnsereGewindigkeiten[1].y:=50;
+  UnsereGewindigkeiten[2].x:=-50;
+  UnsereGewindigkeiten[2].y:=20;
+  UnsereGewindigkeiten[3].x:=-100;
+  UnsereGewindigkeiten[3].y:=-100;
+
+  for i := Low(Positionen) to High(Positionen) do
+  begin
+    x1:=Round(Positionen[i].x+10);
+    y1:=Round(Positionen[i].y+10);
+    x2:=Round(Positionen[i].x-10);
+    y2:=Round(Positionen[i].y-10);
+
+    r1:=Round(Positionen[i].x);
+    r2:=Round(Positionen[i].y);
+    r3:=Round(r1+UnsereGewindigkeiten[i].x);
+    r4:=Round(r2+UnsereGewindigkeiten[i].y);
+
+    with I_MiniMap.Canvas do
+    begin
+      Brush.Color:=CLGreen;
+      Rectangle(x1,y1,x2,y2);
+
+      Brush.Color:=CLBlack;
+      MoveTo(r1,r2);
+      LineTo(r3,r4);
+
+//      // Winkel Für die Pfeilspitze
+//      Vektorx:=UnsereGewindigkeiten[i].x;
+//      Vektory:=UnsereGewindigkeiten[i].y;
+//      hilf:= Vektorx/(Sqrt((Vektory*Vektory)+(Vektorx*Vektorx)));
+//      alphax:= arccos(hilf)-0.5*PI;
+//      alphay:=arccos(hilf)+0.5*PI;
+//
+//
+//      Log_Schreiben(Floattostr(alphax),Hinweis);
+////      Log_Schreiben(Floattostr(sin(alphax)*10),Hinweis);
+////      Log_Schreiben(Floattostr(cos(alphax)*10),Hinweis);
+//
+//      //Pfeilspitze erstellen
+//      Moveto(r3,r4);
+//      LineTo(r3+round(sin(alphax)*10),round(r4+cos(alphax)*10));
+//      Moveto(r3,r4);
+//      LineTo(r3+round(sin(alphay)*10),r4+round(cos(alphay)*10));
+
+
+
+    end;
+  end;
+
+  for j := Low(Gegner) to High(Gegner) do
+  begin
+    x1:=Round(Gegner[j].x+10);
+    y1:=Round(Gegner[j].y+10);
+    x2:=Round(Gegner[j].x-10);
+    y2:=Round(Gegner[j].y-10);
+
+    I_MiniMap.Canvas.Brush.Color:=CLRed;
+    I_MiniMap.Canvas.Rectangle(x1,y1,x2,y2);
+  end;
+
+
 end;
 
 initialization
