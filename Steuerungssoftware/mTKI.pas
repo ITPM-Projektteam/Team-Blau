@@ -71,11 +71,6 @@ begin
         Hauptformular.Log_Schreiben('Verbindung nicht möglich', Fehler);
     end;
   end;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> refs/remotes/origin/master
 end;
 
 class function TKI.PrioritaetFestlegen(index: Integer;
