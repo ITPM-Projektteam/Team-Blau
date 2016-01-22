@@ -7,14 +7,10 @@ uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular, Generic
 type TAktion = (FANGEN,FLIEHEN);
 
 type TKI = class(TObject)
-	  strict private
+	strict private
         class var Formular: THauptformular;
-    	  //gegnerPositionen: Array of TQueue<TVektor>;
-        //unserePositionen: Array of TQueue<TVektor>;
         class var Positionen: Array[TTeam] of Array of TQueue<TVektor>;
         class var Geschwindigkeiten: Array[TTeam] of TVektor;
-        //gegnerGeschwindigkeiten: Array of TQueue<TVektor>;
-        //unsereGeschwindigkeiten: Array of TQueue<TVektor>;
         class var Roboter: Array of TTXTMobilRoboter;
         class var Spielfeld: TVektor;
 
@@ -27,7 +23,7 @@ type TKI = class(TObject)
         class procedure GeschwindigkeitenBerechnen;
 
     public
-    	  class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+    	class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
         class procedure Steuern(Spielende: TDateTime);
 end;
 
@@ -35,20 +31,17 @@ implementation
 
 { TKuenstlicheIntelligenz }
 
-class function TKI.AusweichvektorBerechnen(index: Integer;
-  vektor: TVektor): TVektor;
+class function TKI.AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
 begin
 
 end;
 
-class function TKI.FangvektorBerechnen(index,
-  ziel: Integer): TVektor;
+class function TKI.FangvektorBerechnen(index,ziel: Integer): TVektor;
 begin
 
 end;
 
-class function TKI.FliehvektorBerechnen(index,
-  ziel: Integer): TVektor;
+class function TKI.FliehvektorBerechnen(index,ziel: Integer): TVektor;
 begin
 
 end;
@@ -73,20 +66,17 @@ begin
   end;
 end;
 
-class function TKI.PrioritaetFestlegen(index: Integer;
-  out ziel: Integer): TAktion;
+class function TKI.PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
 begin
 
 end;
 
-class function TKI.RausfahrvektorBerechnen(
-  index: Integer): TVektor;
+class function TKI.RausfahrvektorBerechnen(index: Integer): TVektor;
 begin
 
 end;
 
-class procedure TKI.SteuerbefehlSenden(index: Integer;
-  vektor: TVektor);
+class procedure TKI.SteuerbefehlSenden(index: Integer; vektor: TVektor);
 begin
 
 end;
