@@ -71,8 +71,7 @@ begin
         Formular.Log_Schreiben('Verbindung nicht möglich', Fehler);
     end;
   end;
-//  Roboter[0].BewegenAlle(50,-50);
-//  Roboter[1].BewegenAlle(50,-50);
+
 
 end;
 

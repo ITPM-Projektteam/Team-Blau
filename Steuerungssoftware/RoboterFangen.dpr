@@ -8,7 +8,9 @@ uses
   mVektor in 'mVektor.pas',
   mSRWLock in 'mSRWLock.pas',
   mHauptformular in 'mHauptformular.pas' {Hauptformular},
-  mTKI in 'mTKI.pas';
+  mTKI in 'mTKI.pas',
+  ClientUndServer in 'ClientUndServer.pas',
+  Client in 'Client.pas';
 
 {$R *.res}
 
