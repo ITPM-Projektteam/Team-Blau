@@ -1,7 +1,7 @@
-object Form1: TForm1
+object Hauptformular: THauptformular
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Hauptformular'
   ClientHeight = 707
   ClientWidth = 928
   Color = clBtnFace
@@ -84,7 +84,6 @@ object Form1: TForm1
       Height = 25
       Caption = 'Verbinden'
       TabOrder = 1
-      OnClick = B_VerbindenClick
     end
     object M_Log: TMemo
       Left = 19

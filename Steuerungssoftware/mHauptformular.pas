@@ -9,7 +9,7 @@
  * @license
 }
 //******************************************************************************
-unit Hauptformular;
+unit mHauptformular;
 
 interface
 
@@ -19,7 +19,7 @@ uses
 
 type
   Log_Art= (Hinweis, Warnung, Fehler);
-  TForm1 = class(TForm)
+  THauptformular = class(TForm)
     GroupBox1: TGroupBox;
     Button2: TButton;
     Image1: TImage;
@@ -31,11 +31,9 @@ type
     CheckBox1: TCheckBox;
     B_Verbinden: TButton;
     M_Log: TMemo;
-    procedure Roboterverbinden();
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
-    procedure B_VerbindenClick(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -43,20 +41,21 @@ type
     Server_IP: String;
     IP_Adressen: Array of string;
     Anz_Roboter: Integer;
-    Roboter1: TTxtMobilRoboter;
     { Public-Deklarationen }
   end;
 
 var
-  Form1: TForm1;
+  Hauptformular: THauptformular;
   Log_Datei: Textfile;
 
 implementation
 
 {$R *.dfm}
 
+uses mTKI;
 
-procedure TForm1.FormCreate(Sender: TObject);
+
+procedure THauptformular.FormCreate(Sender: TObject);
 var
   i,j: Integer;
   hilf: String;
@@ -97,12 +96,10 @@ begin
 
 end;
 
-
-
 /// Log Funktion, es wird eine Fehlermeldung als String und eine Priorität (0-3) als Integer Übergeben
 /// @param Meldung Beschreibung der Meldung
 /// @param Art Entwerder Hinweis Fehler oder Warnung
-procedure TForm1.Log_Schreiben(Meldung: string; Art: Log_Art);
+procedure THauptformular.Log_Schreiben(Meldung: string; Art: Log_Art);
 var Ausgabe: String;
 begin
   case art of
@@ -115,34 +112,10 @@ begin
   writeln(Log_Datei, Ausgabe);
 end;
 
-// Roboter Verbinden
-procedure TForm1.Roboterverbinden;
-var i: Integer;
-    Roboter: array of TTXTMobilRoboter;
-begin
-  setlength(Roboter, length(IP_Adressen));
-  for i:= Low(Roboter) to High(Roboter) do
-  begin
-    try
-        Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
-        Roboter[i].Start;
-    except
-        Log_Schreiben('Verbindung nicht möglich',Fehler);
-    end;
-  end;
-//  Roboter[0].BewegenAlle(50,-50);
-//  Roboter[1].BewegenAlle(50,-50);
-end;
-
 //Test
-procedure TForm1.Button2Click(Sender: TObject);
+procedure THauptformular.Button2Click(Sender: TObject);
 begin
   Log_Schreiben('Meldung', Hinweis);
-end;
-
-procedure TForm1.B_VerbindenClick(Sender: TObject);
-begin
-  Roboterverbinden();
 end;
 
 initialization
