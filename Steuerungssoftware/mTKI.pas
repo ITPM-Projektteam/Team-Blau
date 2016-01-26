@@ -10,9 +10,10 @@ type TKI = class(TObject)
 	strict private
         class var Formular: THauptformular;
         class var Positionen: Array[TTeam] of Array of TQueue<TVektor>;
-        class var Geschwindigkeiten: Array[TTeam] of TVektor;
+        class var Geschwindigkeiten: Array[TTeam] of Array of TVektor;
         class var Roboter: Array of TTXTMobilRoboter;
         class var Spielfeld: TVektor;
+        class var Zeit: TQueue<TDateTime>;
 
         class function PrioritaetFestlegen(index: Integer; out Ziel: Integer): TAktion;
         class function FangvektorBerechnen(index, Ziel: Integer): TVektor;
