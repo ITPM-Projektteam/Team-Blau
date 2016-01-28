@@ -2,7 +2,7 @@ unit mTKI;
 
 interface
 
-uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular, Generics.Collections;
+uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, mHauptformular, Math, Generics.Collections;
 
 type TAktion = (FANGEN,FLIEHEN);
 
@@ -72,9 +72,31 @@ begin
 
 end;
 
-class function TKI.RausfahrvektorBerechnen(index: Integer): TVektor;
-begin
 
+class function TKI.RausfahrvektorBerechnen(
+  index: Integer): TVektor;
+var Position: TVektor;
+    Abstand: Array[0..3] of Double;
+    KAbstand: Double;
+
+begin
+   Position := Positionen[TEAM_BLAU,index].Peek;
+   //Berechnung der Seitenabstände mit der Annahame,
+   //dass sich unten links der Koordinatenursprung befindet.
+   Abstand[0] := Position.x;                //links
+   Abstand[1] := Spielfeld.x-Position.x;    //rechts
+   Abstand[2] := Spielfeld.y-Position.y;    //oben
+   Abstand[3] := Position.y;                //unten
+   KAbstand := MinValue(Abstand);
+   //in x- oder y-Richtung herausfahren
+   if (KAbstand=Abstand[0]) or (KAbstand=Abstand[1]) then begin
+     result.x := -KAbstand;
+     result.y := 0;
+   end
+   else begin
+     result.x := 0;
+     result.y := -KAbstand;
+   end
 end;
 
 class procedure TKI.SteuerbefehlSenden(index: Integer; vektor: TVektor);
