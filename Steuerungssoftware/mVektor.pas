@@ -50,6 +50,7 @@ type TVektor = record
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
     /// @exception Es wird eine Exception ausgelöst, wenn der Vektor ein Nullvektor ist
     function Winkel: Double;
+    function Betrag: Double;
 end;
 
 implementation
@@ -78,6 +79,11 @@ begin
   //multipliziert und zurückgegeben
 	Result.x := Skalar * Vektor.x;
   Result.y := Skalar * Vektor.y;
+end;
+
+function TVektor.Betrag: Double;
+begin
+  Result := Sqrt(x*x + y*y);
 end;
 
 class operator TVektor.Multiply(const Vektor: TVektor; const Skalar: Double): TVektor;
