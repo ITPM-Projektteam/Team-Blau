@@ -53,15 +53,19 @@ var
   deltaZeit: Double;
   einRoboter: TRoboterDaten;
   team: TTeam;
+  i: Integer;
 begin
   ZeitLetzterFrames.Enqueue(zeit);
   deltaZeit := SecondSpan(zeit, ZeitLetzterFrames.Dequeue);
 
   for team in [TEAM_ROT, TEAM_BLAU] do
-    for einRoboter in RoboterDaten do
-      einRoboter.Geschwindigkeit :=
-          (einRoboter.Position - einRoboter.Positionsverlauf.Dequeue) *
-          (1 / deltaZeit);
+  begin
+    for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
+    begin
+      einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
+      RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/deltaZeit);
+    end;
+  end;
 end;
 
 class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String);
@@ -80,10 +84,40 @@ begin
 end;
 
 class function TKI.PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
+var DeltaVektor: TVektor;
+    i,j: Integer;
+
 begin
+  j := 0;
+  DeltaVektor.x := RoboterDaten[TEAM_BLAU,index].Position.x - RoboterDaten[TEAM_ROT,0].Position.x;
+  DeltaVektor.y := RoboterDaten[TEAM_BLAU,index].Position.y - RoboterDaten[TEAM_ROT,0].Position.y;
 
 
+  for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
+  begin
+    if (RoboterDaten[TEAM_ROT,i].Position.x < DeltaVektor.x) and
+       (RoboterDaten[TEAM_ROT,i].Position.y < DeltaVektor.y) then
+       begin
+         DeltaVektor.x := RoboterDaten[TEAM_ROT,i].Position.x;
+         DeltaVektor.y := RoboterDaten[TEAM_ROT,i].Position.y;
+         j := i;
+       end;
+  end;
 
+  if (RoboterDaten[TEAM_BLAU,index].Position.Winkel = 0) or (RoboterDaten[TEAM_ROT,j].Position.Winkel = 0) then
+  begin
+    Formular.Log_Schreiben('Null Vektor', Warnung);
+  end
+  else if (RoboterDaten[TEAM_BLAU,index].Position.Winkel-RoboterDaten[TEAM_ROT,j].Position.Winkel) < (pi/2) then
+  begin
+    ziel := j;
+    Result := FLIEHEN;
+  end
+  else
+  begin
+    ziel := j;
+    Result := FANGEN;
+  end;
 end;
 
 
