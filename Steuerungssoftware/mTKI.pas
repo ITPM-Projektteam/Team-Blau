@@ -25,7 +25,7 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
-      class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+      class procedure Init(IP_Adressen: Array of String);
       class procedure Steuern(Spielende: TDateTime);
 end;
 
@@ -68,7 +68,7 @@ begin
   end;
 end;
 
-class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+class procedure TKI.Init(IP_Adressen: Array of String);
 var i: Integer;
 begin
   setlength(Roboter, Length(IP_Adressen));
