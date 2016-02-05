@@ -95,13 +95,16 @@ begin
   //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
   for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
   begin
-    Abstand := (RoboterDaten[TEAM_BLAU,index].Position -
-                RoboterDaten[TEAM_ROT,i].Position).Betrag;
-    if Abstand < KleinsterAbstand then
-       begin
-         KleinsterAbstand := Abstand;
-         NaechsterRoboter := i;
-       end;
+    if RoboterDaten[TEAM_ROT,i].Aktiv then
+    begin
+      Abstand := (RoboterDaten[TEAM_BLAU,index].Position -
+                  RoboterDaten[TEAM_ROT,i].Position).Betrag;
+      if Abstand < KleinsterAbstand then
+         begin
+           KleinsterAbstand := Abstand;
+           NaechsterRoboter := i;
+         end;
+    end;
   end;
 
   //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
