@@ -77,30 +77,22 @@ begin
   //Oberen Spielfeldrand nicht überfahren
   else if (Zielposition.y > Spielfeld.y) then begin
     result.y := Spielfeld.y-aktPos.y;
-    result.x := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.y*result.y);
-    if vektor.x < 0 then
-      result.x := -result.x;
+    result.x := Sign(vektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
   //Unteren Spielfeldrand nicht überfahren
   else if Zielposition.y < 0 then begin
     result.y := -aktPos.y;
-    result.x := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.y*result.y);
-    if vektor.x < 0 then
-      result.x := -result.x;
+    result.x := Sign(vektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
   //Rechten Spielfeldrand nicht überfahren
   else if (Zielposition.x > Spielfeld.x) then begin
     result.x := Spielfeld.x-aktPos.x;
-    result.y := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.x*result.x);
-    if vektor.y < 0 then
-      result.y := -result.y;
+    result.y := Sign(vektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
   end
   //Linken Spielfeldrand nicht überfahren
   else if (Zielposition.x < 0) then begin
     result.x := -aktPos.x;
-    result.y := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.x*result.x);
-    if vektor.y < 0 then
-      result.y := -result.y;
+    result.y := Sign(vektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
   end;
 
   //Kollisionen mit TeamRobotern vermeiden
