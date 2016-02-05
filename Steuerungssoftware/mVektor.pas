@@ -70,9 +70,9 @@ implementation
 
 class operator TVektor.Add(const Summand1, Summand2: TVektor): TVektor;
 begin
-	//Es werden die Komponenten der jeweiligen Vektoren addiert
+  //Es werden die Komponenten der jeweiligen Vektoren addiert
   //und anschließend zurückgegeben.
-	Result.x := Summand1.x + Summand2.x;
+  Result.x := Summand1.x + Summand2.x;
   Result.y := Summand1.y + Summand2.y;
 end;
 
@@ -86,15 +86,15 @@ end;
 
 class operator TVektor.Multiply(const Skalar: Double; const Vektor: TVektor): TVektor;
 begin
-	//Es werden die einzelnen Komponenten des Vektors mit einem Skalar
+  //Es werden die einzelnen Komponenten des Vektors mit einem Skalar
   //multipliziert und zurückgegeben
-	Result.x := Skalar * Vektor.x;
+  Result.x := Skalar * Vektor.x;
   Result.y := Skalar * Vektor.y;
 end;
 
 function TVektor.Betrag: Double;
 begin
-  Result := Sqrt(x*x + y*y);
+  Result := Sqrt(Sqr(x) + Sqr(y));
 end;
 
 

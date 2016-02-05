@@ -144,20 +144,18 @@ end;
 
 class procedure TKI.GeschwindigkeitenBerechnen(zeit: TDateTime);
 var
-  deltaZeit: Double;
   einRoboter: TRoboterDaten;
   team: TTeam;
   i: Integer;
 begin
   ZeitLetzterFrames.Enqueue(zeit);
-  deltaZeit := SecondSpan(zeit, ZeitLetzterFrames.Dequeue);
 
   for team in [TEAM_ROT, TEAM_BLAU] do
   begin
     for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
     begin
       einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
-      RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/deltaZeit);
+		RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
     end;
   end;
 end;
