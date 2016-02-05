@@ -28,11 +28,22 @@ type TKI = class(TObject)
   public
       class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
       class procedure Steuern(Spielende: TDateTime);
+      class function Anmelden(Teamwahl: TTeam): Boolean;
 end;
 
 implementation
 
 { TKuenstlicheIntelligenz }
+
+class function TKI.Anmelden(Teamwahl: TTeam): Boolean;
+begin
+  Server.anmelden(Teamwahl);
+  if Server.anmelden then
+    Formular.Log_Schreiben('Anmelden erfolgreich', Hinweis)
+  else
+    Formular.Log_Schreiben('Anmelden nicht erfolgreich', Fehler);
+
+end;
 
 class function TKI.AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
 begin
@@ -195,11 +206,9 @@ begin
     if Vektor.Winkel(akt_Vektor)<pi then
     Roboter_Blau.Bewegenalle(Geschwindigkeit,
                                  Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
-    else if Vektor.Winkel(akt_Vektor)>pi  then
+    else
     Roboter_Blau.Bewegenalle(Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),
                                  Geschwindigkeit)
-    else
-    Roboter_Blau.BewegenAlle(Geschwindigkeit,Geschwindigkeit);
   end;
 end;
 
