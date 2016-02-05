@@ -44,13 +44,24 @@ type TVektor = record
 
     /// Komponentenweise Multiplikation eines Vektors mit einem Skalar
     class operator Multiply(const Skalar:Double; const Vektor:TVektor): TVektor; overload;
+    /// Komponentenweise Multiplikation eines Skalars mit einem Vektor
     class operator Multiply(const Vektor:TVektor; const Skalar:Double): TVektor; overload;
+    class operator Equal(const Vektor1, Vektor2: TVektor): Boolean;
 
-    /// Gibt den Winkel zwischen dem Vektor und der X-Achse zurück
+    /// Gibt den Winkel des Vektors zurück bezogen auf die x-Achse
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
-    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor ein Nullvektor ist
-    function Winkel: Double;
+    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor gleich dem Nullvektor ist
+    function Winkel: Double; overload;
+    /// Gibt den Winkel des Vektors zurück bezogen auf den Bezugsvektor
+    /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
+    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor oder der Bezugsvektor gleich dem Nullvektor ist
+    function Winkel(const Bezugsvektor: TVektor): Double; overload;
+
+    /// Gibt die Länge des Vektors zurück (Euklidische Norm)
     function Betrag: Double;
+
+    function Drehen(Winkel: Double): TVektor;
+
 end;
 
 implementation
@@ -86,6 +97,18 @@ begin
   Result := Sqrt(x*x + y*y);
 end;
 
+
+function TVektor.Drehen(Winkel: Double): TVektor;
+begin
+  result.x :=  cos(-Winkel)*self.x + sin(-Winkel)*self.y;
+  result.y := -sin(-Winkel)*self.x + cos(-Winkel)*self.y;
+end;
+
+class operator TVektor.Equal(const Vektor1, Vektor2: TVektor): Boolean;
+begin
+  Result := (Vektor1.x = Vektor2.x) and (Vektor1.y = Vektor2.y);
+end;
+
 class operator TVektor.Multiply(const Vektor: TVektor; const Skalar: Double): TVektor;
 begin
 	//Es werden die einzelnen Komponenten des Vektors mit einem Skalar
@@ -115,6 +138,13 @@ begin
     else if Self.y < 0 then
       Result := Result + Pi * 2; // Für den vierten Quadranten
   end;
-  
 end;
+
+function TVektor.Winkel(const Bezugsvektor: TVektor): Double;
+begin
+  Result := self.Winkel - Bezugsvektor.Winkel;
+  if Result < 0 then
+    Result := Result + 2*Pi;
+end;
+
 end.
