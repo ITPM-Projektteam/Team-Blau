@@ -10,7 +10,8 @@ uses
   mHauptformular in 'mHauptformular.pas' {Hauptformular},
   mTKI in 'mTKI.pas',
   ClientUndServer in 'ClientUndServer.pas',
-  Client in 'Client.pas';
+  Client in 'Client.pas',
+  mKonstanten in 'mKonstanten.pas';
 
 {$R *.res}
 
