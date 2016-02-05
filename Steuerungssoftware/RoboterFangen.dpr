@@ -11,6 +11,7 @@ uses
   mTKI in 'mTKI.pas',
   ClientUndServer in 'ClientUndServer.pas',
   Client in 'Client.pas',
+  mKonstanten in 'mKonstanten.pas';
   mRoboterDaten in 'mRoboterDaten.pas';
 
 {$R *.res}
