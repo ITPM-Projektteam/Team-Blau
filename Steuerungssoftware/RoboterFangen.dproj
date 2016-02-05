@@ -95,6 +95,7 @@
         <DCCReference Include="mTKI.pas"/>
         <DCCReference Include="ClientUndServer.pas"/>
         <DCCReference Include="Client.pas"/>
+        <DCCReference Include="mKonstanten.pas"/>
         <DCCReference Include="mRoboterDaten.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
@@ -510,14 +511,22 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
+<<<<<<< HEAD
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+=======
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+>>>>>>> refs/remotes/origin/master
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+<<<<<<< HEAD
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+=======
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+>>>>>>> refs/remotes/origin/master
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
