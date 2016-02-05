@@ -46,6 +46,7 @@ type TVektor = record
     class operator Multiply(const Skalar:Double; const Vektor:TVektor): TVektor; overload;
     /// Komponentenweise Multiplikation eines Skalars mit einem Vektor
     class operator Multiply(const Vektor:TVektor; const Skalar:Double): TVektor; overload;
+    class operator Equal(const Vektor1, Vektor2: TVektor): Boolean;
 
     /// Gibt den Winkel des Vektors zurück bezogen auf die x-Achse
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
@@ -96,10 +97,16 @@ begin
   Result := Sqrt(x*x + y*y);
 end;
 
+
 function TVektor.Drehen(Winkel: Double): TVektor;
 begin
   result.x :=  cos(-Winkel)*self.x + sin(-Winkel)*self.y;
   result.y := -sin(-Winkel)*self.x + cos(-Winkel)*self.y;
+end;
+
+class operator TVektor.Equal(const Vektor1, Vektor2: TVektor): Boolean;
+begin
+  Result := (Vektor1.x = Vektor2.x) and (Vektor1.y = Vektor2.y);
 end;
 
 class operator TVektor.Multiply(const Vektor: TVektor; const Skalar: Double): TVektor;
@@ -131,7 +138,6 @@ begin
     else if Self.y < 0 then
       Result := Result + Pi * 2; // Für den vierten Quadranten
   end;
-  
 end;
 
 function TVektor.Winkel(const Bezugsvektor: TVektor): Double;

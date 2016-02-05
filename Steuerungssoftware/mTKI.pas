@@ -3,7 +3,7 @@ unit mTKI;
 interface
 
 uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, DateUtils,
-     mHauptformular, Math, Generics.Collections, mRoboterDaten, SysUtils;
+     mHauptformular, mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils;
 
 type TAktion = (FANGEN, FLIEHEN);
 
@@ -25,7 +25,7 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
-      class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+      class procedure Init(IP_Adressen: Array of String);
       class procedure Steuern(Spielende: TDateTime);
 end;
 
@@ -139,18 +139,22 @@ var
   deltaZeit: Double;
   einRoboter: TRoboterDaten;
   team: TTeam;
+  i: Integer;
 begin
   ZeitLetzterFrames.Enqueue(zeit);
   deltaZeit := SecondSpan(zeit, ZeitLetzterFrames.Dequeue);
 
   for team in [TEAM_ROT, TEAM_BLAU] do
-    for einRoboter in RoboterDaten do
-      einRoboter.Geschwindigkeit :=
-          (einRoboter.Position - einRoboter.Positionsverlauf.Dequeue) *
-          (1 / deltaZeit);
+  begin
+    for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
+    begin
+      einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
+      RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/deltaZeit);
+    end;
+  end;
 end;
 
-class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+class procedure TKI.Init(IP_Adressen: Array of String);
 var i: Integer;
 begin
   setlength(Roboter, Length(IP_Adressen));
@@ -166,10 +170,47 @@ begin
 end;
 
 class function TKI.PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
+var DeltaVektor: TRoboterDaten;
+    KleinsterAbstand,Abstand: Double;
+    i,NaechsterRoboter: Integer;
 begin
+  NaechsterRoboter := 0;
+  KleinsterAbstand := (RoboterDaten[TEAM_BLAU,index].Position -
+                       RoboterDaten[TEAM_ROT,0].Position).Betrag;
 
+  //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
+  for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
+  begin
+    if RoboterDaten[TEAM_ROT,i].Aktiv then
+    begin
+      Abstand := (RoboterDaten[TEAM_BLAU,index].Position -
+                  RoboterDaten[TEAM_ROT,i].Position).Betrag;
+      if Abstand < KleinsterAbstand then
+         begin
+           KleinsterAbstand := Abstand;
+           NaechsterRoboter := i;
+         end;
+    end;
+  end;
 
-
+  //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
+  //Team Blau befindet
+  if (RoboterDaten[TEAM_BLAU,index].Position = NULLVEKTOR) or
+     (RoboterDaten[TEAM_ROT,NaechsterRoboter].Position = NULLVEKTOR) then
+  begin
+    Formular.Log_Schreiben('Null Vektor', Warnung);
+  end
+  else if (abs((RoboterDaten[TEAM_BLAU,index].Position.Winkel -
+           RoboterDaten[TEAM_ROT,NaechsterRoboter].Position.Winkel)) < (pi/2)) then
+  begin
+    ziel := NaechsterRoboter;
+    Result := FLIEHEN;
+  end
+  else
+  begin
+    ziel := NaechsterRoboter;
+    Result := FANGEN;
+  end;
 end;
 
 
