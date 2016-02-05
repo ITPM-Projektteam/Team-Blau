@@ -128,7 +128,7 @@ begin
     else if y < 0.0 then
       Result := Pi * 1.5
     else
-      raise Exception.Create('Winkel des Nullvektors kann nicht berechnet werden.');
+      raise EMathError.Create('Winkel des Nullvektors kann nicht berechnet werden.');
   end
   else
   begin
