@@ -3,7 +3,7 @@ unit mTKI;
 interface
 
 uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, DateUtils,
-     mHauptformular, mKonstanten, Math, Generics.Collections, mRoboterDaten;
+     mHauptformular, mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils;
 
 type TAktion = (FANGEN, FLIEHEN);
 
@@ -26,7 +26,11 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
+<<<<<<< HEAD
       class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
+=======
+      class procedure Init(IP_Adressen: Array of String);
+>>>>>>> refs/remotes/origin/master
       class procedure Steuern(Spielende: TDateTime);
       class function Anmelden(Teamwahl: TTeam): Boolean;
 end;
@@ -46,19 +50,105 @@ begin
 end;
 
 class function TKI.AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
+var
+  ZielPosition, aktPos: TVektor;
+  VWinkel, t: Double;
+  i: integer;
+  deltaP, deltaV: TVektor;
+  deltaWinkel: Double;
 begin
+  ZielPosition := RoboterDaten[TEAM_BLAU,index].Position + vektor;
+  aktPos := RoboterDaten[TEAM_BLAU,index].Position;
+  VWinkel := 0;
 
+  if vektor = NULLVEKTOR then exit;
+  //Roboter befindet sich außerhalb des Spielfeldes
+  if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
+     result := Spielfeld*0.5 - aktPos
+  //Aus Ecke herausfahren
+  else if (Zielposition.x>Spielfeld.x) and (Zielposition.y>Spielfeld.y) or
+          (Zielposition.x>Spielfeld.x) and (Zielposition.y<0) or
+          (Zielposition.y>Spielfeld.y) and (Zielposition.x<0) or
+          (Zielposition.x<0) and (Zielposition.y<0) then
+  begin
+    result.x := -(vektor.x);
+    result.y := -(vektor.y);
+  end
+  //Oberen Spielfeldrand nicht überfahren
+  else if (Zielposition.y > Spielfeld.y) then begin
+    result.y := Spielfeld.y-aktPos.y;
+    result.x := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.y*result.y);
+    if vektor.x < 0 then
+      result.x := -result.x;
+  end
+  //Unteren Spielfeldrand nicht überfahren
+  else if Zielposition.y < 0 then begin
+    result.y := -aktPos.y;
+    result.x := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.y*result.y);
+    if vektor.x < 0 then
+      result.x := -result.x;
+  end
+  //Rechten Spielfeldrand nicht überfahren
+  else if (Zielposition.x > Spielfeld.x) then begin
+    result.x := Spielfeld.x-aktPos.x;
+    result.y := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.x*result.x);
+    if vektor.y < 0 then
+      result.y := -result.y;
+  end
+  //Linken Spielfeldrand nicht überfahren
+  else if (Zielposition.x < 0) then begin
+    result.x := -aktPos.x;
+    result.y := Sqrt(LAENGE_FLIEHVEKTOR*LAENGE_FLIEHVEKTOR-result.x*result.x);
+    if vektor.y < 0 then
+      result.y := -result.y;
+  end;
+
+  //Kollisionen mit TeamRobotern vermeiden
+  if index = High(RoboterDaten[TEAM_BLAU]) then Exit;
+  if RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel(vektor.winkel) > AUSWEICHWINKEL then Exit;
+
+  for i := index+1 to High(RoboterDaten[TEAM_BLAU]) do begin
+    deltaP := RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_BLAU,i].Position;
+    deltaV := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit - RoboterDaten[TEAM_BLAU,i].Geschwindigkeit;
+    try
+      t := (deltaP.x*deltaV.x+deltaP.y*deltaV.y)/Power(deltaV.Betrag,2);
+    except
+      on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel => kein Ausweichen nötig
+    end;
+
+    if (t>=0) and (t<5) then
+      if ((RoboterDaten[TEAM_BLAU,index].Position+t*RoboterDaten[TEAM_BLAU,index].Geschwindigkeit) -
+         (RoboterDaten[TEAM_BLAU,i].Position+t*RoboterDaten[TEAM_BLAU,i].Geschwindigkeit)).Betrag < MINDESTABSTAND then
+      begin
+        deltaWinkel := RoboterDaten[TEAM_BLAU,i].Geschwindigkeit.winkel - RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.winkel;
+        if deltaWinkel < 0 then
+          deltaWinkel := deltaWinkel + 2*pi;
+        if deltaWinkel < Pi then begin
+          // Weiche nach rechts aus
+          result.x :=  cos(AUSWEICHWINKEL)*vektor.x + sin(AUSWEICHWINKEL)*vektor.y;
+          result.y := -sin(AUSWEICHWINKEL)*vektor.x + cos(AUSWEICHWINKEL)*vektor.y;
+        end
+        else begin
+          // Weiche nach links aus
+          result.x :=  cos(-AUSWEICHWINKEL)*vektor.x + sin(-AUSWEICHWINKEL)*vektor.y;
+          result.y := -sin(-AUSWEICHWINKEL)*vektor.x + cos(-AUSWEICHWINKEL)*vektor.y;
+      end;
+    end;
+  end;
 end;
 
 class function TKI.FangvektorBerechnen(index,ziel: Integer): TVektor;
 begin
-
+  result := RoboterDaten[TEAM_Rot,ziel].Position-RoboterDaten[TEAM_BLAU,index].Position;
 end;
 
 class function TKI.FliehvektorBerechnen(index,ziel: Integer): TVektor;
 begin
-
+  result := RoboterDaten[TEAM_BLAU,index].Position-RoboterDaten[TEAM_rot,ziel].Position;
+  result := (LAENGE_FLIEHVEKTOR/result.Betrag)*result;
 end;
+
+
 
 class procedure TKI.GeschwindigkeitenBerechnen(zeit: TDateTime);
 var
@@ -80,7 +170,11 @@ begin
   end;
 end;
 
+<<<<<<< HEAD
 class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
+=======
+class procedure TKI.Init(IP_Adressen: Array of String);
+>>>>>>> refs/remotes/origin/master
 var i: Integer;
 begin
   Server.Create(Server_Adresse, Port);
@@ -109,13 +203,16 @@ begin
   //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
   for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
   begin
-    Abstand := (RoboterDaten[TEAM_BLAU,index].Position -
-                RoboterDaten[TEAM_ROT,i].Position).Betrag;
-    if Abstand < KleinsterAbstand then
-       begin
-         KleinsterAbstand := Abstand;
-         NaechsterRoboter := i;
-       end;
+    if RoboterDaten[TEAM_ROT,i].Aktiv then
+    begin
+      Abstand := (RoboterDaten[TEAM_BLAU,index].Position -
+                  RoboterDaten[TEAM_ROT,i].Position).Betrag;
+      if Abstand < KleinsterAbstand then
+         begin
+           KleinsterAbstand := Abstand;
+           NaechsterRoboter := i;
+         end;
+    end;
   end;
 
   //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
@@ -144,7 +241,6 @@ class function TKI.RausfahrvektorBerechnen(
 var Position: TVektor;
     Abstand: Array[0..3] of Double;
     KAbstand: Double;
-
 begin
    Position := RoboterDaten[TEAM_BLAU,index].Position;
    //Berechnung der Seitenabstände mit der Annahame,
