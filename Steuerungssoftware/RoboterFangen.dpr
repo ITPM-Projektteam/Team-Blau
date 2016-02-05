@@ -9,9 +9,15 @@ uses
   mSRWLock in 'mSRWLock.pas',
   mHauptformular in 'mHauptformular.pas' {Hauptformular},
   mTKI in 'mTKI.pas',
+<<<<<<< HEAD
+  ClientUndServer in '..\..\Schiedsrichter-Server\ClientUndServer.pas',
+  Client in '..\..\Schiedsrichter-Server\Client.pas',
+  mKonstanten in 'mKonstanten.pas';
+=======
   ClientUndServer in 'ClientUndServer.pas',
   Client in 'Client.pas',
   mKonstanten in 'mKonstanten.pas',
+>>>>>>> refs/remotes/origin/master
   mRoboterDaten in 'mRoboterDaten.pas';
 
 mRoboterDaten in 'mRoboterDaten.pas';

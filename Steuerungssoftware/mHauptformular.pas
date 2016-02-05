@@ -15,7 +15,9 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor, Math;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor, Math,
+  Client, ClientUndServer;
+
 
 type
   Log_Art= (Hinweis, Warnung, Fehler);
@@ -36,11 +38,13 @@ type
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
     procedure Visualisieren();
+    procedure CB_BereitClick(Sender: TObject);
   private
     { Private-Deklarationen }
   public
     IPConfig: Textfile;
     Server_IP: String;
+    Port: Integer;
     IP_Adressen: Array of string;
     Anz_Roboter: Integer;
     { Public-Deklarationen }
@@ -79,7 +83,8 @@ begin
       readln(IPConfig, hilf);
       if i=2 then
       begin
-        Server_IP:=hilf;
+        Server_IP:=hilf.split([':'])[0];
+        Port:=strtoint(hilf.split([':'])[1]);
         Log_Schreiben('ServerIP ' + hilf, Hinweis);
       end;
 
@@ -125,6 +130,11 @@ end;
 procedure THauptformular.B_VerbindenClick(Sender: TObject);
 begin
   // Roboterverbinden();
+end;
+
+procedure THauptformular.CB_BereitClick(Sender: TObject);
+begin
+  TKI.Anmelden(Team_Blau)
 end;
 
 ///Visualisierung der Bewegungen
