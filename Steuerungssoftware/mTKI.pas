@@ -3,7 +3,7 @@ unit mTKI;
 interface
 
 uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, DateUtils,
-     mHauptformular, Math, Generics.Collections, mRoboterDaten;
+     mHauptformular, mKonstanten, Math, Generics.Collections, mRoboterDaten;
 
 type TAktion = (FANGEN, FLIEHEN);
 
@@ -84,31 +84,33 @@ begin
 end;
 
 class function TKI.PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
-var DeltaVektor: TVektor;
+var DeltaVektor: TRoboterDaten;
     i,j: Integer;
-
 begin
   j := 0;
-  DeltaVektor.x := RoboterDaten[TEAM_BLAU,index].Position.x - RoboterDaten[TEAM_ROT,0].Position.x;
-  DeltaVektor.y := RoboterDaten[TEAM_BLAU,index].Position.y - RoboterDaten[TEAM_ROT,0].Position.y;
+  DeltaVektor.Position := RoboterDaten[TEAM_BLAU,index].Position -
+                          RoboterDaten[TEAM_ROT,0].Position;
 
-
+  //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
   for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
   begin
-    if (RoboterDaten[TEAM_ROT,i].Position.x < DeltaVektor.x) and
-       (RoboterDaten[TEAM_ROT,i].Position.y < DeltaVektor.y) then
+    if (RoboterDaten[TEAM_ROT,i].Position.x < DeltaVektor.Position.x) then
        begin
-         DeltaVektor.x := RoboterDaten[TEAM_ROT,i].Position.x;
-         DeltaVektor.y := RoboterDaten[TEAM_ROT,i].Position.y;
+         DeltaVektor.Position.x := RoboterDaten[TEAM_ROT,i].Position.x;
+         DeltaVektor.Position.y := RoboterDaten[TEAM_ROT,i].Position.y;
          j := i;
        end;
   end;
 
-  if (RoboterDaten[TEAM_BLAU,index].Position.Winkel = 0) or (RoboterDaten[TEAM_ROT,j].Position.Winkel = 0) then
+  //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
+  //Team Blau befindet
+  if (RoboterDaten[TEAM_BLAU,index].Position.Winkel = NULLVEKTOR) or
+     (RoboterDaten[TEAM_ROT,j].Position.Winkel = NULLVEKTOR) then
   begin
     Formular.Log_Schreiben('Null Vektor', Warnung);
   end
-  else if (RoboterDaten[TEAM_BLAU,index].Position.Winkel-RoboterDaten[TEAM_ROT,j].Position.Winkel) < (pi/2) then
+  else if (RoboterDaten[TEAM_BLAU,index].Position.Winkel -
+           RoboterDaten[TEAM_ROT,j].Position.Winkel) < (pi/2) then
   begin
     ziel := j;
     Result := FLIEHEN;
