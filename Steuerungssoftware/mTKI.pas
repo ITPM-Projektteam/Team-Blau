@@ -91,12 +91,13 @@ begin
   DeltaVektor.Position := RoboterDaten[TEAM_BLAU,index].Position -
                           RoboterDaten[TEAM_ROT,0].Position;
 
-  //Pruefung welcher Roboter vom Team Rot am nähesten am Roboter von Team Blau ist
+  //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
   for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
   begin
-    if (RoboterDaten[TEAM_ROT,i].Position < DeltaVektor.Position) then
+    if (RoboterDaten[TEAM_ROT,i].Position.x < DeltaVektor.Position.x) then
        begin
-         DeltaVektor.Position := RoboterDaten[TEAM_ROT,i].Position;
+         DeltaVektor.Position.x := RoboterDaten[TEAM_ROT,i].Position.x;
+         DeltaVektor.Position.y := RoboterDaten[TEAM_ROT,i].Position.y;
          j := i;
        end;
   end;
