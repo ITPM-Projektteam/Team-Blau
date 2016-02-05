@@ -245,9 +245,32 @@ begin
 end;
 
 class procedure TKI.SteuerbefehlSenden(index: Integer; vektor: TVektor);
-begin
+var
+ Roboter: TTXTMobilRoboter;
+ Daten: TRoboterDaten;
+ akt_Vektor: tVektor;
 
+const
+  Geschwindigkeit= 512;
+  c_Radius = 2;         //Konstante zum dehen, auf ° bezogen
+
+begin
+  Roboter:= Roboter[Index];
+  akt_Vektor:=Roboterdaten[Team_Blau,Index].Geschwindigkeit;
+
+  if not((akt_Vektor=NULLVEKTOR) or (vektor=NULLVEKTOR)) then
+  begin
+    if Vektor.Winkel(akt_Vektor)<pi then
+    Roboter.Bewegenalle(Geschwindigkeit,
+                                 Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
+    else if Vektor.Winkel(akt_Vektor)>pi  then
+    Roboter.Bewegenalle(Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),
+                                 Geschwindigkeit)
+    else
+    Roboter.BewegenAlle(Geschwindigkeit,Geschwindigkeit);
+  end;
 end;
+
 
 class procedure TKI.Steuern(spielende: TDateTime);
 var einRoboter: TTXTMobilRoboter;
