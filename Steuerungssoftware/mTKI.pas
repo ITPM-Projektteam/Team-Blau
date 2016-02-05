@@ -14,6 +14,7 @@ type TKI = class(TObject)
       class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
       class var Roboter: Array of TTXTMobilRoboter;
       class var Spielfeld: TVektor;
+      class var Server: TServerVerbindung;
 
       class function PrioritaetFestlegen(index: Integer; out Ziel: Integer): TAktion;
       class function FangvektorBerechnen(index, Ziel: Integer): TVektor;
@@ -25,7 +26,7 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
-      class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+      class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
       class procedure Steuern(Spielende: TDateTime);
 end;
 
@@ -68,9 +69,11 @@ begin
   end;
 end;
 
-class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String);
+class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
 var i: Integer;
 begin
+  Server.Create(Server_Adresse, Port);
+
   setlength(Roboter, Length(IP_Adressen));
   for i:= Low(Roboter) to High(Roboter) do
   begin
@@ -152,13 +155,30 @@ begin
 end;
 
 class function TKI.ServerdatenEmpfangen: Boolean;
+var
+  i: Integer;
+  Team: TTeam;
+  Serverdaten: TSpielstatus;
 begin
+  Serverdaten:= Server.StatusEmpfangen;
+  for Team in [Team_Blau,Team_Rot] do
+  begin
+    for i := low(Roboterdaten[Team]) to High(Roboterdaten[Team]) do
+    begin
+      Roboterdaten[Team,i].Position.x:=Serverdaten.Roboterpositionen[Team,i].x;
+      Roboterdaten[Team,i].Position.y:=Serverdaten.Roboterpositionen[Team,i].y;
+      Roboterdaten[Team,i].Aktiv:=Serverdaten.RoboterIstAktiv[Team,i];
 
+      Roboterdaten[Team,i].Positionsverlauf.Enqueue(Roboterdaten[Team,i].Position);
+
+      GeschwindigkeitenBerechnen(Serverdaten.Zeit);
+    end;
+  end;
 end;
 
 class procedure TKI.SteuerbefehlSenden(index: Integer; vektor: TVektor);
 var
- Roboter: TTXTMobilRoboter;
+ Roboter_Blau: TTXTMobilRoboter;
  Daten: TRoboterDaten;
  akt_Vektor: tVektor;
 
@@ -167,19 +187,19 @@ const
   c_Radius = 2;         //Konstante zum dehen, auf ° bezogen
 
 begin
-  Roboter:= Roboter[Index];
+  Roboter_Blau:= Roboter[Index];
   akt_Vektor:=Roboterdaten[Team_Blau,Index].Geschwindigkeit;
 
   if not((akt_Vektor=NULLVEKTOR) or (vektor=NULLVEKTOR)) then
   begin
     if Vektor.Winkel(akt_Vektor)<pi then
-    Roboter.Bewegenalle(Geschwindigkeit,
+    Roboter_Blau.Bewegenalle(Geschwindigkeit,
                                  Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
     else if Vektor.Winkel(akt_Vektor)>pi  then
-    Roboter.Bewegenalle(Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),
+    Roboter_Blau.Bewegenalle(Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),
                                  Geschwindigkeit)
     else
-    Roboter.BewegenAlle(Geschwindigkeit,Geschwindigkeit);
+    Roboter_Blau.BewegenAlle(Geschwindigkeit,Geschwindigkeit);
   end;
 end;
 

@@ -9,8 +9,8 @@ uses
   mSRWLock in 'mSRWLock.pas',
   mHauptformular in 'mHauptformular.pas' {Hauptformular},
   mTKI in 'mTKI.pas',
-  ClientUndServer in 'ClientUndServer.pas',
-  Client in 'Client.pas',
+  ClientUndServer in '..\..\Schiedsrichter-Server\ClientUndServer.pas',
+  Client in '..\..\Schiedsrichter-Server\Client.pas',
   mKonstanten in 'mKonstanten.pas';
   mRoboterDaten in 'mRoboterDaten.pas';
 
