@@ -82,6 +82,7 @@ object Hauptformular: THauptformular
       Height = 17
       Caption = 'Bereit'
       TabOrder = 0
+      OnClick = CB_BereitClick
     end
     object B_Verbinden: TButton
       Left = 133
