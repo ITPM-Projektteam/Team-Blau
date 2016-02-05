@@ -217,7 +217,8 @@ begin
     else
       Result := FANGEN;
   Except
-	on EMathError do Formular.Log_Schreiben('Zwei Roboter haben die gleiche Position oder ein eigener Roboter steht still.', Warnung);		
+	on EMathError do Formular.Log_Schreiben('Zwei Roboter haben die gleiche Position oder ein eigener Roboter steht still.', Warnung);
+  End;
 end;
 
 
