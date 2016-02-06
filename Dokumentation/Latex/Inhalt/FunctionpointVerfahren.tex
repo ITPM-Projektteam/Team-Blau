@@ -1,0 +1,114 @@
+\section{Aufwandsschätzung}
+Um den Aufwand unseres IT-Projektes abschätzen zu können, haben wir die Methode Function-Point benutzt.
+
+Das Function-Point-Verfahren(auch -Analys oder -Methode, kurz: FPA) dient der Bewertung des fachlich-funktionalen Umfangs eines Informationstechnischen Systems.\\
+\newline
+Die Durchführung des Verfahrens verläuft in 5 Schritten:
+\begin{enumerate}
+	\item Analyse der Komponenten und Kategorisierung ihrer Funktionalitäten
+	\item Bewertung der verschiedenen Funktionskategorien
+	\item Einbeziehung besonderer Einflussfaktoren
+	\item Ermittlung der sog. Total Function Points(TFP)
+	\item Ableitung des zu erwartenden Entwicklungsaufwandes
+\end{enumerate}
+\vspace{0.2cm}
+\paragraph{1. Schritt}
+\begin{itemize}
+	\item Eingabedaten
+	\begin{itemize}
+		\item GUI
+		\item Programmstart
+	\end{itemize}
+	\item Ausgabedaten
+	\begin{itemize}
+		\item Ereignisprotokolldatei
+		\item Kamerabild
+		\item Steuerbefehle senden
+	\end{itemize}
+	\item projektbez. Datenbestände
+	\begin{itemize}
+		\item Fahrtrichtung
+		\item Fangen
+		\item Fliehen
+		\item Ausweichen
+		\item Im Feld bleiben
+		\item Rausfahren nach dem Fangen
+		\item Vektorberechnung
+	\end{itemize}
+	\item externe Datenbestände
+	\begin{itemize}
+		\item Positionsdaten
+		\item Mitteilung gefangen
+		\item Roboter aktiv?
+	\end{itemize}
+\end{itemize}
+
+\newpage
+\begin{landscape}
+	\paragraph{2. Schritt}
+	\begin{center}
+		\begin{tabular}{|l|ccc|ccc|ccc|}
+			\hline
+			\multirow{2}{*}{Funktionskategorie} & \multicolumn{3}{c|}{Anzahl der Funktionen} & \multicolumn{3}{c|}{Faktoren der Funktionen} & \multicolumn{3}{c|}{Funktionspunkte}\\
+			& Einfach & Mittel & Komplex & Einfach & Mittel & Komplex & Einfach & Mittel & Komplex\\
+			\hline
+			Eingabedaten & 1 & 1 & 0 & 3 & 4 & 6 & 3 & 4 & 0\\
+			Ausgabedaten & 1 & 2 & 0 & 4 & 5 & 7 & 4 & 10 & 0\\
+			Projektbez. Datenbestände & 1 & 3 & 3 & 7 & 10 & 15 & 7 & 30 & 45\\
+			Externe Datenbestände & 3 & 0 & 0 & 5 & 7 & 10 & 15 & 0 & 0\\
+			\hline
+			\multicolumn{10}{c}{}\\
+			\cline{8-10}
+			\multicolumn{7}{c}{} & \multicolumn{2}{|l|}{{\bf Summe S$1$:}} & {\bf $118$}\\
+			\cline{8-10}			
+		\end{tabular}
+	\end{center}
+	\vspace{0.2cm}
+	\begin{minipage}{0.7\textwidth}
+		\paragraph{3. Schritt}
+		\begin{center}
+			\begin{tabular}{|c|l|c|}
+				\hline
+				Nr & Einflussfaktoren & Gewichte\\
+				\hline
+				1 & Schwierigkeit und Komplexität der Rechenoperatoren (Faktor 2) & 2\\
+				2 & Schwierigkeit und Komplexität der Ablauflogik & 5\\
+				3 & Umfang der Ausnahmeregelung (Faktor 2) & 6\\
+				4 & Verflechtungen mit anderen IT-Systemen & 3\\
+				5 & dezentrale Verarbeitung und Datenhaltung & 0\\
+				6 & erforderliche Maßnahmen der IT Sicherheit & 0\\
+				7 & angestrebte Rechengeschwindigkeit & 1\\
+				8 & Konvertierung der Datenbeständen & 0\\
+				9 & Benutzer- und Änderungsfreundlichkeit & 1\\
+				10 & Wiederverwendbarkeit von Komponenten (bspw. Klassen) & 1\\
+				\hline
+				\multicolumn{3}{c}{}\\
+				\cline{2-3}
+			    \multicolumn{1}{c}{} & \multicolumn{1}{|l|}{{\bf Summe S$2$:}} & $19$\\
+				\cline{2-3} 
+			\end{tabular}
+		\end{center}
+	\end{minipage}
+\end{landscape}
+
+\paragraph{4. Schritt}
+\begin{align*}
+	\text{TFP} &= \text{S}1 \cdot \text{S}3\\
+			   &= \text{S}1 \cdot \left(0{,}7 + \frac{\text{S}2}{100}\right)\\
+			   &= 118 \cdot \left( 0{,}7 + \frac{19}{100}\right)\\
+	\text{TFP} &= 105{,}02\\
+\end{align*}
+\paragraph{5. Schritt}
+\[\text{PM\footnotemark} = 0{,}08 \cdot \text{TFP}-7 \leq 1000\text{TFP} > \text{PM} = 0{,}08 \cdot \text{TFP}-108\]
+\begin{align*}
+	\text{PM} &= 0{,}08 \cdot \text{TFP} - 7 \\
+			  &= 0{,}08 \cdot 105{,}02 -7\\
+	\text{PM} &= 1{,}4016\\
+	\\
+	\text{PM} &= 672{,}77 \text{h}\\
+	\\
+	\text{3 Personen} &= 224{,}256\text{h pro Person}\\
+	\text{4 Personen} &= 168{,}192\text{h pro Person}\\
+\end{align*}\footnotetext{Personenmonate(PM) = 20 Arbeitstage}
+
+$\Rightarrow$ Bei einem 4 starken Team benötigen wir ca. 170h pro Person.
