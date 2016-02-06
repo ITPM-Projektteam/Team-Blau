@@ -1,4 +1,16 @@
 \select@language {ngerman}
-\contentsline {section}{\numberline {1}Projektbeschreibung}{2}
-\contentsline {section}{\numberline {2}Spielregeln}{3}
-\contentsline {section}{\numberline {3}Benutzeroberfl\IeC {\"a}che}{3}
+\contentsline {section}{\numberline {1}Projektbeschreibung}{3}
+\contentsline {subsection}{\numberline {1.1}Spielablauf}{4}
+\contentsline {section}{\numberline {2}Gantt-Diagramm}{4}
+\contentsline {section}{\numberline {3}Aufwandssch\IeC {\"a}tzung}{7}
+\contentsline {paragraph}{\nonumberline 1. Schritt}{7}
+\contentsline {paragraph}{\nonumberline 2. Schritt}{9}
+\contentsline {paragraph}{\nonumberline 3. Schritt}{9}
+\contentsline {paragraph}{\nonumberline 4. Schritt}{10}
+\contentsline {paragraph}{\nonumberline 5. Schritt}{10}
+\contentsline {section}{\numberline {4}GitHub}{10}
+\contentsline {subsection}{\numberline {4.1}ZenHub}{10}
+\contentsline {section}{\numberline {5}Bedienung}{11}
+\contentsline {section}{\numberline {6}Programmierung}{11}
+\contentsline {subsection}{\numberline {6.1}Programmablaufplan}{11}
+\contentsline {section}{\numberline {7}Res\IeC {\"u}mee}{18}
