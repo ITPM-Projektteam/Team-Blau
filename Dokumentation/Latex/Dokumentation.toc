@@ -12,5 +12,5 @@
 \contentsline {subsection}{\numberline {4.1}ZenHub}{10}
 \contentsline {section}{\numberline {5}Bedienung}{11}
 \contentsline {section}{\numberline {6}Programmierung}{11}
-\contentsline {subsection}{\numberline {6.1}Programmablaufplan}{11}
-\contentsline {section}{\numberline {7}Res\IeC {\"u}mee}{18}
+\contentsline {subsection}{\numberline {6.1}Programmablaufplan}{13}
+\contentsline {section}{\numberline {7}Res\IeC {\"u}mee}{19}
