@@ -58,7 +58,7 @@ begin
   VWinkel := 0;
 
   if vektor = NULLVEKTOR then exit;
-  //Roboter befindet sich außerhalb des Spielfeldes
+  //Roboter befindet sich ausserhalb des Spielfeldes
   if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
      result := Spielfeld*0.5 - aktPos
   //Aus Ecke herausfahren
@@ -70,22 +70,22 @@ begin
     result.x := -(vektor.x);
     result.y := -(vektor.y);
   end
-  //Oberen Spielfeldrand nicht überfahren
+  //Oberen Spielfeldrand nicht ueberfahren
   else if (Zielposition.y > Spielfeld.y) then begin
     result.y := Spielfeld.y-aktPos.y;
     result.x := Sign(vektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
-  //Unteren Spielfeldrand nicht überfahren
+  //Unteren Spielfeldrand nicht ueberfahren
   else if Zielposition.y < 0 then begin
     result.y := -aktPos.y;
     result.x := Sign(vektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
-  //Rechten Spielfeldrand nicht überfahren
+  //Rechten Spielfeldrand nicht ueberfahren
   else if (Zielposition.x > Spielfeld.x) then begin
     result.x := Spielfeld.x-aktPos.x;
     result.y := Sign(vektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
   end
-  //Linken Spielfeldrand nicht überfahren
+  //Linken Spielfeldrand nicht ueberfahren
   else if (Zielposition.x < 0) then begin
     result.x := -aktPos.x;
     result.y := Sign(vektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
@@ -101,7 +101,7 @@ begin
     try
       t := (deltaP.x*deltaV.x+deltaP.y*deltaV.y)/Power(deltaV.Betrag,2);
     except
-      on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel => kein Ausweichen nötig
+      on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel => kein Ausweichen noetig
     end;
 
     if (t>=0) and (t<5) then
@@ -166,7 +166,7 @@ begin
         Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i]);
         Roboter[i].Start;
     except
-        Hauptformular.Log_Schreiben('Verbindung nicht möglich', Fehler);
+        Hauptformular.Log_Schreiben('Verbindung nicht moeglich', Fehler);
     end;
   end;
 end;
@@ -218,7 +218,7 @@ var Position: TVektor;
     KAbstand: Double;
 begin
    Position := RoboterDaten[TEAM_BLAU,index].Position;
-   //Berechnung der Seitenabstände mit der Annahame,
+   //Berechnung der Seitenabstaende mit der Annahame,
    //dass sich unten links der Koordinatenursprung befindet.
    Abstand[0] := Position.x;                //links
    Abstand[1] := Spielfeld.x-Position.x;    //rechts
@@ -266,7 +266,7 @@ var
 
 const
   Geschwindigkeit= 512;
-  c_Radius = 2;         //Konstante zum dehen, auf ° bezogen
+  c_Radius = 2;         //Konstante zum drehen, auf Grad bezogen
 
 begin
   Roboter_Blau:= Roboter[Index];
@@ -287,7 +287,7 @@ class procedure TKI.Steuern(spielende: TDateTime);
 var einRoboter: TTXTMobilRoboter;
 begin
   // Startaufstellung einnehmen
-  // Queues füllen
+  // Queues fuellen
 
   while True do // Andere Bedingung
   begin

@@ -10,7 +10,13 @@
 \contentsline {paragraph}{\nonumberline 5. Schritt}{10}
 \contentsline {section}{\numberline {4}GitHub}{10}
 \contentsline {subsection}{\numberline {4.1}ZenHub}{10}
-\contentsline {section}{\numberline {5}Bedienung}{11}
-\contentsline {section}{\numberline {6}Programmierung}{11}
-\contentsline {subsection}{\numberline {6.1}Programmablaufplan}{13}
-\contentsline {section}{\numberline {7}Res\IeC {\"u}mee}{19}
+\contentsline {section}{\numberline {5}Bedienung}{12}
+\contentsline {section}{\numberline {6}Programmierung}{12}
+\contentsline {subsection}{\numberline {6.1}Programmablaufplan}{12}
+\contentsline {subsection}{\numberline {6.2}Benutzeroberfl\IeC {\"a}che}{13}
+\contentsline {subsection}{\numberline {6.3}Klassen}{13}
+\contentsline {subsubsection}{\numberline {6.3.1}Vektor}{13}
+\contentsline {subsubsection}{\numberline {6.3.2}KI}{13}
+\contentsline {subsubsection}{\numberline {6.3.3}Konstanten}{14}
+\contentsline {subsubsection}{\numberline {6.3.4}Roboter Daten}{14}
+\contentsline {section}{\numberline {7}Res\IeC {\"u}mee}{14}

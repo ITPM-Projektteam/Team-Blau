@@ -1,33 +1,110 @@
 \section{Programmierung}
-Test
 \input{Inhalt/Skizze_KI.tex}
+\subsection{Benutzeroberfläche}
 
- \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
- \definecolor{lightgray}{rgb}{0.8,0.8,0.8}
- \definecolor{orange}{rgb}{0.8,0.3,0.3}
- \definecolor{yac}{rgb}{0.6,0.6,0.1}
+\subsection{Klassen}
+Für die Berechnungen und Logik haben wir eigene Klassen geschrieben.\\
+\newline
+Diese unterteilen sich in:
+\begin{itemize}
+	\item mVektor
+	\item mTKI
+	\item mKonstanten
+	\item mRoboterDaten
+\end{itemize}
 
- \lstset{
- 	basicstyle=\scriptsize\ttfamily,
- 	keywordstyle=\bfseries\ttfamily\color{orange},
- 	stringstyle=\color{green}\ttfamily,
- 	commentstyle=\color{middlegray}\ttfamily,
- 	emph={square}, 
- 	emphstyle=\color{blue}\texttt,
- 	emph={[2]root,base},
- 	emphstyle={[2]\color{yac}\texttt},
- 	showstringspaces=false,
- 	flexiblecolumns=false,
- 	tabsize=2,
- 	numbers=left,
- 	numberstyle=\tiny,
- 	numberblanklines=true,
- 	stepnumber=1,
- 	numbersep=10pt,
- 	xleftmargin=15pt
- }
+\subsubsection{Vektor}
+\begin{itemize}
+	\item Funktionen
+	\begin{description}
+		\item[Label] Beschreibung
+	\end{description}
+	\item Prozeduren
+	\begin{description}
+		\item[Label] Beschreibung
+	\end{description}
+	\item Variablen
+	\begin{description}
+		\item[Label] Beschreibung
+	\end{description}
+\end{itemize}
 
-\lstinputlisting[caption={Klasse für die KI}
-				 \label{lst:mTKI}, 
-				 captionpos=t, language=DELPHI]
-				 {Inhalt/Quellcode/mTKI.pas}
+\subsubsection{KI}
+\begin{itemize}
+	\item Funktionen
+	\begin{description}
+		\item[PrioritätFestlegen] Beschreibung
+		\item[FangvektorBerechnen] description
+		\item[FliehvektorBerechnen] description
+		\item[AusweichvektorBerechnen] description
+		\item[RausfahrvektorBerechnen] description
+		\item[ServerdatenEmpfangen] description
+		\item[Anmelden] description
+	\end{description}
+	\item Prozeduren
+	\begin{description}
+		\item[SteuerbefehlSenden] Beschreibung
+		\item[GeschwindigkeitBerechnen] description
+		\item[Initialisierung] description
+		\item[Steuern] description
+	\end{description}
+	\item Variablen
+	\begin{description}
+		\item[ZeitletzterFrames] Beschreibung
+		\item[RoboterDaten] description
+		\item[Roboter] description	
+		\item[Spielfeld] description
+		\item[Server] description	
+	\end{description}
+\end{itemize}
+
+\subsubsection{Konstanten}
+\begin{itemize}
+	\item Variablen
+	\begin{description}
+		\item[Mindestabstand] Beschreibung
+		\item[Nullvektor] ist ein konstanter Record
+	\end{description}
+\end{itemize}
+
+\subsubsection{Roboter Daten}
+\begin{itemize}
+	\item Variablen
+	\begin{description}
+		\item[Position] eines jeden Roboters vom Typ TVektor 
+		\item[Geschwindigkeit] eines jeden Roboters in $\frac{m}{s}$ vom Typ TVektor
+		\item[Positionverlauf] ist eine Warteschlange(TQueue) mit Positionen des Roboters vom Typ TVektor
+		\item[Aktiv] description
+	\end{description}
+\end{itemize}
+
+
+% \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+% \definecolor{orange}{rgb}{0.8,0.3,0.3}
+% \definecolor{yac}{rgb}{0.6,0.6,0.1}
+%
+% \lstset{
+% 	basicstyle=\scriptsize\ttfamily,
+% 	keywordstyle=\bfseries\ttfamily\color{orange},
+% 	stringstyle=\color{green}\ttfamily,
+% 	commentstyle=\color{middlegray}\ttfamily,
+% 	emph={square}, 
+% 	emphstyle=\color{blue}\texttt,
+% 	emph={[2]root,base},
+% 	emphstyle={[2]\color{yac}\texttt},
+% 	showstringspaces=false,
+% 	flexiblecolumns=false,
+% 	tabsize=2,
+% 	numbers=left,
+% 	numberstyle=\tiny,
+% 	numberblanklines=true,
+% 	stepnumber=1,
+% 	numbersep=10pt,
+% 	xleftmargin=10pt
+% }
+%
+%\lstinputlisting[caption={Klasse für die KI}
+%				 \label{lst:mTKI}, 
+%				 captionpos=t, language=pascal]
+%				 {Inhalt/Quellcode/mTKI.pas}
