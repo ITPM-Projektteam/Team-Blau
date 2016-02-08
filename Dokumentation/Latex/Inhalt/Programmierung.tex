@@ -13,31 +13,44 @@ Diese unterteilen sich in:
 	\item mRoboterDaten
 \end{itemize}
 
-\subsubsection{Vektor}
+\subsubsection{mVektor}
+Die Klasse mVektor besteht aus dem Record TVektor.
+
+Dieser hat folgende Funktionen, überladende Operatoren und Variablen:
 \begin{itemize}
 	\item Funktionen
 	\begin{description}
-		\item[Label] Beschreibung
+		\item[Winkel(überladen)] gibt den Winkel des Vektors, bezogen auf die X-Achse, zurück
+		\item[Winkel(überladen)] gibt den Winkel zwischen zwei Vektoren zurück
+		\item[Betrag] gibt die Länge des Vektors zurück(Euklidische Norm "`2-Norm"')
+		\item[Drehen] dreht den Vektor um einen, als Parameter übergebenen, Winkel
 	\end{description}
-	\item Prozeduren
+	\item Operatoren
 	\begin{description}
-		\item[Label] Beschreibung
+		\item[Add] Komponentenweise Addition zweier Vektoren
+		\item[Substract] Komponentenweise Subtraktion zweier Vektoren
+		\item[Multiply(überladen)] Komponentenweise Multiplikation eines Vektors mit einem Skalar
+		\item[Multiply(überladen)] Komponentenweise Multiplikation eines Skalars mit einem Vektor
+		\item[Equal] überprüft die Komponenten zweier Vektoren auf Gleichheit
 	\end{description}
 	\item Variablen
 	\begin{description}
-		\item[Label] Beschreibung
+		\item[x,y] Komponenten des Vektors
 	\end{description}
 \end{itemize}
 
-\subsubsection{KI}
+\subsubsection{mTKI}
+Die Klasse mTKI hat einen Datentypen TAktion mit den Werten Fliehen und Fangen und eine abgeleitete Klasse TKI von TObject.
+Die abgeleitete Klasse TKI besteht aus foglenden Funktionen, Prozeduren und Variablen:
 \begin{itemize}
 	\item Funktionen
 	\begin{description}
-		\item[PrioritätFestlegen] Beschreibung
+		\item[PrioritätFestlegen] Anhand der Positionsdaten der gegnerischen Roboter wird überprüft, welcher sich am nächsten an unserem
+		Roboter befindet. Anschließend wird über die Winkel Funktion von der Klasse mVektor ermittelt, ob sich dieser Roboter vor oder hinter unserem Roboter befindet. Danach wird die Priorität auf FANGEN bzw. FLIEHEN gesetzt.
 		\item[FangvektorBerechnen] description
 		\item[FliehvektorBerechnen] description
 		\item[AusweichvektorBerechnen] description
-		\item[RausfahrvektorBerechnen] description
+		\item[RausfahrvektorBerechnen] Sobald ein Roboter aus unserem Team gefangen wurde, wird ein Vektor zum Raus fahren aus dem Spielfeld berechnet.
 		\item[ServerdatenEmpfangen] description
 		\item[Anmelden] description
 	\end{description}
@@ -58,7 +71,8 @@ Diese unterteilen sich in:
 	\end{description}
 \end{itemize}
 
-\subsubsection{Konstanten}
+\subsubsection{mKonstanten}
+Da wir an verschiedenen Stellen die gleichen Werte benötigten, erstellten wir eine eigene Klasse für Konstanten.
 \begin{itemize}
 	\item Variablen
 	\begin{description}
@@ -67,12 +81,15 @@ Diese unterteilen sich in:
 	\end{description}
 \end{itemize}
 
-\subsubsection{Roboter Daten}
+\subsubsection{mRoboterDaten}
+Um den Zugriff auf die Daten eines Roboters zu vereinfachen, haben wir diese in einer eigenen Klasse mRoboterDaten untergebracht.
+
+Diese besteht aus einem Record TRoboterDaten mit folgenden Variablen:
 \begin{itemize}
 	\item Variablen
 	\begin{description}
 		\item[Position] eines jeden Roboters vom Typ TVektor 
-		\item[Geschwindigkeit] eines jeden Roboters in $\frac{m}{s}$ vom Typ TVektor
+		\item[Geschwindigkeit] eines jeden Roboters vom Typ TVektor
 		\item[Positionverlauf] ist eine Warteschlange(TQueue) mit Positionen des Roboters vom Typ TVektor
 		\item[Aktiv] description
 	\end{description}

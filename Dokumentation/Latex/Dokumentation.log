@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  7 FEB 2016 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  8 FEB 2016 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,8 +1063,13 @@ File: Bilder/Spielfeld.pdf Graphic file (type pdf)
 <use Bilder/Spielfeld.pdf>
 Package pdftex.def Info: Bilder/Spielfeld.pdf used on input line 3.
 (pdftex.def)             Requested size: 209.12778pt x 203.3467pt.
- [3]) (./Inhalt/GanttChart.tex [4 <./Bilder/Spielfeld.pdf>] <Bilder/GanttDiagra
-mm_[Page1].pdf, id=37, 845.1575pt x 597.23125pt>
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
+
+ []
+
+) (./Inhalt/GanttChart.tex [4 <./Bilder/Spielfeld.pdf>]
+<Bilder/GanttDiagramm_[Page1].pdf, id=37, 845.1575pt x 597.23125pt>
 File: Bilder/GanttDiagramm_[Page1].pdf Graphic file (type pdf)
 
 <use Bilder/GanttDiagramm_[Page1].pdf>
@@ -1172,7 +1177,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
 
-[13]) (./Inhalt/Resuemee.tex) [14] (./Dokumentation.aux) ) 
+
+Overfull \hbox (27.81226pt too wide) in paragraph at lines 48--50
+[]\OT1/lmr/m/n/10.95 Anhand der Po-si-ti-ons-da-ten der geg-ne-ri-schen Ro-bo-t
+er wird []uberpr[]uft,
+ []
+
+[13] [14]) (./Inhalt/Resuemee.tex) [15] (./Dokumentation.aux) ) 
 Here is how much of TeX's memory you used:
  18659 strings out of 493339
  355527 string characters out of 6141382
@@ -1181,24 +1192,23 @@ Here is how much of TeX's memory you used:
  55730 words of font info for 63 fonts, out of 8000000 for 9000
  953 hyphenation exceptions out of 8191
  64i,15n,64p,435b,719s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/t
-exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts
-/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ma
-thex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/
-share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/l
-m/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm
-/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Dokumentation.pdf (15 pages, 256230 bytes).
+{/usr/share/texl
+ive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/
+lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<
+/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on Dokumentation.pdf (16 pages, 257016 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 189 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
