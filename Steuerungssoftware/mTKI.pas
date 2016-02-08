@@ -199,24 +199,20 @@ begin
     end;
   end;
 
+  ziel := NaechsterRoboter;
+  
   //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
   //Team Blau befindet
-  if (RoboterDaten[TEAM_BLAU,index].Position = NULLVEKTOR) or
-     (RoboterDaten[TEAM_ROT,NaechsterRoboter].Position = NULLVEKTOR) then
-  begin
-    Formular.Log_Schreiben('Null Vektor', Warnung);
-  end
-  else if (abs((RoboterDaten[TEAM_BLAU,index].Position.Winkel -
-           RoboterDaten[TEAM_ROT,NaechsterRoboter].Position.Winkel)) < (pi/2)) then
-  begin
-    ziel := NaechsterRoboter;
-    Result := FLIEHEN;
-  end
-  else
-  begin
-    ziel := NaechsterRoboter;
-    Result := FANGEN;
-  end;
+  Try
+	if InRange(
+		(RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_ROT,NaechsterRoboter].Position)
+		  .Winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit), pi*0.5, pi*1.5) then
+      Result := FLIEHEN;
+    else
+      Result := FANGEN;
+  Except
+	on EMathError do Formular.Log_Schreiben('Zwei Roboter haben die gleiche Position oder ein eigener Roboter steht still.', Warnung);
+  End;
 end;
 
 
