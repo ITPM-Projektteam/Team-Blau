@@ -60,6 +60,7 @@ type TVektor = record
     /// Gibt die Länge des Vektors zurück (Euklidische Norm)
     function Betrag: Double;
 
+    // Gibt den Vektor nach einer Drehung um einen Winkel zurück
     function Drehen(Winkel: Double): TVektor;
 
 end;
@@ -97,11 +98,12 @@ begin
   Result := Sqrt(Sqr(x) + Sqr(y));
 end;
 
-
 function TVektor.Drehen(Winkel: Double): TVektor;
 begin
-  result.x :=  cos(-Winkel)*self.x + sin(-Winkel)*self.y;
-  result.y := -sin(-Winkel)*self.x + cos(-Winkel)*self.y;
+  //Mit der Drehmatrix wird ein neuer Vektor berechnet, der um einen Winkel
+  //nach links(positiv) bzw. rechts(negativ) gedreht ist.
+  result.x :=  cos(Winkel)*self.x - sin(Winkel)*self.y;
+  result.y :=  sin(Winkel)*self.x + cos(Winkel)*self.y;
 end;
 
 class operator TVektor.Equal(const Vektor1, Vektor2: TVektor): Boolean;

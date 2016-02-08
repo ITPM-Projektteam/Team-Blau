@@ -460,11 +460,8 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-<<<<<<< HEAD
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
-=======
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
->>>>>>> refs/remotes/origin/master
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>

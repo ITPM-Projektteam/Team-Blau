@@ -26,11 +26,7 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
-<<<<<<< HEAD
       class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
-=======
-      class procedure Init(IP_Adressen: Array of String);
->>>>>>> refs/remotes/origin/master
       class procedure Steuern(Spielende: TDateTime);
       class function Anmelden(Teamwahl: TTeam): Boolean;
 end;
@@ -65,6 +61,11 @@ begin
   //Roboter befindet sich außerhalb des Spielfeldes
   if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
      result := Spielfeld*0.5 - aktPos
+  //Roboter befindet sich in der Nähe des Spielfeldrandes
+  //und darf nur in eine Richtung ablenken
+
+
+
   //Aus Ecke herausfahren
   else if (Zielposition.x>Spielfeld.x) and (Zielposition.y>Spielfeld.y) or
           (Zielposition.x>Spielfeld.x) and (Zielposition.y<0) or
@@ -117,15 +118,13 @@ begin
           deltaWinkel := deltaWinkel + 2*pi;
         if deltaWinkel < Pi then begin
           // Weiche nach rechts aus
-          result.x :=  cos(AUSWEICHWINKEL)*vektor.x + sin(AUSWEICHWINKEL)*vektor.y;
-          result.y := -sin(AUSWEICHWINKEL)*vektor.x + cos(AUSWEICHWINKEL)*vektor.y;
+          result := vektor.Drehen(-AUSWEICHWINKEL);
         end
         else begin
           // Weiche nach links aus
-          result.x :=  cos(-AUSWEICHWINKEL)*vektor.x + sin(-AUSWEICHWINKEL)*vektor.y;
-          result.y := -sin(-AUSWEICHWINKEL)*vektor.x + cos(-AUSWEICHWINKEL)*vektor.y;
+          result := vektor.Drehen(AUSWEICHWINKEL);
+        end;
       end;
-    end;
   end;
 end;
 
@@ -140,8 +139,6 @@ begin
   result := (LAENGE_FLIEHVEKTOR/result.Betrag)*result;
 end;
 
-
-
 class procedure TKI.GeschwindigkeitenBerechnen(zeit: TDateTime);
 var
   einRoboter: TRoboterDaten;
@@ -155,16 +152,13 @@ begin
     for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
     begin
       einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
-		RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
+		  RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
     end;
   end;
 end;
 
-<<<<<<< HEAD
+
 class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
-=======
-class procedure TKI.Init(IP_Adressen: Array of String);
->>>>>>> refs/remotes/origin/master
 var i: Integer;
 begin
   Server.Create(Server_Adresse, Port);

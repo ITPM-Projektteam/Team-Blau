@@ -2,10 +2,11 @@ unit mKonstanten;
 
 interface
 
-uses mVektor;
+uses mVektor, Math;
 
 const MINDESTABSTAND = 0.2;
-
+      AUSWEICHWINKEL = DegToRad(20);
+      LAENGE_FLIEHVEKTOR: TVektor = (x: 0.2; y:0.2);
       NULLVEKTOR: TVektor = (x: 0; y:0);
 
 implementation
