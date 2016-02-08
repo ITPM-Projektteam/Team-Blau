@@ -58,14 +58,22 @@ begin
   VWinkel := 0;
 
   if vektor = NULLVEKTOR then exit;
+
+  //Roboter befindet sich in der Nähe des Spielfeldrandes
+  //und darf nur in eine Richtung ablenken
+  if aktPos.x > Spielfeld.x-RAND then
+    if RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel(vektor.winkel) < pi and
+    (RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel(vektor.winkel) > pi/2) then
+      result := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Drehen(DegToRad(179))
+    else if vektor.winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel) < pi and
+    (vektor.winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel) > pi/2) then
+      result := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Drehen(-DegToRad(179));
+  //Nur für den oberen Spielfeldrand
+
+
   //Roboter befindet sich außerhalb des Spielfeldes
   if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
      result := Spielfeld*0.5 - aktPos
-  //Roboter befindet sich in der Nähe des Spielfeldrandes
-  //und darf nur in eine Richtung ablenken
-
-
-
   //Aus Ecke herausfahren
   else if (Zielposition.x>Spielfeld.x) and (Zielposition.y>Spielfeld.y) or
           (Zielposition.x>Spielfeld.x) and (Zielposition.y<0) or
@@ -207,7 +215,7 @@ begin
 	if InRange(
 		(RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_ROT,NaechsterRoboter].Position)
 		  .Winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit), pi*0.5, pi*1.5) then
-      Result := FLIEHEN;
+      Result := FLIEHEN
     else
       Result := FANGEN;
   Except
