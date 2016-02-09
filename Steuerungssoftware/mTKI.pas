@@ -26,11 +26,7 @@ type TKI = class(TObject)
       class function ServerdatenEmpfangen: Boolean;
 
   public
-<<<<<<< HEAD
       class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
-=======
-      class procedure Init(IP_Adressen: Array of String);
->>>>>>> refs/remotes/origin/master
       class procedure Steuern(Spielende: TDateTime);
       class function Anmelden(Teamwahl: TTeam): Boolean;
 end;
@@ -51,17 +47,30 @@ end;
 
 class function TKI.AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
 var
-  ZielPosition, aktPos: TVektor;
-  VWinkel, t: Double;
+  ZielPosition, aktPos, Geschwindigkeit: TVektor;
+  t: Double;
   i: integer;
   deltaP, deltaV: TVektor;
   deltaWinkel: Double;
 begin
   ZielPosition := RoboterDaten[TEAM_BLAU,index].Position + vektor;
   aktPos := RoboterDaten[TEAM_BLAU,index].Position;
-  VWinkel := 0;
+  Geschwindigkeit := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit;
 
   if vektor = NULLVEKTOR then exit;
+
+  //Roboter befindet sich in der Nähe des Spielfeldrandes
+  //und darf nur in eine Richtung ablenken
+  if aktPos.x > Spielfeld.x-RAND then
+    if Geschwindigkeit.Winkel(vektor.winkel) < pi and
+    (Geschwindigkeit.Winkel(vektor.winkel) > pi/2) then
+      result := Geschwindigkeit.Drehen(DegToRad(179))
+    else if vektor.winkel(Geschwindigkeit.Winkel) < pi and
+    (vektor.winkel(Geschwindigkeit.Winkel) > pi/2) then
+      result := Geschwindigkeit.Drehen(-DegToRad(179));
+  //Nur für den oberen Spielfeldrand
+
+
   //Roboter befindet sich außerhalb des Spielfeldes
   if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
      result := Spielfeld*0.5 - aktPos
@@ -97,11 +106,11 @@ begin
 
   //Kollisionen mit TeamRobotern vermeiden
   if index = High(RoboterDaten[TEAM_BLAU]) then Exit;
-  if RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.Winkel(vektor.winkel) > AUSWEICHWINKEL then Exit;
+  if Geschwindigkeit.Winkel(vektor.winkel) > AUSWEICHWINKEL then Exit;
 
   for i := index+1 to High(RoboterDaten[TEAM_BLAU]) do begin
-    deltaP := RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_BLAU,i].Position;
-    deltaV := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit - RoboterDaten[TEAM_BLAU,i].Geschwindigkeit;
+    deltaP := aktPos - RoboterDaten[TEAM_BLAU,i].Position;
+    deltaV := Geschwindigkeit - RoboterDaten[TEAM_BLAU,i].Geschwindigkeit;
     try
       t := (deltaP.x*deltaV.x+deltaP.y*deltaV.y)/Power(deltaV.Betrag,2);
     except
@@ -109,23 +118,21 @@ begin
     end;
 
     if (t>=0) and (t<5) then
-      if ((RoboterDaten[TEAM_BLAU,index].Position+t*RoboterDaten[TEAM_BLAU,index].Geschwindigkeit) -
+      if ((aktPos+t*Geschwindigkeit) -
          (RoboterDaten[TEAM_BLAU,i].Position+t*RoboterDaten[TEAM_BLAU,i].Geschwindigkeit)).Betrag < MINDESTABSTAND then
       begin
-        deltaWinkel := RoboterDaten[TEAM_BLAU,i].Geschwindigkeit.winkel - RoboterDaten[TEAM_BLAU,index].Geschwindigkeit.winkel;
+        deltaWinkel := RoboterDaten[TEAM_BLAU,i].Geschwindigkeit.winkel - Geschwindigkeit.winkel;
         if deltaWinkel < 0 then
           deltaWinkel := deltaWinkel + 2*pi;
         if deltaWinkel < Pi then begin
           // Weiche nach rechts aus
-          result.x :=  cos(AUSWEICHWINKEL)*vektor.x + sin(AUSWEICHWINKEL)*vektor.y;
-          result.y := -sin(AUSWEICHWINKEL)*vektor.x + cos(AUSWEICHWINKEL)*vektor.y;
+          result := vektor.Drehen(-AUSWEICHWINKEL);
         end
         else begin
           // Weiche nach links aus
-          result.x :=  cos(-AUSWEICHWINKEL)*vektor.x + sin(-AUSWEICHWINKEL)*vektor.y;
-          result.y := -sin(-AUSWEICHWINKEL)*vektor.x + cos(-AUSWEICHWINKEL)*vektor.y;
+          result := vektor.Drehen(AUSWEICHWINKEL);
+        end;
       end;
-    end;
   end;
 end;
 
@@ -140,8 +147,6 @@ begin
   result := (LAENGE_FLIEHVEKTOR/result.Betrag)*result;
 end;
 
-
-
 class procedure TKI.GeschwindigkeitenBerechnen(zeit: TDateTime);
 var
   einRoboter: TRoboterDaten;
@@ -155,16 +160,13 @@ begin
     for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
     begin
       einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
-		RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
+		  RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
     end;
   end;
 end;
 
-<<<<<<< HEAD
+
 class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
-=======
-class procedure TKI.Init(IP_Adressen: Array of String);
->>>>>>> refs/remotes/origin/master
 var i: Integer;
 begin
   Server.Create(Server_Adresse, Port);
@@ -213,7 +215,7 @@ begin
 	if InRange(
 		(RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_ROT,NaechsterRoboter].Position)
 		  .Winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit), pi*0.5, pi*1.5) then
-      Result := FLIEHEN;
+      Result := FLIEHEN
     else
       Result := FANGEN;
   Except
