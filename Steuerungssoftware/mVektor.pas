@@ -55,7 +55,7 @@ type TVektor = record
     /// Gibt den Winkel des Vektors zurück bezogen auf den Bezugsvektor
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
     /// @exception Es wird eine Exception ausgelöst, wenn der Vektor oder der Bezugsvektor gleich dem Nullvektor ist
-    function Winkel(const Bezugsvektor: TVektor): Double; overload;
+    function Winkel(Bezugsvektor: TVektor): Double; overload;
 
     /// Gibt die Länge des Vektors zurück (Euklidische Norm)
     function Betrag: Double;
@@ -142,7 +142,7 @@ begin
   end;
 end;
 
-function TVektor.Winkel(const Bezugsvektor: TVektor): Double;
+function TVektor.Winkel( Bezugsvektor: TVektor): Double;
 begin
   Result := self.Winkel - Bezugsvektor.Winkel;
   if Result < 0 then
