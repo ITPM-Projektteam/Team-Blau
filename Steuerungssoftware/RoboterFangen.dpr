@@ -9,7 +9,8 @@ uses
   mSRWLock in 'mSRWLock.pas',
   mHauptformular in 'mHauptformular.pas' {Hauptformular},
   mTKI in 'mTKI.pas',
-  mKonstanten in 'mKonstanten.pas';
+  mKonstanten in 'mKonstanten.pas',
+  mRoboterDaten in 'mRoboterDaten.pas';
 
 uses
   Vcl.Forms,
