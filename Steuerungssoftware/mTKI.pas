@@ -2,33 +2,36 @@ unit mTKI;
 
 interface
 
-uses mVektor, mTXTMobilRoboter, Client, ClientUndServer, DateUtils,
-     mHauptformular, mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils;
+uses mVektor,mTXTMobilRoboter,Client,ClientUndServer,DateUtils,mHauptformular,
+     mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils;
 
 type TAktion = (FANGEN, FLIEHEN);
 
 type TKI = class(TObject)
   strict private
-      class var Formular: THauptformular;
-      class var ZeitLetzterFrames: TQueue<TDateTime>;
-      class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
-      class var Roboter: Array of TTXTMobilRoboter;
-      class var Spielfeld: TVektor;
-      class var Server: TServerVerbindung;
+    class var Formular: THauptformular;
+    class var ZeitLetzterFrames: TQueue<TDateTime>;
+    class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
+    class var Roboter: Array of TTXTMobilRoboter;
+    class var Spielfeld: TVektor;
+    class var Server: TServerVerbindung;
 
-      class function PrioritaetFestlegen(index: Integer; out Ziel: Integer): TAktion;
-      class function FangvektorBerechnen(index, Ziel: Integer): TVektor;
-      class function FliehvektorBerechnen(index, Ziel: Integer): TVektor;
-      class function AusweichvektorBerechnen(index: Integer; Vektor: TVektor): TVektor;
-      class function RausfahrvektorBerechnen(index: Integer): TVektor;
-      class procedure SteuerbefehlSenden(index: Integer; Vektor: TVektor);
-      class procedure GeschwindigkeitenBerechnen(zeit: TDateTime);
-      class function ServerdatenEmpfangen: Boolean;
+    class function PrioritaetFestlegen(index: Integer;
+      out Ziel: Integer): TAktion;
+    class function FangvektorBerechnen(index, Ziel: Integer): TVektor;
+    class function FliehvektorBerechnen(index, Ziel: Integer): TVektor;
+    class function AusweichvektorBerechnen(index: Integer;
+      Vektor: TVektor): TVektor;
+    class function RausfahrvektorBerechnen(index: Integer): TVektor;
+    class procedure SteuerbefehlSenden(index: Integer; Vektor: TVektor);
+    class procedure GeschwindigkeitenBerechnen(zeit: TDateTime);
+    class function ServerdatenEmpfangen: Boolean;
 
   public
-      class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
-      class procedure Steuern(Spielende: TDateTime);
-      class function Anmelden(Teamwahl: TTeam): Boolean;
+    class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String;
+      Server_Adresse: String; Port: Integer);
+    class procedure Steuern(Spielende: TDateTime);
+    class function Anmelden(Teamwahl: TTeam): Boolean;
 end;
 
 implementation
@@ -45,7 +48,8 @@ begin
 
 end;
 
-class function TKI.AusweichvektorBerechnen(index: Integer; vektor: TVektor): TVektor;
+class function TKI.AusweichvektorBerechnen(index: Integer;
+  vektor: TVektor): TVektor;
 var
   ZielPosition, aktPos, Geschwindigkeit: TVektor;
   t: Double;
@@ -72,8 +76,9 @@ begin
 
 
   //Roboter befindet sich außerhalb des Spielfeldes
-  if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or (aktPos.y>Spielfeld.y) then
-     result := Spielfeld*0.5 - aktPos
+  if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or
+    (aktPos.y>Spielfeld.y) then
+    result := Spielfeld*0.5 - aktPos
   //Aus Ecke herausfahren
   else if (Zielposition.x>Spielfeld.x) and (Zielposition.y>Spielfeld.y) or
           (Zielposition.x>Spielfeld.x) and (Zielposition.y<0) or
@@ -114,14 +119,17 @@ begin
     try
       t := (deltaP.x*deltaV.x+deltaP.y*deltaV.y)/Power(deltaV.Betrag,2);
     except
-      on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel => kein Ausweichen nötig
+      on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel
+                                 // => kein Ausweichen nötig
     end;
 
     if (t>=0) and (t<5) then
       if ((aktPos+t*Geschwindigkeit) -
-         (RoboterDaten[TEAM_BLAU,i].Position+t*RoboterDaten[TEAM_BLAU,i].Geschwindigkeit)).Betrag < MINDESTABSTAND then
+         (RoboterDaten[TEAM_BLAU,i].Position+t*
+         RoboterDaten[TEAM_BLAU,i].Geschwindigkeit)).Betrag< MINDESTABSTAND then
       begin
-        deltaWinkel := RoboterDaten[TEAM_BLAU,i].Geschwindigkeit.winkel - Geschwindigkeit.winkel;
+        deltaWinkel := RoboterDaten[TEAM_BLAU,i].Geschwindigkeit.winkel -
+        Geschwindigkeit.winkel;
         if deltaWinkel < 0 then
           deltaWinkel := deltaWinkel + 2*pi;
         if deltaWinkel < Pi then begin
@@ -138,12 +146,14 @@ end;
 
 class function TKI.FangvektorBerechnen(index,ziel: Integer): TVektor;
 begin
-  result := RoboterDaten[TEAM_Rot,ziel].Position-RoboterDaten[TEAM_BLAU,index].Position;
+  result := RoboterDaten[TEAM_Rot,ziel].Position-
+  RoboterDaten[TEAM_BLAU,index].Position;
 end;
 
 class function TKI.FliehvektorBerechnen(index,ziel: Integer): TVektor;
 begin
-  result := RoboterDaten[TEAM_BLAU,index].Position-RoboterDaten[TEAM_rot,ziel].Position;
+  result := RoboterDaten[TEAM_BLAU,index].Position-
+  RoboterDaten[TEAM_rot,ziel].Position;
   result := (LAENGE_FLIEHVEKTOR/result.Betrag)*result;
 end;
 
@@ -160,13 +170,15 @@ begin
     for i := Low(RoboterDaten[team]) to High(RoboterDaten[team]) do
     begin
       einRoboter.Geschwindigkeit := (RoboterDaten[team,i].Position -
-		  RoboterDaten[team,i].Positionsverlauf.Dequeue)*(1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
+		  RoboterDaten[team,i].Positionsverlauf.Dequeue)*
+      (1/SecondSpan(zeit, ZeitLetzterFrames.Dequeue));
     end;
   end;
 end;
 
 
-class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String; Server_Adresse: String; Port: Integer);
+class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String;
+  Server_Adresse: String; Port: Integer);
 var i: Integer;
 begin
   Server.Create(Server_Adresse, Port);
@@ -183,7 +195,8 @@ begin
   end;
 end;
 
-class function TKI.PrioritaetFestlegen(index: Integer; out ziel: Integer): TAktion;
+class function TKI.PrioritaetFestlegen(index: Integer;
+  out ziel: Integer): TAktion;
 var DeltaVektor: TRoboterDaten;
     KleinsterAbstand,Abstand: Double;
     i,NaechsterRoboter: Integer;
@@ -192,7 +205,8 @@ begin
   KleinsterAbstand := (RoboterDaten[TEAM_BLAU,index].Position -
                        RoboterDaten[TEAM_ROT,0].Position).Betrag;
 
-  //Pruefung welcher Roboter vom Team Rot am naehesten am Roboter vom Team Blau ist
+  //Pruefung welcher Roboter vom Team Rot am
+  //naehesten am Roboter vom Team Blau ist
   for i := Low(RoboterDaten[TEAM_ROT])+1 to High(RoboterDaten[TEAM_ROT]) do
   begin
     if RoboterDaten[TEAM_ROT,i].Aktiv then
@@ -212,14 +226,15 @@ begin
   //Pruefung ob der Roboter von Team Rot sich vor oder hinter dem Roboter von
   //Team Blau befindet
   Try
-	if InRange(
-		(RoboterDaten[TEAM_BLAU,index].Position - RoboterDaten[TEAM_ROT,NaechsterRoboter].Position)
-		  .Winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit), pi*0.5, pi*1.5) then
-      Result := FLIEHEN
-    else
-      Result := FANGEN;
-  Except
-	on EMathError do Formular.Log_Schreiben('Zwei Roboter haben die gleiche Position oder ein eigener Roboter steht still.', Warnung);
+	if InRange((RoboterDaten[TEAM_BLAU,index].Position -
+    RoboterDaten[TEAM_ROT,NaechsterRoboter].Position)
+    .Winkel(RoboterDaten[TEAM_BLAU,index].Geschwindigkeit), pi*0.5, pi*1.5) then
+    Result := FLIEHEN
+  else
+    Result := FANGEN;
+  Except on EMathError do
+    Formular.Log_Schreiben('Zwei Roboter haben die gleiche '+
+    'Position oder ein eigener Roboter steht still.', Warnung);
   End;
 end;
 
@@ -264,7 +279,8 @@ begin
       Roboterdaten[Team,i].Position.y:=Serverdaten.Roboterpositionen[Team,i].y;
       Roboterdaten[Team,i].Aktiv:=Serverdaten.RoboterIstAktiv[Team,i];
 
-      Roboterdaten[Team,i].Positionsverlauf.Enqueue(Roboterdaten[Team,i].Position);
+      Roboterdaten[Team,i].Positionsverlauf.
+      Enqueue(Roboterdaten[Team,i].Position);
 
       GeschwindigkeitenBerechnen(Serverdaten.Zeit);
     end;
@@ -289,10 +305,10 @@ begin
   begin
     if Vektor.Winkel(akt_Vektor)<pi then
     Roboter_Blau.Bewegenalle(Geschwindigkeit,
-                                 Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
+    Geschwindigkeit-round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
     else
-    Roboter_Blau.Bewegenalle(Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),
-                                 Geschwindigkeit)
+    Roboter_Blau.Bewegenalle(Geschwindigkeit-
+    round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))),Geschwindigkeit)
   end;
 end;
 
