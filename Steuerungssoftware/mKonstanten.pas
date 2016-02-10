@@ -5,8 +5,8 @@ interface
 uses mVektor, Math;
 
 const MINDESTABSTAND = 0.2;
-      AUSWEICHWINKEL = DegToRad(20);
-      LAENGE_FLIEHVEKTOR: TVektor = (x: 0.2; y:0.2);
+      AUSWEICHWINKEL = 20*pi/180;
+      LAENGE_FLIEHVEKTOR = 0.3;
       RAND = 0.3;
       NULLVEKTOR: TVektor = (x: 0; y:0);
 

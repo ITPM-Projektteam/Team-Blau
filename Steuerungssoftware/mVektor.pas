@@ -151,7 +151,7 @@ begin
   end;
 end;
 
-function TVektor.Winkel(const Bezugsvektor: TVektor): Double;
+function TVektor.Winkel( Bezugsvektor: TVektor): Double;
 begin
   Result := self.Winkel - Bezugsvektor.Winkel;
   if Result < 0 then
