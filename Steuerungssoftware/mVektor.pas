@@ -3,8 +3,8 @@
  * @file Vorlage_Unit.pas
  * @author Eugen, Sven
  * @date 05.01.2016
- * @brief Dieses Modul stellt einen 2D-Vektortyp für verschiedene Berechnungen zur Verfügung
- *
+ * @brief Dieses Modul stellt einen 2D-Vektortyp für
+ *  verschiedene Berechnungen zur Verfügung
  * @copyright Copyright © 2016 Obi8, Nevsor
  *
  * @license
@@ -43,19 +43,23 @@ type TVektor = record
     class operator Subtract(const Subtrahend, Minuend: TVektor): TVektor;
 
     /// Komponentenweise Multiplikation eines Vektors mit einem Skalar
-    class operator Multiply(const Skalar:Double; const Vektor:TVektor): TVektor; overload;
+    class operator Multiply(const Skalar:Double;
+      const Vektor:TVektor): TVektor; overload;
     /// Komponentenweise Multiplikation eines Skalars mit einem Vektor
-    class operator Multiply(const Vektor:TVektor; const Skalar:Double): TVektor; overload;
+    class operator Multiply(const Vektor:TVektor;
+      const Skalar:Double): TVektor; overload;
     class operator Equal(const Vektor1, Vektor2: TVektor): Boolean;
 
     /// Gibt den Winkel des Vektors zurück bezogen auf die x-Achse
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
-    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor gleich dem Nullvektor ist
+    /// @exception Es wird eine Exception ausgelöst,
+    /// wenn der Vektor gleich dem Nullvektor ist
     function Winkel: Double; overload;
     /// Gibt den Winkel des Vektors zurück bezogen auf den Bezugsvektor
     /// @return Winkel in Bogenmaß im halboffenen Intervall [0;2*Pi)
-    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor oder der Bezugsvektor gleich dem Nullvektor ist
-    function Winkel(Bezugsvektor: TVektor): Double; overload;
+    /// @exception Es wird eine Exception ausgelöst, wenn der Vektor oder der
+    /// Bezugsvektor gleich dem Nullvektor ist
+    function Winkel(const Bezugsvektor: TVektor): Double; overload;
 
     /// Gibt die Länge des Vektors zurück (Euklidische Norm)
     function Betrag: Double;
@@ -85,7 +89,8 @@ begin
   Result.y := Subtrahend.y - Minuend.y;
 end;
 
-class operator TVektor.Multiply(const Skalar: Double; const Vektor: TVektor): TVektor;
+class operator TVektor.Multiply(const Skalar: Double;
+  const Vektor: TVektor): TVektor;
 begin
   //Es werden die einzelnen Komponenten des Vektors mit einem Skalar
   //multipliziert und zurückgegeben
@@ -100,8 +105,9 @@ end;
 
 function TVektor.Drehen(Winkel: Double): TVektor;
 begin
-  //Mit der Drehmatrix wird ein neuer Vektor berechnet, der um einen Winkel
-  //nach links(positiv) bzw. rechts(negativ) gedreht ist.
+  //Mit der Drehmatrix wird ein neuer Vektor berechnet, der um einen als
+  //Parameter übergebenen Winkel nach links(positiv) bzw.
+  //rechts(negativ) gedreht ist.
   result.x :=  cos(Winkel)*self.x - sin(Winkel)*self.y;
   result.y :=  sin(Winkel)*self.x + cos(Winkel)*self.y;
 end;
@@ -111,7 +117,8 @@ begin
   Result := (Vektor1.x = Vektor2.x) and (Vektor1.y = Vektor2.y);
 end;
 
-class operator TVektor.Multiply(const Vektor: TVektor; const Skalar: Double): TVektor;
+class operator TVektor.Multiply(const Vektor: TVektor;
+  const Skalar: Double): TVektor;
 begin
 	//Es werden die einzelnen Komponenten des Vektors mit einem Skalar
   //multipliziert und zurückgegeben
@@ -123,14 +130,16 @@ function TVektor.Winkel: Double;
 begin
   //Es wird der Winkel zwischen dem Vektor und der X-Achse berechnet und
   //anschließend zurückgegeben.
-  if Self.x = 0.0 then // Wenn x = 0, kann arctan(Self.y/Self.x) nicht berechnet werden.
+  if Self.x = 0.0 then // Wenn x = 0, kann arctan(Self.y/Self.x)
+                       // nicht berechnet werden.
   begin
     if Self.y > 0.0 then
       Result := Pi * 0.5
     else if y < 0.0 then
       Result := Pi * 1.5
     else
-      raise EMathError.Create('Winkel des Nullvektors kann nicht berechnet werden.');
+      raise EMathError.Create('Winkel des Nullvektors'+
+      ' kann nicht berechnet werden.');
   end
   else
   begin

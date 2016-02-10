@@ -39,6 +39,7 @@ type
     procedure B_VerbindenClick(Sender: TObject);
     procedure Visualisieren();
     procedure CB_BereitClick(Sender: TObject);
+    procedure KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
   private
     { Private-Deklarationen }
   public
@@ -60,6 +61,15 @@ implementation
 
 uses mTKI;
 
+procedure THauptformular.KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
+begin
+  case Roboter.HoleID of
+   0: I_Roboter1.Picture.Graphic := Roboter.KamerabildJpeg;
+   1: I_Roboter2.Picture.Graphic := Roboter.KamerabildJpeg;
+   2: I_Roboter3.Picture.Graphic := Roboter.KamerabildJpeg;
+   3: I_Roboter4.Picture.Graphic := Roboter.KamerabildJpeg;
+  end;
+end;
 
 procedure THauptformular.FormCreate(Sender: TObject);
 var

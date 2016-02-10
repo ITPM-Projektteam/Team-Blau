@@ -94,7 +94,7 @@
         </DCCReference>
         <DCCReference Include="mTKI.pas"/>
         <DCCReference Include="mKonstanten.pas"/>
-        <DCCReference Include="..\..\Schiedsrichter-Server\Client.pas"/>
+		<DCCReference Include="..\..\Schiedsrichter-Server\Client.pas"/>
         <DCCReference Include="..\..\Schiedsrichter-Server\ClientUndServer.pas"/>
         <DCCReference Include="mRoboterDaten.pas"/>
         <BuildConfiguration Include="Release">
