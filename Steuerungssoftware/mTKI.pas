@@ -405,6 +405,7 @@ begin
       FahrVektor:= RoboterAusweichVektorBerechnen(einRoboter, FahrVektor);
       // Befehele werden an dern Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
+      Formular.Visualisieren(RoboterDaten, Fahrvektor);
     end;
   end;
 end;

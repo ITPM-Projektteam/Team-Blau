@@ -17,7 +17,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor, Math,
   Client, ClientUndServer, IdBaseComponent, IdComponent, IdTCPConnection,
-  IdTCPClient;
+  IdTCPClient, mRoboterDaten;
 
 
 type
@@ -34,12 +34,11 @@ type
     B_Verbinden: TButton;
     M_Log: TMemo;
     I_MiniMap: TImage;
-    Client1: TIdTCPClient;
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
-    procedure Visualisieren();
+    procedure Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
     procedure CB_BereitClick(Sender: TObject);
     procedure KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
   private
@@ -111,10 +110,6 @@ begin
   end;
   Anz_Roboter:=Length(IP_Adressen)+1;
   closeFile(IPConfig);
-
-  Visualisieren();
-
-
 end;
 
 
@@ -153,7 +148,7 @@ begin
 end;
 
 ///Visualisierung der Bewegungen
-procedure THauptformular.Visualisieren;
+procedure THauptformular.Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
 {var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
   i,j: Integer;
   alphax, alphay, Vektorx, Vektory, hilf: Double;

@@ -102,12 +102,4 @@ object Hauptformular: THauptformular
       TabOrder = 2
     end
   end
-  object Client1: TIdTCPClient
-    ConnectTimeout = 0
-    IPVersion = Id_IPv4
-    Port = 0
-    ReadTimeout = -1
-    Left = 464
-    Top = 616
-  end
 end
