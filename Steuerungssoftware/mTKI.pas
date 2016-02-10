@@ -3,7 +3,7 @@ unit mTKI;
 interface
 
 uses mVektor,mTXTMobilRoboter,Client,ClientUndServer,DateUtils,mHauptformular,
-     mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils;
+     mKonstanten, Math, Generics.Collections, mRoboterDaten, SysUtils, IdTCPClient;
 
 type TAktion = (FANGEN, FLIEHEN);
 
@@ -14,7 +14,7 @@ type TKI = class(TObject)
     class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
     class var Roboter: Array of TTXTMobilRoboter;
     class var Spielfeld: TVektor;
-    class var Server: TServerVerbindung;
+    class var Client: TServerVerbindung;
 
     class function PrioritaetFestlegen(index: Integer;
       out Ziel: Integer): TAktion;
@@ -30,34 +30,26 @@ type TKI = class(TObject)
     class function ServerdatenEmpfangen: Boolean;
 
   public
-    class procedure Init(Spielfeld: TVektor; IP_Adressen: Array of String;
-      Server_Adresse: String; Port: Integer);
+    class procedure Init(IP_Adressen: Array of String;
+      Server_Adresse: String; Port: Integer; Formular: THauptformular);
     class procedure Steuern(Spielende: TDateTime);
-    class function Anmelden(Teamwahl: TTeam): Boolean;
+    class procedure Anmelden(Teamwahl: TTeam);
 end;
 
 implementation
 
 { TKuenstlicheIntelligenz }
 
-class function TKI.Anmelden(Teamwahl: TTeam): Boolean;
+class procedure TKI.Anmelden(Teamwahl: TTeam);
 begin
-  Server.anmelden(Teamwahl);
-  if Server.anmelden(Teamwahl) then
+  if Client.anmelden(Teamwahl) then
     Formular.Log_Schreiben('Anmelden erfolgreich', Hinweis)
   else
     Formular.Log_Schreiben('Anmelden nicht erfolgreich', Fehler);
 
-  while not Server.WarteAufSpielstart do
-  begin
-    if Server.WarteAufSpielstart then
-    begin
-      TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
-      break;
-    end;
-  end;
 
-
+ if Client.WarteAufSpielstart then
+  TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
 end;
 
 class function TKI.RandAusweichvektorBerechnen(index: Integer;
@@ -74,14 +66,6 @@ begin
 
   //Roboter befindet sich in der Nähe des Spielfeldrandes
   //und darf nur in eine Richtung ablenken
-<<<<<<< HEAD
-  if aktPos.x > Spielfeld.x-RAND then
-    if (Geschwindigkeit.Winkel(vektor) < pi) and
-    (Geschwindigkeit.Winkel(vektor) > pi/2) then
-      result := Geschwindigkeit.Drehen(DegToRad(179))
-    else if (vektor.winkel(Geschwindigkeit) < pi) and
-    (vektor.winkel(Geschwindigkeit) > pi/2) then
-=======
   if aktPos.x > Spielfeld.x-RAND then begin
     if (Geschwindigkeit.x > 0) and (Zielvektor.x < 0) then
       result := Geschwindigkeit.Drehen(-DegToRad(179))
@@ -104,7 +88,6 @@ begin
     if (Geschwindigkeit.y > 0) and (Zielvektor.y < 0) then
       result := Geschwindigkeit.Drehen(DegToRad(179))
     else if (Geschwindigkeit.y < 0) and (Zielvektor.y < 0) then
->>>>>>> refs/remotes/origin/master
       result := Geschwindigkeit.Drehen(-DegToRad(179));
   end;
 
@@ -147,7 +130,8 @@ end;
 class function TKI.RoboterAusweichvektorBerechnen(index: Integer;
   Zielvektor: TVektor): TVektor;
 var
-  t,i: Double;
+  t: Double;
+  i: Integer;
   deltaP, deltaV: TVektor;
   deltaWinkel: Double;
   aktPos, Geschwindigkeit: TVektor;
@@ -156,11 +140,7 @@ begin
   Geschwindigkeit := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit;
   //Kollisionen mit TeamRobotern vermeiden
   if index = High(RoboterDaten[TEAM_BLAU]) then Exit;
-<<<<<<< HEAD
-  if Geschwindigkeit.Winkel(vektor) > AUSWEICHWINKEL then Exit;
-=======
-  if Geschwindigkeit.Winkel(Zielvektor.winkel) > AUSWEICHWINKEL then Exit;
->>>>>>> refs/remotes/origin/master
+  if Geschwindigkeit.Winkel(Zielvektor) > AUSWEICHWINKEL then Exit;
 
   for i := index+1 to High(RoboterDaten[TEAM_BLAU]) do begin
     deltaP := aktPos - RoboterDaten[TEAM_BLAU,i].Position;
@@ -226,11 +206,13 @@ begin
 end;
 
 
-class procedure TKI.Init(Spielfeld: TVektor; IP_Adressen: Array of String;
-  Server_Adresse: String; Port: Integer);
+class procedure TKI.Init(IP_Adressen: Array of String;
+  Server_Adresse: String; Port: Integer; Formular: THauptformular);
 var i: Integer;
 begin
-  Server.Create(Server_Adresse, Port);
+  Client:= TServerVerbindung.create(Server_Adresse, Port);
+
+  self.Formular:=Formular;
 
   setlength(Roboter, Length(IP_Adressen));
   for i:= Low(Roboter) to High(Roboter) do
@@ -238,8 +220,9 @@ begin
     try
         Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i], i);
         Roboter[i].Start;
+        Formular.Log_Schreiben('Verbindung zum Server Erfolgreich', Hinweis);
     except
-        Hauptformular.Log_Schreiben('Verbindung nicht möglich', Fehler);
+        formular.Log_Schreiben('Verbindung nicht möglich', Fehler);
     end;
   end;
 end;
@@ -319,7 +302,7 @@ var
   Team: TTeam;
   Serverdaten: TSpielstatus;
 begin
-  Serverdaten:= Server.StatusEmpfangen;
+  Serverdaten:= Client.StatusEmpfangen;
   for Team in [Team_Blau,Team_Rot] do
   begin
     for i := low(Roboterdaten[Team]) to High(Roboterdaten[Team]) do
@@ -353,9 +336,9 @@ begin
   if not((akt_Vektor=NULLVEKTOR) or (Zielvektor=NULLVEKTOR)) then
   begin
     // Liegt der neue Vekter links oder rechts des Roboters
-    if Vektor.Winkel(akt_Vektor)<pi then
+    if Zielvektor.Winkel(akt_Vektor)<pi then
     Roboter_Blau.Bewegenalle(Geschwindigkeit,
-                                 Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
+                                 Geschwindigkeit- round(c_Radius*RadToDeg(Zielvektor.Winkel(akt_Vektor))))
     // Der Kurvenradius hängt vom Winkel der 2 Vektoren ab, je größer der Winkle desto größer der Radius
     else
     Roboter_Blau.Bewegenalle(Geschwindigkeit-
@@ -390,7 +373,7 @@ begin
         // Abfrage ob der Roboter gefangen wurden
         if Roboter[einRoboter].LiesDigital(5) or Roboter[einRoboter].LiesDigital(6) then
         begin
-          server.GefangenMelden(einRoboter);
+          Client.GefangenMelden(einRoboter);
           Fahrvektor:=RausfahrvektorBerechnen(einRoboter);
           Formular.Log_Schreiben('Roboter: '+ Inttostr(einRoboter) + ' wurde gefangen', Warnung);
         end
@@ -401,12 +384,15 @@ begin
           if Aktion=FLIEHEN then
           begin
             FahrVektor:= FliehvektorBerechnen(einRoboter,Ziel_R);
+            FahrVektor:= RandAusweichVektorBerechnen(einRoboter,FahrVektor
+            );
             Formular.Log_Schreiben('Roboter: '+ Inttostr(einRoboter) + ' flieht', Hinweis)
           end
           // oder fängt er
           else if Aktion=Fangen then
           begin
             FahrVektor:= FangvektorBerechnen(einRoboter,Ziel_R);
+            FahrVektor:= RandAusweichVektorBerechnen(einRoboter,FahrVektor);
             Formular.Log_Schreiben('Roboter: '+ Inttostr(einRoboter) + ' verfolgt', Hinweis)
           end;
         end;
@@ -416,7 +402,7 @@ begin
         FahrVektor:=RausFahrvektorBerechnen(einRoboter);
       end;
       // Überprüfungsmechanismus auf Kreuzverkehr oder Spielfeldgrenzen
-      FahrVektor:= AusweichVektorBerechnen(einRoboter, FahrVektor);
+      FahrVektor:= RoboterAusweichVektorBerechnen(einRoboter, FahrVektor);
       // Befehele werden an dern Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
     end;

@@ -81,6 +81,7 @@ object Hauptformular: THauptformular
       Width = 97
       Height = 17
       Caption = 'Bereit'
+      Enabled = False
       TabOrder = 0
       OnClick = CB_BereitClick
     end
@@ -91,6 +92,7 @@ object Hauptformular: THauptformular
       Height = 25
       Caption = 'Verbinden'
       TabOrder = 1
+      OnClick = B_VerbindenClick
     end
     object M_Log: TMemo
       Left = 19
@@ -99,5 +101,13 @@ object Hauptformular: THauptformular
       Height = 502
       TabOrder = 2
     end
+  end
+  object Client1: TIdTCPClient
+    ConnectTimeout = 0
+    IPVersion = Id_IPv4
+    Port = 0
+    ReadTimeout = -1
+    Left = 464
+    Top = 616
   end
 end
