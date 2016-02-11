@@ -1,0 +1,49 @@
+\section{Programmierung}
+\input{Inhalt/Skizze_KI.tex}
+\subsection{Hauptformular}
+\begin{center}
+	\includegraphics[scale=0.4]{Bilder/GUI.pdf}
+\end{center}
+\begin{enumerate}
+	\item Anzeige der Bilder, von den USB-Kameras der Roboter 
+	\item Kontrollkästchen, das der Roboter bereit ist
+	\item Anzeige von Fehler-, Hinweis- und Warnmeldungen
+	\item Schaltknopf zum Verbinden der Roboter mit dem Server
+	\item Grafische Anzeige der Fahrtrichtungen von den einzelnen Robotern\\
+\end{enumerate}
+\input{Inhalt/Hauptformular.tex}
+
+\subsection{Klassen}
+Für die Berechnungen und Logik haben wir eigene Klassen geschrieben.\\
+\newline
+Diese unterteilen sich in:
+\begin{itemize}
+	\item mVektor
+	\item mTKI
+	\item mKonstanten
+	\item mRoboterDaten
+\end{itemize}
+
+\subsubsection{mVektor}
+Die Klasse mVektor besteht aus dem Record TVektor.
+\\
+Dieser hat folgende Funktionen, überladende Operatoren und Variablen:
+\input{Inhalt/mVektor.tex}
+
+\subsubsection{mTKI}
+Die Klasse mTKI hat einen Datentypen TAktion mit den Werten Fliehen und Fangen und eine abgeleitete Klasse TKI von TObject.
+
+Die abgeleitete Klasse TKI besteht aus foglenden Funktionen, Prozeduren und Variablen:\\
+\input{Inhalt/mTKI.tex}
+
+\subsubsection{mKonstanten}
+Da wir an verschiedenen Stellen die gleichen Werte benötigten, erstellten wir eine eigene Klasse für Konstanten.
+\input{Inhalt/mKonstanten.tex}
+
+\subsubsection{mRoboterDaten}
+Um den Zugriff auf die Daten eines Roboters zu vereinfachen, haben wir diese in einer eigenen Klasse mRoboterDaten untergebracht.
+\\
+Diese besteht aus einem Record TRoboterDaten mit folgenden Variablen:
+\input{Inhalt/mRoboterDaten.tex}
+
+

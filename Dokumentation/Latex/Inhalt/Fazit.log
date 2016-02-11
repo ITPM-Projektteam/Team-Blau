@@ -1,0 +1,50 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  9 FEB 2016 19:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Fazit.tex
+(./Fazit.tex
+LaTeX2e <2011/06/27>
+Babel <3.9k> and hyphenation patterns for 75 languages loaded.
+! Undefined control sequence.
+l.1 \section
+            {Fazit}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section{F
+              azit}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no F in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+)
+! Emergency stop.
+<*> Fazit.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 5 strings out of 493339
+ 119 string characters out of 6141382
+ 51486 words of memory out of 5000000
+ 3556 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 953 hyphenation exceptions out of 8191
+ 5i,0n,4p,27b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
