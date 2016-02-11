@@ -49,6 +49,7 @@ begin
 
 
  if Client.WarteAufSpielstart then
+  Formular.Log_Schreiben('Warte auf Spielstart', Hinweis);
   TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
 end;
 
@@ -220,9 +221,9 @@ begin
     try
         Roboter[i]:=TTXTMobilRoboter.Create(Ip_Adressen[i], i);
         Roboter[i].Start;
-        Formular.Log_Schreiben('Verbindung zum Server Erfolgreich', Hinweis);
+        Formular.Log_Schreiben('Roboter-Verbindung zum Server Erfolgreich', Hinweis);
     except
-        formular.Log_Schreiben('Verbindung nicht moeglich', Fehler);
+        formular.Log_Schreiben('Roboter-Verbindung nicht moeglich', Fehler);
     end;
   end;
 end;

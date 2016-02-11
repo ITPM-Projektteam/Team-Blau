@@ -1,2 +1,3 @@
-[Hinweis]  13:31:46  ServerIP Localhost:12345
-[Hinweis]  13:31:46  Roboter 0 192.168.58.2
+[Hinweis]  13:54:54  ServerIP 192.168.0.102:12345
+[Hinweis]  13:54:54  Roboter 0 192.168.58.2
+[Hinweis]  13:56:34  Suche Verbi
