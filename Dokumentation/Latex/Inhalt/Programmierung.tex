@@ -1,6 +1,17 @@
 \section{Programmierung}
 \input{Inhalt/Skizze_KI.tex}
-\subsection{Benutzeroberfläche}
+\subsection{Hauptformular}
+\begin{center}
+	\includegraphics[scale=0.4]{Bilder/GUI.pdf}
+\end{center}
+\begin{enumerate}
+	\item Anzeige der Bilder, von den USB-Kameras der Roboter 
+	\item Kontrollkästchen, das der Roboter bereit ist
+	\item Anzeige von Fehler-, Hinweis- und Warnmeldungen
+	\item Schaltknopf zum Verbinden der Roboter mit dem Server
+	\item Grafische Anzeige der Fahrtrichtungen von den einzelnen Robotern\\
+\end{enumerate}
+\input{Inhalt/Hauptformular.tex}
 
 \subsection{Klassen}
 Für die Berechnungen und Logik haben wir eigene Klassen geschrieben.\\
@@ -15,113 +26,24 @@ Diese unterteilen sich in:
 
 \subsubsection{mVektor}
 Die Klasse mVektor besteht aus dem Record TVektor.
-
+\\
 Dieser hat folgende Funktionen, überladende Operatoren und Variablen:
-\begin{itemize}
-	\item Funktionen
-	\begin{description}
-		\item[Winkel(überladen)] gibt den Winkel des Vektors, bezogen auf die X-Achse, zurück
-		\item[Winkel(überladen)] gibt den Winkel zwischen zwei Vektoren zurück
-		\item[Betrag] gibt die Länge des Vektors zurück(Euklidische Norm "`2-Norm"')
-		\item[Drehen] dreht den Vektor um einen, als Parameter übergebenen, Winkel
-	\end{description}
-	\item Operatoren
-	\begin{description}
-		\item[Add] Komponentenweise Addition zweier Vektoren
-		\item[Substract] Komponentenweise Subtraktion zweier Vektoren
-		\item[Multiply(überladen)] Komponentenweise Multiplikation eines Vektors mit einem Skalar
-		\item[Multiply(überladen)] Komponentenweise Multiplikation eines Skalars mit einem Vektor
-		\item[Equal] überprüft die Komponenten zweier Vektoren auf Gleichheit
-	\end{description}
-	\item Variablen
-	\begin{description}
-		\item[x,y] Komponenten des Vektors
-	\end{description}
-\end{itemize}
+\input{Inhalt/mVektor.tex}
 
 \subsubsection{mTKI}
 Die Klasse mTKI hat einen Datentypen TAktion mit den Werten Fliehen und Fangen und eine abgeleitete Klasse TKI von TObject.
-Die abgeleitete Klasse TKI besteht aus foglenden Funktionen, Prozeduren und Variablen:
-\begin{itemize}
-	\item Funktionen
-	\begin{description}
-		\item[PrioritätFestlegen] Anhand der Positionsdaten der gegnerischen Roboter wird überprüft, welcher sich am nächsten an unserem
-		Roboter befindet. Anschließend wird über die Winkel Funktion von der Klasse mVektor ermittelt, ob sich dieser Roboter vor oder hinter unserem Roboter befindet. Danach wird die Priorität auf FANGEN bzw. FLIEHEN gesetzt.
-		\item[FangvektorBerechnen] description
-		\item[FliehvektorBerechnen] description
-		\item[AusweichvektorBerechnen] description
-		\item[RausfahrvektorBerechnen] Sobald ein Roboter aus unserem Team gefangen wurde, wird ein Vektor zum Raus fahren aus dem Spielfeld berechnet.
-		\item[ServerdatenEmpfangen] description
-		\item[Anmelden] description
-	\end{description}
-	\item Prozeduren
-	\begin{description}
-		\item[SteuerbefehlSenden] Beschreibung
-		\item[GeschwindigkeitBerechnen] description
-		\item[Initialisierung] description
-		\item[Steuern] description
-	\end{description}
-	\item Variablen
-	\begin{description}
-		\item[ZeitletzterFrames] Beschreibung
-		\item[RoboterDaten] description
-		\item[Roboter] description	
-		\item[Spielfeld] description
-		\item[Server] description	
-	\end{description}
-\end{itemize}
+
+Die abgeleitete Klasse TKI besteht aus foglenden Funktionen, Prozeduren und Variablen:\\
+\input{Inhalt/mTKI.tex}
 
 \subsubsection{mKonstanten}
 Da wir an verschiedenen Stellen die gleichen Werte benötigten, erstellten wir eine eigene Klasse für Konstanten.
-\begin{itemize}
-	\item Variablen
-	\begin{description}
-		\item[Mindestabstand] Beschreibung
-		\item[Nullvektor] ist ein konstanter Record
-	\end{description}
-\end{itemize}
+\input{Inhalt/mKonstanten.tex}
 
 \subsubsection{mRoboterDaten}
 Um den Zugriff auf die Daten eines Roboters zu vereinfachen, haben wir diese in einer eigenen Klasse mRoboterDaten untergebracht.
-
+\\
 Diese besteht aus einem Record TRoboterDaten mit folgenden Variablen:
-\begin{itemize}
-	\item Variablen
-	\begin{description}
-		\item[Position] eines jeden Roboters vom Typ TVektor 
-		\item[Geschwindigkeit] eines jeden Roboters vom Typ TVektor
-		\item[Positionverlauf] ist eine Warteschlange(TQueue) mit Positionen des Roboters vom Typ TVektor
-		\item[Aktiv] description
-	\end{description}
-\end{itemize}
+\input{Inhalt/mRoboterDaten.tex}
 
 
-% \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
-% \definecolor{lightgray}{rgb}{0.8,0.8,0.8}
-% \definecolor{orange}{rgb}{0.8,0.3,0.3}
-% \definecolor{yac}{rgb}{0.6,0.6,0.1}
-%
-% \lstset{
-% 	basicstyle=\scriptsize\ttfamily,
-% 	keywordstyle=\bfseries\ttfamily\color{orange},
-% 	stringstyle=\color{green}\ttfamily,
-% 	commentstyle=\color{middlegray}\ttfamily,
-% 	emph={square}, 
-% 	emphstyle=\color{blue}\texttt,
-% 	emph={[2]root,base},
-% 	emphstyle={[2]\color{yac}\texttt},
-% 	showstringspaces=false,
-% 	flexiblecolumns=false,
-% 	tabsize=2,
-% 	numbers=left,
-% 	numberstyle=\tiny,
-% 	numberblanklines=true,
-% 	stepnumber=1,
-% 	numbersep=10pt,
-% 	xleftmargin=10pt
-% }
-%
-%\lstinputlisting[caption={Klasse für die KI}
-%				 \label{lst:mTKI}, 
-%				 captionpos=t, language=pascal]
-%				 {Inhalt/Quellcode/mTKI.pas}

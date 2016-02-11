@@ -1,4 +1,4 @@
-\section{Aufwandsschätzung}
+\subsection{Aufwandsschätzung}
 Um den Aufwand unseres IT-Projektes abschätzen zu können, haben wir die Methode Function-Point benutzt.
 
 Das Function-Point-Verfahren(auch -Analyse oder -Methode, kurz: FPA) dient der Bewertung des fachlich-funktionalen Umfangs eines Informationstechnischen Systems.\\
@@ -9,40 +9,42 @@ Die Durchführung des Verfahrens verläuft in 5 Schritten:
 	\item Bewertung der verschiedenen Funktionskategorien
 	\item Einbeziehung besonderer Einflussfaktoren
 	\item Ermittlung der sog. Total Function Points(TFP)
-	\item Ableitung des zu erwartenden Entwicklungsaufwandes
+	\item Ableitung des zu erwartenden Entwicklungsaufwandes\\
 \end{enumerate}
-\vspace{0.2cm}
-\paragraph{1. Schritt}
-\begin{itemize}
-	\item Eingabedaten
+\textbf{1. Schritt}\\
+\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
 	\begin{itemize}
-		\item GUI
-		\item Programmstart
-	\end{itemize}
-	\item Ausgabedaten
+		\item Eingabedaten
+		\begin{itemize}
+			\item GUI
+			\item Programmstart
+		\end{itemize}
+		\item Ausgabedaten
+		\begin{itemize}
+			\item Ereignisprotokolldatei
+			\item Kamerabild
+			\item Steuerbefehle senden
+		\end{itemize}
+		\item projektbez. Datenbestände
+		\begin{itemize}
+			\item Fahrtrichtung
+			\item Fangen
+			\item Fliehen
+			\item Ausweichen
+			\item Im Feld bleiben
+			\item Rausfahren nach dem Fangen
+			\item Vektorberechnung
+		\end{itemize}
+	\end{itemize} & 
 	\begin{itemize}
-		\item Ereignisprotokolldatei
-		\item Kamerabild
-		\item Steuerbefehle senden
-	\end{itemize}
-	\item projektbez. Datenbestände
-	\begin{itemize}
-		\item Fahrtrichtung
-		\item Fangen
-		\item Fliehen
-		\item Ausweichen
-		\item Im Feld bleiben
-		\item Rausfahren nach dem Fangen
-		\item Vektorberechnung
-	\end{itemize}
-	\item externe Datenbestände
-	\begin{itemize}
-		\item Positionsdaten
-		\item Mitteilung gefangen
-		\item Roboter aktiv?
-	\end{itemize}
-\end{itemize}
-
+		\item externe Datenbestände
+		\begin{itemize}
+			\item Positionsdaten
+			\item Mitteilung gefangen
+			\item Roboter aktiv?
+		\end{itemize}
+	\end{itemize}\\
+\end{tabular}
 \newpage
 \begin{landscape}
 	\paragraph{2. Schritt}
@@ -111,4 +113,4 @@ Die Durchführung des Verfahrens verläuft in 5 Schritten:
 	\text{4 Personen} &= 168{,}192\text{h pro Person}\\
 \end{align*}\footnotetext{Personenmonate(PM) = 20 Arbeitstage}
 
-$\Rightarrow$ Bei einem 4 starken Team benötigen wir ca. 170h pro Person.
+$\Rightarrow$ Bei einem 4 Mann starken Team benötigen wir ca. 170h pro Person.

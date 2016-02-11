@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  8 FEB 2016 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  11 FEB 2016 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,38 +882,54 @@ File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-(./Dokumentation.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2008/12/01 v0.9 tabulary package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen185
+\extrarowheight=\dimen186
+\NC@list=\toks38
+\extratabsurround=\skip58
+\backup@length=\skip59
+)
+\TY@count=\count139
+\TY@linewidth=\dimen187
+\tymin=\dimen188
+\tymax=\dimen189
+\TY@tablewidth=\dimen190
+) (./Dokumentation.aux)
 \openout1 = `Dokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen185
+\scratchcounter=\count140
+\scratchdimen=\dimen191
 \scratchbox=\box48
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen186
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
-\everyMPtoPDFconversion=\toks39
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen192
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -961,48 +977,48 @@ e
 \AtBeginShipoutBox=\box49
 
 ABD: EveryShipout initializing macros
-\Hy@linkcounter=\count145
-\c@lstlisting=\count146
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 28.
+\Hy@linkcounter=\count146
+\c@lstlisting=\count147
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 28.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 28.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 28.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 28.
+(Font)              <14.4> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 28.
+(Font)              <10> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 28.
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+(Font)              <7> on input line 29.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (34.03703pt too wide) in paragraph at lines 28--28
+Overfull \hbox (34.03703pt too wide) in paragraph at lines 29--29
  [][] 
  []
 
@@ -1036,7 +1052,7 @@ Class scrartcl Warning: \float@listhead detected!
 (scrartcl)              Loading of package `scrhack' may help to
 (scrartcl)              avoid this warning, if you are using a
 (scrartcl)              a package that still implements the
-(scrartcl)              deprecated \float@listhead interface  on input line 33.
+(scrartcl)              deprecated \float@listhead interface  on input line 34.
 
 
 (./Dokumentation.lol)
@@ -1044,15 +1060,15 @@ Class scrartcl Warning: \float@listhead detected!
 \openout6 = `Dokumentation.lol'.
 
  [2] (./Inhalt/Projektbeschreibung.tex
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 10.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 10.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
@@ -1064,33 +1080,33 @@ File: Bilder/Spielfeld_2.pdf Graphic file (type pdf)
 Package pdftex.def Info: Bilder/Spielfeld_2.pdf used on input line 3.
 (pdftex.def)             Requested size: 334.60571pt x 254.75676pt.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 16--20
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
 
  []
 
-) (./Inhalt/GanttChart.tex [4 <./Bilder/Spielfeld_2.pdf>]
-<Bilder/GanttDiagramm_[Page1].pdf, id=37, 845.1575pt x 597.23125pt>
+) (./Inhalt/Zeitablauf.tex [4 <./Bilder/Spielfeld_2.pdf>]
+<Bilder/GanttDiagramm_[Page1].pdf, id=42, 845.1575pt x 597.23125pt>
 File: Bilder/GanttDiagramm_[Page1].pdf Graphic file (type pdf)
 
 <use Bilder/GanttDiagramm_[Page1].pdf>
-Package pdftex.def Info: Bilder/GanttDiagramm_[Page1].pdf used on input line 17
+Package pdftex.def Info: Bilder/GanttDiagramm_[Page1].pdf used on input line 18
 .
 (pdftex.def)             Requested size: 422.57771pt x 298.61488pt.
 
-<Bilder/GanttDiagramm_[Page2].pdf, id=38, 845.1575pt x 597.23125pt>
+<Bilder/GanttDiagramm_[Page2].pdf, id=43, 845.1575pt x 597.23125pt>
 File: Bilder/GanttDiagramm_[Page2].pdf Graphic file (type pdf)
 
 <use Bilder/GanttDiagramm_[Page2].pdf>
-Package pdftex.def Info: Bilder/GanttDiagramm_[Page2].pdf used on input line 18
+Package pdftex.def Info: Bilder/GanttDiagramm_[Page2].pdf used on input line 19
 .
 (pdftex.def)             Requested size: 422.57771pt x 298.61488pt.
 
-Overfull \hbox (4.32216pt too wide) in paragraph at lines 17--19
+Overfull \hbox (4.32216pt too wide) in paragraph at lines 18--20
 [][]
  []
 
 
-Overfull \hbox (4.32216pt too wide) in paragraph at lines 17--19
+Overfull \hbox (4.32216pt too wide) in paragraph at lines 18--20
 [] 
  []
 
@@ -1107,7 +1123,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-[7] [8]
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 14--48
+[] 
+ []
+
+[7]
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              You should note, that in 1994 font command `\bf' has
@@ -1120,7 +1146,7 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 62.
+(scrartcl)              by `\normalfont \bfseries ' on input line 64.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -1134,7 +1160,7 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 62.
+(scrartcl)              by `\normalfont \bfseries ' on input line 64.
 
 
 Class scrartcl Warning: Usage of deprecated font command `\bf'!
@@ -1148,67 +1174,1224 @@ Class scrartcl Warning: Usage of deprecated font command `\bf'!
 (scrartcl)              Note also, that KOMA-Script will remove the definition
 (scrartcl)              of `\bf' anytime until release of about version 3.20.
 (scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
-(scrartcl)              by `\normalfont \bfseries ' on input line 87.
+(scrartcl)              by `\normalfont \bfseries ' on input line 89.
 
 
-Overfull \hbox (108.78535pt too wide) in paragraph at lines 70--90
+Overfull \hbox (110.38533pt too wide) in paragraph at lines 72--92
  [] 
  []
 
-[9
+[8
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 100.
-) (./Inhalt/GitHub.tex) (./Inhalt/ZenHub.tex) (./Inhalt/Bedienung.tex)
-(./Inhalt/Programmierung.tex (./Inhalt/Skizze_KI.tex
+(Font)              <9> on input line 102.
+) (./Inhalt/GitHub.tex <Bilder/Github.pdf, id=128, 750.55406pt x 445.665pt>
+File: Bilder/Github.pdf Graphic file (type pdf)
+
+<use Bilder/Github.pdf>
+Package pdftex.def Info: Bilder/Github.pdf used on input line 6.
+(pdftex.def)             Requested size: 375.27611pt x 222.83195pt.
+ [9
+
+]) (./Inhalt/ZenHub.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+[10 <./Bilder/Github.pdf>]
+<Bilder/ZenHub1.pdf, id=144, 626.34pt x 641.39626pt>
+File: Bilder/ZenHub1.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub1.pdf>
+Package pdftex.def Info: Bilder/ZenHub1.pdf used on input line 22.
+(pdftex.def)             Requested size: 313.16922pt x 320.69734pt.
+
+<Bilder/ZenHub2.pdf, id=145, 630.85687pt x 638.385pt>
+File: Bilder/ZenHub2.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub2.pdf>
+Package pdftex.def Info: Bilder/ZenHub2.pdf used on input line 22.
+(pdftex.def)             Requested size: 315.42766pt x 319.19171pt.
+
+
+Package tabulary Warning: No suitable columns! on input line 22.
+
+File: Bilder/ZenHub1.pdf Graphic file (type pdf)
+<use Bilder/ZenHub1.pdf>
+Package pdftex.def Info: Bilder/ZenHub1.pdf used on input line 22.
+(pdftex.def)             Requested size: 313.16922pt x 320.69734pt.
+File: Bilder/ZenHub2.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub2.pdf>
+Package pdftex.def Info: Bilder/ZenHub2.pdf used on input line 22.
+(pdftex.def)             Requested size: 315.42766pt x 319.19171pt.
+
+Overfull \hbox (56.79662pt too wide) in paragraph at lines 22--23
+ [] 
+ []
+
+[11
+
+ <./Bilder/ZenHub1.pdf> <./Bilder/ZenHub2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Bilder/ZenHub2.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]) (./Inhalt/Systemaufbau.tex
+<Bilder/Systemaufbau.pdf, id=156, 754.46375pt x 449.98347pt>
+File: Bilder/Systemaufbau.pdf Graphic file (type pdf)
+
+<use Bilder/Systemaufbau.pdf>
+Package pdftex.def Info: Bilder/Systemaufbau.pdf used on input line 3.
+(pdftex.def)             Requested size: 377.23094pt x 224.99118pt.
+) (./Inhalt/Programmierung.tex
+(./Inhalt/Skizze_KI.tex
 Overfull \hbox (0.53883pt too wide) in paragraph at lines 35--35
  [][][][]\OT1/lmr/m/n/10.95 Verfolgungsvektor 
  []
 
-[10
+[12
 
-] [11]
-Overfull \vbox (5.83638pt too high) has occurred while \output is active []
+ <./Bilder/Systemaufbau.pdf>] [13])
+<Bilder/GUI.pdf, id=211, 1059.95976pt x 583.48079pt>
+File: Bilder/GUI.pdf Graphic file (type pdf)
+ <use Bilder/GUI.pdf>
+Package pdftex.def Info: Bilder/GUI.pdf used on input line 5.
+(pdftex.def)             Requested size: 423.9764pt x 233.38818pt.
+
+Overfull \hbox (5.72084pt too wide) in paragraph at lines 5--6
+ [] 
+ []
 
 
-[12])
-Underfull \hbox (badness 10000) in paragraph at lines 6--9
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+(./Inhalt/Hauptformular.tex
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 15.
+
+
+Overfull \hbox (9.43349pt too wide) in paragraph at lines 15--15
+\OT1/lmr/m/n/10.95 protokolldatei|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 15.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 15.
+
+
+Overfull \hbox (9.43349pt too wide) in paragraph at lines 15--15
+\OT1/lmr/m/n/10.95 protokolldatei|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 31.
+
+
+Overfull \hbox (8.24672pt too wide) in paragraph at lines 31--31
+[]|\OT1/lmr/m/n/10.95 Kamerabilder 
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 31.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 31.
+
+
+Overfull \hbox (8.24672pt too wide) in paragraph at lines 31--31
+[]|\OT1/lmr/m/n/10.95 Kamerabilder 
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 46.
+
+
+Package tabulary Warning: No suitable columns! on input line 46.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 46.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 61.
+
+
+Package tabulary Warning: No suitable columns! on input line 61.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 61.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
 
  []
 
 
-Overfull \hbox (27.81226pt too wide) in paragraph at lines 48--50
-[]\OT1/lmr/m/n/10.95 Anhand der Po-si-ti-ons-da-ten der geg-ne-ri-schen Ro-bo-t
-er wird []uberpr[]uft,
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
  []
 
-[13] [14]) (./Inhalt/Resuemee.tex) [15] (./Dokumentation.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+[14 <./Bilder/GUI.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+
+ []
+
+(./Inhalt/mVektor.tex [15]
+Overfull \hbox (13.69803pt too wide) in paragraph at lines 164--165
+[]\OT1/lmr/m/n/10.95 Berechnet den Win-kel zwi-schen zwei Vek-to-ren. Als R[]uc
+kgabewert
+ []
+
+
+Overfull \hbox (18.84616pt too wide) in paragraph at lines 174--175
+[]\OT1/lmr/m/n/10.95 Es wer-den die ein-zel-nen Kom-po-nen-ten zwei-er Vek-to-r
+en auf Gleich-heit []uberpr[]uft. 
+ []
+
+) (./Inhalt/mTKI.tex
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 17.
+
+
+Overfull \hbox (13.12692pt too wide) in paragraph at lines 17--17
+[]|\OT1/lmr/m/n/10.95 Prioritat 
+ []
+
+
+Overfull \hbox (15.56064pt too wide) in paragraph at lines 17--17
+\OT1/lmr/m/n/10.95 Festlegen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 17.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 17.
+
+
+Overfull \hbox (13.12692pt too wide) in paragraph at lines 17--17
+[]|\OT1/lmr/m/n/10.95 Prioritat 
+ []
+
+
+Overfull \hbox (15.56064pt too wide) in paragraph at lines 17--17
+\OT1/lmr/m/n/10.95 Festlegen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 33.
+
+
+Overfull \hbox (24.95967pt too wide) in paragraph at lines 33--33
+[]|\OT1/lmr/m/n/10.95 Fangvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 33--33
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 33.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 33.
+
+
+Overfull \hbox (24.95967pt too wide) in paragraph at lines 33--33
+[]|\OT1/lmr/m/n/10.95 Fangvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 33--33
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 49.
+
+
+Overfull \hbox (25.56802pt too wide) in paragraph at lines 49--49
+[]|\OT1/lmr/m/n/10.95 Fliehvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 49--49
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 49.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 49.
+
+
+Overfull \hbox (25.56802pt too wide) in paragraph at lines 49--49
+[]|\OT1/lmr/m/n/10.95 Fliehvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 49--49
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 66.
+
+
+Package tabulary Warning: No suitable columns! on input line 66.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 66.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 84.
+
+
+Package tabulary Warning: No suitable columns! on input line 84.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 84.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 100.
+
+
+Overfull \hbox (44.82127pt too wide) in paragraph at lines 100--100
+[]|\OT1/lmr/m/n/10.95 Rausfahrvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 100--100
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 100.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 100.
+
+
+Overfull \hbox (44.82127pt too wide) in paragraph at lines 100--100
+[]|\OT1/lmr/m/n/10.95 Rausfahrvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 100--100
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 116.
+
+
+Overfull \hbox (28.18335pt too wide) in paragraph at lines 116--116
+[]|\OT1/lmr/m/n/10.95 Serverdaten 
+ []
+
+
+Overfull \hbox (25.53612pt too wide) in paragraph at lines 116--116
+\OT1/lmr/m/n/10.95 Empfangen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 116.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 116.
+
+
+Overfull \hbox (28.18335pt too wide) in paragraph at lines 116--116
+[]|\OT1/lmr/m/n/10.95 Serverdaten 
+ []
+
+
+Overfull \hbox (25.53612pt too wide) in paragraph at lines 116--116
+\OT1/lmr/m/n/10.95 Empfangen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 131.
+
+
+Package tabulary Warning: No suitable columns! on input line 131.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 131.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 149.
+
+
+Overfull \hbox (30.58595pt too wide) in paragraph at lines 149--149
+[]|\OT1/lmr/m/n/10.95 Steuerbefehl 
+ []
+
+
+Overfull \hbox (5.61372pt too wide) in paragraph at lines 149--149
+\OT1/lmr/m/n/10.95 Senden|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 149.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 149.
+
+
+Overfull \hbox (30.58595pt too wide) in paragraph at lines 149--149
+[]|\OT1/lmr/m/n/10.95 Steuerbefehl 
+ []
+
+
+Overfull \hbox (5.61372pt too wide) in paragraph at lines 149--149
+\OT1/lmr/m/n/10.95 Senden|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 165.
+
+
+Overfull \hbox (48.94217pt too wide) in paragraph at lines 165--165
+[]|\OT1/lmr/m/n/10.95 Geschwindigkeit 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 165--165
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 165.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 165.
+
+
+Overfull \hbox (48.94217pt too wide) in paragraph at lines 165--165
+[]|\OT1/lmr/m/n/10.95 Geschwindigkeit 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 165--165
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 181.
+
+
+Overfull \hbox (37.64236pt too wide) in paragraph at lines 181--181
+[]|\OT1/lmr/m/n/10.95 Initialisierung|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 181.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 181.
+
+
+Overfull \hbox (37.64236pt too wide) in paragraph at lines 181--181
+[]|\OT1/lmr/m/n/10.95 Initialisierung|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 196.
+
+
+Package tabulary Warning: No suitable columns! on input line 196.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 196.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+[16] [17] [18] [19] (./Inhalt/mKonstanten.tex) (./Inhalt/mRoboterDaten.tex))
+(./Inhalt/Fazit.tex) (./Inhalt/QuellCode.tex [20] [21]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 29.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(./Inhalt/Quellcode/mTKI.pas
+Overfull \hbox (30.3489pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 8.
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.44896pt too wide) in paragraph at lines 22--23
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.34943pt too wide) in paragraph at lines 29--30
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.74911pt too wide) in paragraph at lines 62--63
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+[22]
+Overfull \hbox (101.74963pt too wide) in paragraph at lines 96--98
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.74911pt too wide) in paragraph at lines 99--100
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (122.14984pt too wide) in paragraph at lines 100--101
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (132.34995pt too wide) in paragraph at lines 104--105
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (101.74963pt too wide) in paragraph at lines 108--109
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (198.65062pt too wide) in paragraph at lines 109--110
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (239.45103pt too wide) in paragraph at lines 111--112
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 116--117
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 117--118
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 122--123
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[23]
+Overfull \hbox (40.54901pt too wide) in paragraph at lines 130--131
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.54901pt too wide) in paragraph at lines 135--136
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (96.64958pt too wide) in paragraph at lines 152--153
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (71.14932pt too wide) in paragraph at lines 157--158
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 174--175
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 183--184
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[24]
+Overfull \hbox (76.24937pt too wide) in paragraph at lines 204--205
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.9487pt too wide) in paragraph at lines 205--206
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (264.9513pt too wide) in paragraph at lines 210--211
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25]
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 254--256
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (111.94974pt too wide) in paragraph at lines 279--280
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (91.54953pt too wide) in paragraph at lines 281--282
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)) [26] (./Dokumentation.aux) ) 
 Here is how much of TeX's memory you used:
- 18659 strings out of 493339
- 355537 string characters out of 6141382
- 448165 words of memory out of 5000000
- 21676 multiletter control sequences out of 15000+600000
- 55730 words of font info for 63 fonts, out of 8000000 for 9000
+ 19723 strings out of 493339
+ 368259 string characters out of 6141382
+ 510841 words of memory out of 5000000
+ 22699 multiletter control sequences out of 15000+600000
+ 56353 words of font info for 65 fonts, out of 8000000 for 9000
  953 hyphenation exceptions out of 8191
- 64i,15n,64p,435b,719s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texl
-ive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/font
-s/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/
-lm-mathex.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<
-/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on Dokumentation.pdf (16 pages, 258418 bytes).
+ 64i,15n,64p,439b,1744s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/l
+m/lm-rmtt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
+lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/l
+m/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on Dokumentation.pdf (27 pages, 1507850 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 317 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
