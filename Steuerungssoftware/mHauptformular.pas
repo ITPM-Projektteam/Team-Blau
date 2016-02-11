@@ -38,7 +38,7 @@ type
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
-    procedure Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
+    procedure Visualisieren(RoboterDaten: A_RoboterDaten; ZielVektor: Tvektor);
     procedure CB_BereitClick(Sender: TObject);
     procedure KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
   private
@@ -74,7 +74,7 @@ end;
 
 procedure THauptformular.FormCreate(Sender: TObject);
 var
-  i,j: Integer;
+  i: Integer;
   hilf: String;
 begin
 
@@ -148,11 +148,10 @@ begin
 end;
 
 ///Visualisierung der Bewegungen
-procedure THauptformular.Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
-{var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
-  i,j: Integer;
-  alphax, alphay, Vektorx, Vektory, hilf: Double;
-  x1,x2,y1,y2,r1,r2,r3,r4: Integer;}
+procedure THauptformular.Visualisieren(RoboterDaten: A_RoboterDaten; ZielVektor: Tvektor);
+var
+ Team: TTeam;
+ i, x1,x2,y2,y1,r1,r2,r3,r4: Integer;
 begin
 {  //Testdaten
   Positionen[1].x:=10;
@@ -174,28 +173,35 @@ begin
   UnsereGewindigkeiten[2].x:=-50;
   UnsereGewindigkeiten[2].y:=20;
   UnsereGewindigkeiten[3].x:=-100;
-  UnsereGewindigkeiten[3].y:=-100;
+  UnsereGewindigkeiten[3].y:=-100;  }
 
-  for i := Low(Positionen) to High(Positionen) do
+  for team in [TEAM_ROT,TEAM_BLAU] do
   begin
-    x1:=Round(Positionen[i].x+10);
-    y1:=Round(Positionen[i].y+10);
-    x2:=Round(Positionen[i].x-10);
-    y2:=Round(Positionen[i].y-10);
 
-    r1:=Round(Positionen[i].x);
-    r2:=Round(Positionen[i].y);
-    r3:=Round(r1+UnsereGewindigkeiten[i].x);
-    r4:=Round(r2+UnsereGewindigkeiten[i].y);
-
-    with I_MiniMap.Canvas do
+    for i := Low(Roboterdaten[Team]) to High(Roboterdaten[Team]) do
     begin
-      Brush.Color:=CLGreen;
-      Rectangle(x1,y1,x2,y2);
+      if Team=TEAM_ROT then
+        I_Minimap.canvas.Brush.Color:=CLRed
+      else
+        I_Minimap.canvas.Brush.Color:=CLBlue;
+      x1:=Round(Roboterdaten[Team,i].Position.x+10);
+      y1:=Round(Roboterdaten[Team,i].Position.y+10);
+      x2:=Round(Roboterdaten[Team,i].Position.x-10);
+      y2:=Round(Roboterdaten[Team,i].Position.y-10);
 
-      Brush.Color:=CLBlack;
-      MoveTo(r1,r2);
-      LineTo(r3,r4);
+      r1:=Round(Roboterdaten[Team,i].Position.x);
+      r2:=Round(Roboterdaten[Team,i].Position.y);
+      r3:=Round(Roboterdaten[Team,i].Position.x+Zielvektor.x);
+      r4:=Round(Roboterdaten[Team,i].Position.y+Zielvektor.y);
+
+      with I_MiniMap.Canvas do
+      begin
+        Rectangle(x1,y1,x2,y2);
+        Brush.Color:=CLBlack;
+        MoveTo(r1,r2);
+        LineTo(r3,r4);
+      end;
+    end;
 
 //      // Winkel Für die Pfeilspitze
 //      Vektorx:=UnsereGewindigkeiten[i].x;
@@ -214,24 +220,7 @@ begin
 //      LineTo(r3+round(sin(alphax)*10),round(r4+cos(alphax)*10));
 //      Moveto(r3,r4);
 //      LineTo(r3+round(sin(alphay)*10),r4+round(cos(alphay)*10));
-
-
-
-    end;
   end;
-
-  for j := Low(Gegner) to High(Gegner) do
-  begin
-    x1:=Round(Gegner[j].x+10);
-    y1:=Round(Gegner[j].y+10);
-    x2:=Round(Gegner[j].x-10);
-    y2:=Round(Gegner[j].y-10);
-
-    I_MiniMap.Canvas.Brush.Color:=CLRed;
-    I_MiniMap.Canvas.Rectangle(x1,y1,x2,y2);
-  end;
-}
-
 end;
 
 initialization

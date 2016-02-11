@@ -12,7 +12,8 @@ uses
   mKonstanten in 'mKonstanten.pas',
   Client in '..\..\Schiedsrichter-Server\Client.pas',
   ClientUndServer in '..\..\Schiedsrichter-Server\ClientUndServer.pas',
-  mRoboterDaten in 'mRoboterDaten.pas';
+  mRoboterDaten in 'mRoboterDaten.pas',
+  GlobaleTypen in '..\..\Schiedsrichter-Server\GlobaleTypen.pas';
 
 {$R *.res}
 

@@ -11,7 +11,7 @@ type TKI = class(TObject)
   strict private
     class var Formular: THauptformular;
     class var ZeitLetzterFrames: TQueue<TDateTime>;
-    class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
+    class var RoboterDaten: A_RoboterDaten;
     class var Roboter: Array of TTXTMobilRoboter;
     class var Spielfeld: TVektor;
     class var Client: TServerVerbindung;
@@ -47,18 +47,6 @@ begin
   else
     Formular.Log_Schreiben('Anmelden nicht erfolgreich', Fehler);
 
-<<<<<<< HEAD
-=======
-  while not Server.WarteAufSpielstart do
-  begin
-    if Server.WarteAufSpielstart then
-    begin
-      TKI.Steuern(Now); // TODO: Richtige Zeit einfuegen                                                                                       //!!!!!!!!
-      break;
-    end;
-  end;
-
->>>>>>> refs/remotes/origin/master
 
  if Client.WarteAufSpielstart then
   TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
@@ -152,12 +140,7 @@ begin
   Geschwindigkeit := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit;
   //Kollisionen mit TeamRobotern vermeiden
   if index = High(RoboterDaten[TEAM_BLAU]) then Exit;
-<<<<<<< HEAD
   if Geschwindigkeit.Winkel(Zielvektor) > AUSWEICHWINKEL then Exit;
-=======
-  if Geschwindigkeit.Winkel(vektor) > AUSWEICHWINKEL then Exit;
-
->>>>>>> refs/remotes/origin/master
 
   for i := index+1 to High(RoboterDaten[TEAM_BLAU]) do begin
     deltaP := aktPos - RoboterDaten[TEAM_BLAU,i].Position;
@@ -376,12 +359,11 @@ begin
   while True do // Andere Bedingung
   begin
     ServerdatenEmpfangen;
-    // Gewindigkeiten werden in Serverdaten Empfangen Berechnet
+    // Gewindigkeiten werden in ServerdatenEmpfangen Berechnet
 
     //Fuer jeden Roboter wird ein Vektor festergelegt, den er entlang fahren soll
     for einRoboter := low(Roboter)to High(Roboter) do
     begin
-
 
       if Roboterdaten[TEAM_BLAU,einRoboter].Aktiv then
       begin
@@ -422,8 +404,8 @@ begin
       FahrVektor:= RoboterAusweichVektorBerechnen(einRoboter, FahrVektor);
       // Befehele werden an dern Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
-      Formular.Visualisieren(RoboterDaten, Fahrvektor);
     end;
+          Formular.Visualisieren(RoboterDaten, Fahrvektor);
   end;
 end;
 
