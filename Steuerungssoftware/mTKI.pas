@@ -107,22 +107,30 @@ begin
   //Oberen Spielfeldrand nicht ueberfahren
   else if (Zielposition.y > Spielfeld.y) then begin
     result.y := Spielfeld.y-aktPos.y;
-    result.x := Sign(Zielvektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
+    result.x := Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
+	if Zielvektor.x < 0 then
+		result.x := -result.x;
   end
   //Unteren Spielfeldrand nicht ueberfahren
   else if Zielposition.y < 0 then begin
     result.y := -aktPos.y;
-    result.x := Sign(Zielvektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
+    result.x := Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
+	if Zielvektor.x < 0 then
+		result.x := -result.x;
   end
   //Rechten Spielfeldrand nicht ueberfahren
   else if (Zielposition.x > Spielfeld.x) then begin
     result.x := Spielfeld.x-aktPos.x;
-    result.y := Sign(Zielvektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
+    result.y := Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
+	if Zielvektor.y < 0 then
+		result.y := -result.y;
   end
   //Linken Spielfeldrand nicht ueberfahren
   else if (Zielposition.x < 0) then begin
     result.x := -aktPos.x;
-    result.y := Sign(Zielvektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
+    result.y := Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
+	if Zielvektor.y < 0 then
+		result.y := -result.y;
   end;
 
 end;
