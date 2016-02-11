@@ -16,7 +16,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, mTXTRoboter, mTXTMobilRoboter, MVektor, Math,
-  Client, ClientUndServer;
+  Client, ClientUndServer, IdBaseComponent, IdComponent, IdTCPConnection,
+  IdTCPClient, mRoboterDaten;
 
 
 type
@@ -37,7 +38,7 @@ type
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
     procedure B_VerbindenClick(Sender: TObject);
-    procedure Visualisieren();
+    procedure Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
     procedure CB_BereitClick(Sender: TObject);
     procedure KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
   private
@@ -109,11 +110,8 @@ begin
   end;
   Anz_Roboter:=Length(IP_Adressen)+1;
   closeFile(IPConfig);
-
-  Visualisieren();
-
-
 end;
+
 
 /// Log Funktion, es wird eine Fehlermeldung als String und eine Priorität (0-3) als Integer Übergeben
 /// @param Meldung Beschreibung der Meldung
@@ -139,7 +137,9 @@ end;
 
 procedure THauptformular.B_VerbindenClick(Sender: TObject);
 begin
-  // Roboterverbinden();
+  Log_Schreiben('Suche Verbindung', Hinweis);
+  TKI.Init(IP_Adressen,Server_IP,Port,Self);
+  CB_Bereit.Enabled := True;
 end;
 
 procedure THauptformular.CB_BereitClick(Sender: TObject);
@@ -148,13 +148,13 @@ begin
 end;
 
 ///Visualisierung der Bewegungen
-procedure THauptformular.Visualisieren;
-var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
+procedure THauptformular.Visualisieren(RoboterDaten: Array[TTeam] of Array of TRoboterDaten; ZielVektor: Tvektor);
+{var Positionen, Gegner, UnsereGewindigkeiten, GegnerGeschwindigkeiten : Array[1..3] of TVektor;
   i,j: Integer;
   alphax, alphay, Vektorx, Vektory, hilf: Double;
-  x1,x2,y1,y2,r1,r2,r3,r4: Integer;
+  x1,x2,y1,y2,r1,r2,r3,r4: Integer;}
 begin
-  //Testdaten
+{  //Testdaten
   Positionen[1].x:=10;
   Positionen[1].y:= 10;
   Positionen[2].x:=100;
@@ -230,7 +230,7 @@ begin
     I_MiniMap.Canvas.Brush.Color:=CLRed;
     I_MiniMap.Canvas.Rectangle(x1,y1,x2,y2);
   end;
-
+}
 
 end;
 
