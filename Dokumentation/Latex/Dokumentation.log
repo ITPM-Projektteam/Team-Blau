@@ -1,44 +1,43 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.12.13)  7 JAN 2016 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2016.1.24)  11 FEB 2016 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Dokumentation.tex
 (./Dokumentation.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9m> and hyphenation patterns for 79 languages loaded.
-(/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
-Document Class: scrartcl 2015/10/03 v3.19a KOMA-Script document class (article)
+LaTeX2e <2011/06/27>
+Babel <3.9k> and hyphenation patterns for 75 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
 
-(/usr/share/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(/usr/share/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
- basics and keyval usage)
-
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
 
-Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-))) (/usr/share/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
+))) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 123.
+(tocbasic)             for `toc' on input line 115.
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 124.
+(tocbasic)             for `lof' on input line 116.
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 125.
+(tocbasic)             for `lot' on input line 117.
 Package scrartcl Info: You've used standard option `11pt'.
 (scrartcl)             This is correct!
 (scrartcl)             Internally I'm using `fontsize=11pt'.
@@ -46,16 +45,16 @@ Package scrartcl Info: You've used standard option `11pt'.
 (scrartcl)             you'd have to use `fontsize=11pt' there
 (scrartcl)             instead of `11pt', too.
 Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
-ine 2033.
+ine 1531.
 
-(/usr/share/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (11p
-t)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (11pt
 )
-(/usr/share/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
 
-Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
                   Copyright (C) Frank Neukam, 1992-1994
                   Copyright (C) Markus Kohm, 1994-
 
@@ -87,7 +86,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1509.
+(typearea)              on input line 1330.
 )
 \c@part=\count80
 \c@section=\count81
@@ -95,24 +94,23 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
-LaTeX Info: Redefining \textsubscript on input line 3906.
 \abovecaptionskip=\skip46
 \belowcaptionskip=\skip47
 \c@pti@nb@sid@b@x=\box26
 \c@figure=\count86
 \c@table=\count87
 \bibindent=\dimen102
-) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2015/08/03 3.9m The Babel package
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
 
-(/usr/share/texmf-dist/tex/generic/babel-german/ngerman.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
 Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
-(/usr/share/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
 Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
 
-(/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2015/08/03 3.9m Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -120,25 +118,23 @@ File: babel.def 2015/08/03 3.9m Babel common definitions
 \l@nswissgerman = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 88.
 )))
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-(/usr/share/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -259,10 +255,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -270,10 +262,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -292,12 +280,10 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -315,14 +301,6 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -333,8 +311,8 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -357,7 +335,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -392,39 +370,39 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/share/texmf-dist/tex/latex/units/units.sty
+(/usr/share/texlive/texmf-dist/tex/latex/units/units.sty
 Package: units 1998/08/04 v0.9b Typesetting units
 
-(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip48
 \L@UnitsRaiseTextstyle=\skip49
 \L@UnitsRaiseScriptstyle=\skip50
 ))
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -432,71 +410,555 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-(./Dokumentation.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks17
+\float@box=\box27
+\@float@everytoks=\toks18
+\@floatcapt=\box28
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count91
+\calc@Bcount=\count92
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count93
+\calc@Cskip=\skip53
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box29
+\AM@toc@title=\toks19
+\c@AM@survey=\count94
+\AM@templatesizebox=\box30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen108
+\pgfutil@tempdimb=\dimen109
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box31
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks23
+))
+\pgf@x=\dimen110
+\pgf@y=\dimen111
+\pgf@xa=\dimen112
+\pgf@ya=\dimen113
+\pgf@xb=\dimen114
+\pgf@yb=\dimen115
+\pgf@xc=\dimen116
+\pgf@yc=\dimen117
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count95
+\c@pgf@countb=\count96
+\c@pgf@countc=\count97
+\c@pgf@countd=\count98
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count99
+\pgfsyssoftpath@bigbuffer@items=\count100
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen118
+\pgfmath@count=\count101
+\pgfmath@box=\box32
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count102
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen119
+\pgf@picmaxx=\dimen120
+\pgf@picminy=\dimen121
+\pgf@picmaxy=\dimen122
+\pgf@pathminx=\dimen123
+\pgf@pathmaxx=\dimen124
+\pgf@pathminy=\dimen125
+\pgf@pathmaxy=\dimen126
+\pgf@xx=\dimen127
+\pgf@xy=\dimen128
+\pgf@yx=\dimen129
+\pgf@yy=\dimen130
+\pgf@zx=\dimen131
+\pgf@zy=\dimen132
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen133
+\pgf@path@lasty=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen135
+\pgf@shorten@start@additional=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box33
+\pgf@hbox=\box34
+\pgf@layerbox@main=\box35
+\pgf@picture@serial@count=\count103
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen137
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen138
+\pgf@pt@y=\dimen139
+\pgf@pt@temp=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen141
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen142
+\pgf@sys@shading@range@num=\count104
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box36
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box37
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen143
+\pgf@nodesepend=\dimen144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen145
+\pgffor@skip=\dimen146
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count105
+\pgfplotmarksize=\dimen147
+)
+\tikz@lastx=\dimen148
+\tikz@lasty=\dimen149
+\tikz@lastxsaved=\dimen150
+\tikz@lastysaved=\dimen151
+\tikzleveldistance=\dimen152
+\tikzsiblingdistance=\dimen153
+\tikz@figbox=\box38
+\tikz@figbox@bg=\box39
+\tikz@tempbox=\box40
+\tikz@tempbox@bg=\box41
+\tikztreelevel=\count106
+\tikznumberofchildren=\count107
+\tikznumberofcurrentchild=\count108
+\tikz@fig@count=\count109
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count110
+\pgfmatrixcurrentcolumn=\count111
+\pgf@matrix@numberofcolumns=\count112
+)
+\tikz@expandcount=\count113
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.0 (rcs-revision 1.1)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
+\arrowsize=\dimen154
+)) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen155
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks32
+\ex@=\dimen156
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count114
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count115
+\leftroot@=\count116
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count117
+\DOTSCASE@=\count118
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box42
+\strutbox@=\box43
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count119
+\c@MaxMatrixCols=\count120
+\dotsspace@=\muskip10
+\c@parentequation=\count121
+\dspbrk@lvl=\count122
+\tag@help=\toks33
+\row@=\count123
+\column@=\count124
+\maxfields@=\count125
+\andhelp@=\toks34
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks35
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count126
+\l_MT_multwidth_dim=\dimen165
+\origjot=\skip57
+\l_MT_shortvdotswithinadjustabove_dim=\dimen166
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen167
+\l_MT_above_intertext_sep=\dimen168
+\l_MT_below_intertext_sep=\dimen169
+\l_MT_above_shortintertext_sep=\dimen170
+\l_MT_below_shortintertext_sep=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/empheq.sty
+Package: empheq 2013/02/12 v2.13 Emphasizing equations
+\l_EQ_equationtype_int=\count127
+\l_EQ_alignmentmode_int=\count128
+\l_EQ_totalwidth_dim=\dimen172
+\l_EQ_displaywidth_dim=\dimen173
+\l_EQ_temp_linewidth_dim=\dimen174
+\EmphEqdelimitershortfall=\dimen175
+\EmphEqdelimiterfactor=\count129
+\g_EQ_toptag_height_dim=\dimen176
+\g_EQ_bottomtag_depth_dim=\dimen177
+\g_EQ_toprow_height_dim=\dimen178
+\g_EQ_bottomrow_depth_dim=\dimen179
+\g_EQ_widesttag_dim=\dimen180
+\EQ_mathdisplay_box=\box44
+\EQ_tag_box=\box45
+\g_EQ_temprow_int=\count130
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count131
+\lst@gtempboxa=\box46
+\lst@token=\toks37
+\lst@length=\count132
+\lst@currlwidth=\dimen181
+\lst@column=\count133
+\lst@pos=\count134
+\lst@lostspace=\dimen182
+\lst@width=\dimen183
+\lst@newlines=\count135
+\lst@lineno=\count136
+\lst@maxwidth=\dimen184
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count137
+\lst@skipnumbers=\count138
+\lst@framebox=\box47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2008/12/01 v0.9 tabulary package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen185
+\extrarowheight=\dimen186
+\NC@list=\toks38
+\extratabsurround=\skip58
+\backup@length=\skip59
+)
+\TY@count=\count139
+\TY@linewidth=\dimen187
+\tymin=\dimen188
+\tymax=\dimen189
+\TY@tablewidth=\dimen190
+) (./Dokumentation.aux)
 \openout1 = `Dokumentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 8.
- (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
+ (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-(/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
-\scratchdimen=\dimen106
-\scratchbox=\box27
-\nofMPsegments=\count91
-\nofMParguments=\count92
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count93
-\MPscratchDim=\dimen107
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
-\everyMPtoPDFconversion=\toks18
-) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+\scratchcounter=\count140
+\scratchdimen=\dimen191
+\scratchbox=\box48
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen192
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks40
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -508,76 +970,1428 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 16.
+\AtBeginShipoutBox=\box49
+
+ABD: EveryShipout initializing macros
+\Hy@linkcounter=\count146
+\c@lstlisting=\count147
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 29.
 
 
-(/usr/share/texmf-dist/tex/latex/lm/ot1lmss.fd
+(/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 16.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 29.
 
-(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 29.
 
 
-(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+(/usr/share/texlive/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 16.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 29.
 
 
-(/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
+(/usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 16.
+(Font)              <14.4> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 16.
+(Font)              <10> on input line 29.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 29.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
-Overfull \hbox (34.03703pt too wide) in paragraph at lines 16--16
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (34.03703pt too wide) in paragraph at lines 29--29
  [][] 
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Dokumentation.toc)
-\tf@toc=\write3
-\openout3 = `Dokumentation.toc'.
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+(./Dokumentation.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `Dokumentation.toc'.
+
+ [1] (./Dokumentation.lof)
+\tf@lof=\write5
+\openout5 = `Dokumentation.lof'.
 
 
-[1] (./Inhalt/Spielregeln.tex
-<Bilder/Spielfeld.pdf, id=13, 581.00528pt x 564.94817pt>
-File: Bilder/Spielfeld.pdf Graphic file (type pdf)
 
-<use Bilder/Spielfeld.pdf>
-Package pdftex.def Info: Bilder/Spielfeld.pdf used on input line 3.
-(pdftex.def)             Requested size: 209.12778pt x 203.3467pt.
-) (./Inhalt/Benutzerhandbuch.tex) [2 <./Bilder/Spielfeld.pdf>] (./Dokumentation
-.aux) ) 
+Class scrartcl Warning: \float@listhead detected!
+(scrartcl)              Implementation of \float@listhead became
+(scrartcl)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrartcl)              has been replaced by more several more flexible
+(scrartcl)              features of package `tocbasic`.
+(scrartcl)              Maybe implementation of \float@listhead will
+(scrartcl)              be removed from KOMA-Script soon.
+(scrartcl)              Loading of package `scrhack' may help to
+(scrartcl)              avoid this warning, if you are using a
+(scrartcl)              a package that still implements the
+(scrartcl)              deprecated \float@listhead interface  on input line 34.
+
+
+(./Dokumentation.lol)
+\tf@lol=\write6
+\openout6 = `Dokumentation.lol'.
+
+ [2] (./Inhalt/Projektbeschreibung.tex
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 11.
+
+(/usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 11.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+) (./Inhalt/Spielregeln.tex
+<Bilder/Spielfeld_2.pdf, id=19, 741.91571pt x 564.86723pt>
+File: Bilder/Spielfeld_2.pdf Graphic file (type pdf)
+
+<use Bilder/Spielfeld_2.pdf>
+Package pdftex.def Info: Bilder/Spielfeld_2.pdf used on input line 3.
+(pdftex.def)             Requested size: 334.60571pt x 254.75676pt.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 18--22
+
+ []
+
+) (./Inhalt/Zeitablauf.tex [4 <./Bilder/Spielfeld_2.pdf>]
+<Bilder/GanttDiagramm_[Page1].pdf, id=42, 845.1575pt x 597.23125pt>
+File: Bilder/GanttDiagramm_[Page1].pdf Graphic file (type pdf)
+
+<use Bilder/GanttDiagramm_[Page1].pdf>
+Package pdftex.def Info: Bilder/GanttDiagramm_[Page1].pdf used on input line 18
+.
+(pdftex.def)             Requested size: 422.57771pt x 298.61488pt.
+
+<Bilder/GanttDiagramm_[Page2].pdf, id=43, 845.1575pt x 597.23125pt>
+File: Bilder/GanttDiagramm_[Page2].pdf Graphic file (type pdf)
+
+<use Bilder/GanttDiagramm_[Page2].pdf>
+Package pdftex.def Info: Bilder/GanttDiagramm_[Page2].pdf used on input line 19
+.
+(pdftex.def)             Requested size: 422.57771pt x 298.61488pt.
+
+Overfull \hbox (4.32216pt too wide) in paragraph at lines 18--20
+[][]
+ []
+
+
+Overfull \hbox (4.32216pt too wide) in paragraph at lines 18--20
+[] 
+ []
+
+[5]
+Overfull \vbox (30.10954pt too high) has occurred while \output is active []
+
+
+[6 <./Bilder/GanttDiagramm_[Page1].pdf> <./Bilder/GanttDiagramm_[Page2].pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Bilder/GanttDiagramm_[Page2].pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]) (./Inhalt/FunctionpointVerfahren.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 14--48
+[] 
+ []
+
+[7]
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 64.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 64.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 89.
+
+
+Overfull \hbox (110.38533pt too wide) in paragraph at lines 72--92
+ [] 
+ []
+
+[8
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 102.
+) (./Inhalt/GitHub.tex <Bilder/Github.pdf, id=128, 750.55406pt x 445.665pt>
+File: Bilder/Github.pdf Graphic file (type pdf)
+
+<use Bilder/Github.pdf>
+Package pdftex.def Info: Bilder/Github.pdf used on input line 6.
+(pdftex.def)             Requested size: 418.25555pt x 248.35344pt.
+ [9
+
+]) (./Inhalt/ZenHub.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+
+ []
+
+[10 <./Bilder/Github.pdf>]
+<Bilder/ZenHub1.pdf, id=144, 626.34pt x 641.39626pt>
+File: Bilder/ZenHub1.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub1.pdf>
+Package pdftex.def Info: Bilder/ZenHub1.pdf used on input line 22.
+(pdftex.def)             Requested size: 313.16922pt x 320.69734pt.
+
+<Bilder/ZenHub2.pdf, id=145, 630.85687pt x 638.385pt>
+File: Bilder/ZenHub2.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub2.pdf>
+Package pdftex.def Info: Bilder/ZenHub2.pdf used on input line 22.
+(pdftex.def)             Requested size: 315.42766pt x 319.19171pt.
+
+
+Package tabulary Warning: No suitable columns! on input line 22.
+
+File: Bilder/ZenHub1.pdf Graphic file (type pdf)
+<use Bilder/ZenHub1.pdf>
+Package pdftex.def Info: Bilder/ZenHub1.pdf used on input line 22.
+(pdftex.def)             Requested size: 313.16922pt x 320.69734pt.
+File: Bilder/ZenHub2.pdf Graphic file (type pdf)
+ <use Bilder/ZenHub2.pdf>
+Package pdftex.def Info: Bilder/ZenHub2.pdf used on input line 22.
+(pdftex.def)             Requested size: 315.42766pt x 319.19171pt.
+
+Overfull \hbox (56.79662pt too wide) in paragraph at lines 22--23
+ [] 
+ []
+
+[11
+
+ <./Bilder/ZenHub1.pdf> <./Bilder/ZenHub2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Bilder/ZenHub2.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>]) (./Inhalt/Systemaufbau.tex
+<Bilder/Systemaufbau.pdf, id=156, 912.69412pt x 471.81981pt>
+File: Bilder/Systemaufbau.pdf Graphic file (type pdf)
+
+<use Bilder/Systemaufbau.pdf>
+Package pdftex.def Info: Bilder/Systemaufbau.pdf used on input line 3.
+(pdftex.def)             Requested size: 418.25555pt x 216.21901pt.
+) (./Inhalt/Programmierung.tex
+(./Inhalt/Skizze_KI.tex
+Overfull \hbox (0.53883pt too wide) in paragraph at lines 35--35
+ [][][][]\OT1/lmr/m/n/10.95 Verfolgungsvektor 
+ []
+
+[12
+
+ <./Bilder/Systemaufbau.pdf>] [13])
+<Bilder/GUI.pdf, id=216, 1059.95976pt x 583.48079pt>
+File: Bilder/GUI.pdf Graphic file (type pdf)
+ <use Bilder/GUI.pdf>
+Package pdftex.def Info: Bilder/GUI.pdf used on input line 5.
+(pdftex.def)             Requested size: 423.9764pt x 233.38818pt.
+
+Overfull \hbox (5.72084pt too wide) in paragraph at lines 5--6
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+(./Inhalt/Hauptformular.tex
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 15.
+
+
+Overfull \hbox (9.43349pt too wide) in paragraph at lines 15--15
+\OT1/lmr/m/n/10.95 protokolldatei|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 15.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 15.
+
+
+Overfull \hbox (9.43349pt too wide) in paragraph at lines 15--15
+\OT1/lmr/m/n/10.95 protokolldatei|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 31.
+
+
+Overfull \hbox (8.24672pt too wide) in paragraph at lines 31--31
+[]|\OT1/lmr/m/n/10.95 Kamerabilder 
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 31.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 31.
+
+
+Overfull \hbox (8.24672pt too wide) in paragraph at lines 31--31
+[]|\OT1/lmr/m/n/10.95 Kamerabilder 
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 46.
+
+
+Package tabulary Warning: No suitable columns! on input line 46.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 46.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 61.
+
+
+Package tabulary Warning: No suitable columns! on input line 61.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 61.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 1--15
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--15
+
+ []
+
+[14 <./Bilder/GUI.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+
+ []
+
+(./Inhalt/mVektor.tex [15]
+Overfull \hbox (13.69803pt too wide) in paragraph at lines 164--165
+[]\OT1/lmr/m/n/10.95 Berechnet den Win-kel zwi-schen zwei Vek-to-ren. Als R[]uc
+kgabewert
+ []
+
+
+Overfull \hbox (18.84616pt too wide) in paragraph at lines 174--175
+[]\OT1/lmr/m/n/10.95 Es wer-den die ein-zel-nen Kom-po-nen-ten zwei-er Vek-to-r
+en auf Gleich-heit []uberpr[]uft. 
+ []
+
+) (./Inhalt/mTKI.tex
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 17.
+
+
+Overfull \hbox (13.12692pt too wide) in paragraph at lines 17--17
+[]|\OT1/lmr/m/n/10.95 Prioritat 
+ []
+
+
+Overfull \hbox (15.56064pt too wide) in paragraph at lines 17--17
+\OT1/lmr/m/n/10.95 Festlegen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 17.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 17.
+
+
+Overfull \hbox (13.12692pt too wide) in paragraph at lines 17--17
+[]|\OT1/lmr/m/n/10.95 Prioritat 
+ []
+
+
+Overfull \hbox (15.56064pt too wide) in paragraph at lines 17--17
+\OT1/lmr/m/n/10.95 Festlegen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 33.
+
+
+Overfull \hbox (24.95967pt too wide) in paragraph at lines 33--33
+[]|\OT1/lmr/m/n/10.95 Fangvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 33--33
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 33.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 33.
+
+
+Overfull \hbox (24.95967pt too wide) in paragraph at lines 33--33
+[]|\OT1/lmr/m/n/10.95 Fangvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 33--33
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 49.
+
+
+Overfull \hbox (25.56802pt too wide) in paragraph at lines 49--49
+[]|\OT1/lmr/m/n/10.95 Fliehvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 49--49
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 49.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 49.
+
+
+Overfull \hbox (25.56802pt too wide) in paragraph at lines 49--49
+[]|\OT1/lmr/m/n/10.95 Fliehvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 49--49
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 66.
+
+
+Package tabulary Warning: No suitable columns! on input line 66.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 66.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 84.
+
+
+Package tabulary Warning: No suitable columns! on input line 84.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 84.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 100.
+
+
+Overfull \hbox (44.82127pt too wide) in paragraph at lines 100--100
+[]|\OT1/lmr/m/n/10.95 Rausfahrvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 100--100
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 100.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 100.
+
+
+Overfull \hbox (44.82127pt too wide) in paragraph at lines 100--100
+[]|\OT1/lmr/m/n/10.95 Rausfahrvektor 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 100--100
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 116.
+
+
+Overfull \hbox (28.18335pt too wide) in paragraph at lines 116--116
+[]|\OT1/lmr/m/n/10.95 Serverdaten 
+ []
+
+
+Overfull \hbox (25.53612pt too wide) in paragraph at lines 116--116
+\OT1/lmr/m/n/10.95 Empfangen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 116.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 116.
+
+
+Overfull \hbox (28.18335pt too wide) in paragraph at lines 116--116
+[]|\OT1/lmr/m/n/10.95 Serverdaten 
+ []
+
+
+Overfull \hbox (25.53612pt too wide) in paragraph at lines 116--116
+\OT1/lmr/m/n/10.95 Empfangen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 131.
+
+
+Package tabulary Warning: No suitable columns! on input line 131.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 131.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 149.
+
+
+Overfull \hbox (30.58595pt too wide) in paragraph at lines 149--149
+[]|\OT1/lmr/m/n/10.95 Steuerbefehl 
+ []
+
+
+Overfull \hbox (5.61372pt too wide) in paragraph at lines 149--149
+\OT1/lmr/m/n/10.95 Senden|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 149.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 149.
+
+
+Overfull \hbox (30.58595pt too wide) in paragraph at lines 149--149
+[]|\OT1/lmr/m/n/10.95 Steuerbefehl 
+ []
+
+
+Overfull \hbox (5.61372pt too wide) in paragraph at lines 149--149
+\OT1/lmr/m/n/10.95 Senden|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 165.
+
+
+Overfull \hbox (48.94217pt too wide) in paragraph at lines 165--165
+[]|\OT1/lmr/m/n/10.95 Geschwindigkeit 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 165--165
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 165.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 165.
+
+
+Overfull \hbox (48.94217pt too wide) in paragraph at lines 165--165
+[]|\OT1/lmr/m/n/10.95 Geschwindigkeit 
+ []
+
+
+Overfull \hbox (21.00436pt too wide) in paragraph at lines 165--165
+\OT1/lmr/m/n/10.95 Berechnen|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 181.
+
+
+Overfull \hbox (37.64236pt too wide) in paragraph at lines 181--181
+[]|\OT1/lmr/m/n/10.95 Initialisierung|  
+ []
+
+
+Package tabulary Warning: No suitable columns! on input line 181.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 181.
+
+
+Overfull \hbox (37.64236pt too wide) in paragraph at lines 181--181
+[]|\OT1/lmr/m/n/10.95 Initialisierung|  
+ []
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 196.
+
+
+Package tabulary Warning: No suitable columns! on input line 196.
+
+
+Class scrartcl Warning: Usage of deprecated font command `\bf'!
+(scrartcl)              You should note, that in 1994 font command `\bf' has
+(scrartcl)              been defined for compatiblitiy to Script 2.0 only.
+(scrartcl)              Now, after two decades of LaTeX2e and NFSS2, you
+(scrartcl)              shouldn't use such commands any longer and within
+(scrartcl)              KOMA-Script usage of `\bf' is definitely deprecated.
+(scrartcl)              See `fntguide.pdf' for more information about
+(scrartcl)              recommended font commands.
+(scrartcl)              Note also, that KOMA-Script will remove the definition
+(scrartcl)              of `\bf' anytime until release of about version 3.20.
+(scrartcl)              But for now, KOMA-Script will replace deprecated `\bf'
+(scrartcl)              by `\normalfont \bfseries ' on input line 196.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+
+Overfull \hbox (15.82533pt too wide) in paragraph at lines 36--38
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
+
+ []
+
+[16] [17] [18] [19] (./Inhalt/mKonstanten.tex) (./Inhalt/mRoboterDaten.tex))
+(./Inhalt/Fazit.tex) (./Inhalt/QuellCode.tex [20] [21]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 29.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(./Inhalt/Quellcode/mTKI.pas
+Overfull \hbox (30.3489pt too wide) in paragraph at lines 6--8
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 8.
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.44896pt too wide) in paragraph at lines 22--23
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.34943pt too wide) in paragraph at lines 29--30
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.74911pt too wide) in paragraph at lines 62--63
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+[22]
+Overfull \hbox (101.74963pt too wide) in paragraph at lines 96--98
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.74911pt too wide) in paragraph at lines 99--100
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (122.14984pt too wide) in paragraph at lines 100--101
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (132.34995pt too wide) in paragraph at lines 104--105
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (101.74963pt too wide) in paragraph at lines 108--109
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (198.65062pt too wide) in paragraph at lines 109--110
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (239.45103pt too wide) in paragraph at lines 111--112
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 116--117
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 117--118
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (25.24886pt too wide) in paragraph at lines 122--123
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[23]
+Overfull \hbox (40.54901pt too wide) in paragraph at lines 130--131
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.54901pt too wide) in paragraph at lines 135--136
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (96.64958pt too wide) in paragraph at lines 152--153
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (71.14932pt too wide) in paragraph at lines 157--158
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 174--175
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 183--184
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[24]
+Overfull \hbox (76.24937pt too wide) in paragraph at lines 204--205
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.9487pt too wide) in paragraph at lines 205--206
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (264.9513pt too wide) in paragraph at lines 210--211
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25]
+Overfull \hbox (15.04875pt too wide) in paragraph at lines 254--256
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (111.94974pt too wide) in paragraph at lines 279--280
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (91.54953pt too wide) in paragraph at lines 281--282
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)) [26] (./Dokumentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3941 strings out of 493054
- 60977 string characters out of 6140585
- 185341 words of memory out of 5000000
- 7384 multiletter control sequences out of 15000+600000
- 37393 words of font info for 33 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 46i,6n,54p,254b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-di
-st/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/l
-m/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/
-texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on Dokumentation.pdf (3 pages, 109655 bytes).
+ 19723 strings out of 493339
+ 368259 string characters out of 6141382
+ 510841 words of memory out of 5000000
+ 22699 multiletter control sequences out of 15000+600000
+ 56353 words of font info for 65 fonts, out of 8000000 for 9000
+ 953 hyphenation exceptions out of 8191
+ 64i,15n,64p,439b,1744s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/l
+m/lm-rmtt.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{
+/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texlive/texmf-dist/font
+s/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
+lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/l
+m/lmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on Dokumentation.pdf (27 pages, 1118630 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 322 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

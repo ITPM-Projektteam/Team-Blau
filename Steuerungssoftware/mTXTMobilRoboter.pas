@@ -321,12 +321,21 @@ begin
   // TODO: Möglichkeit eines Deadlocks überprüfen
   // Immer gleiche Reihenfolge bei Aquirieren beider Locks?
   LBefehle.AcquireShared;
-  LAntworten.AcquireShared;
-  for i := 0 to 2 do
-    Result := Result and (befehle.m_motor_distance[i] <=
-      antworten.m_counter_value[i]);
-  LAntworten.ReleaseShared;
-  LBefehle.ReleaseShared;
+  Try
+    LAntworten.AcquireShared;
+    Try
+      for i := 0 to 1 do
+      Result := Result and (befehle.m_motor_distance[i] <=
+        antworten.m_counter_value[i]);
+    Finally
+      LAntworten.ReleaseShared;
+    End;
+    
+  Finally
+    LBefehle.ReleaseShared;
+  End;
+
+
 end;
 
 end.

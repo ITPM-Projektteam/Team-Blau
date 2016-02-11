@@ -1,0 +1,11 @@
+\section{Systemaufbau}
+\begin{center}
+	\includegraphics[width=\textwidth]{Bilder/Systemaufbau.pdf}
+\end{center}
+Der Systemaufbau des Projekts stellt sich wie folgt dar:
+\newline
+Ein zentraler Schiedsrichter-Server überwacht das Spielfeld der Roboter mithilfe einer Kamera. Anhand der Kamerabilder werden Positionsdaten der Roboter bestimmt. Des weiteren überwacht der Server den Status der Roboter, d.h. es wird überprüft ob diese gefangen wurden.
+
+Die Positionsdaten werden mittels einer TCP/IP-Verbindung an die jeweiligen Team-Server gesendet. Diese werten die Daten aus und ermitteln die Fahrtrichtungen für jeden Roboter eines Teams. Die Befehle werden wieder mithilfe einer TCP/IP-Verbindung an die Roboter übermittelt.
+
+

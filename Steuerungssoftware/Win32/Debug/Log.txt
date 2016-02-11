@@ -1,3 +1,2 @@
-[Hinweis]  18:08:01  ServerIP fdsfrdsfds
-[Hinweis]  18:08:01  Roboter 0 192.168.58.2
-[Hinweis]  18:08:01  Roboter 1 192.168.68
+[Hinweis]  13:31:46  ServerIP Localhost:12345
+[Hinweis]  13:31:46  Roboter 0 192.168.58.2
