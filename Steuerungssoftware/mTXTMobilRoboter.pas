@@ -77,9 +77,10 @@ type
     var
       nwThread: TNetzwerkThread; //< Der Thread für die nebenläufige Kommunikation mit dem Roboter
       kamThread: TKameraThread; //< Der Thread für das nebenläufige Empfangen der Kamerabilder
+      ID: Integer;
   public
 
-    constructor Create(IP_Adresse: String);
+    constructor Create(IP_Adresse: String; ID: Integer);
 
     destructor Destroy;
 
@@ -118,6 +119,8 @@ type
 
     /// Gibt True zurück, wenn alle Motoren die vorgegebene Anzahl Schritte absolviert haben.
     function ZielErreicht: Boolean;
+
+    function HoleID: Integer;
   end;
 
 implementation
@@ -186,6 +189,11 @@ begin
 
   FreeAndNil(nwThread);
   FreeAndNil(kamThread);
+end;
+
+function TTXTMobilRoboter.HoleID: Integer;
+begin
+	Result := ID;
 end;
 
 procedure TTXTMobilRoboter.BewegenAlle(GeschwindigkeitRechts,
@@ -283,9 +291,11 @@ begin
   LBefehle.ReleaseExclusive;
 end;
 
-constructor TTXTMobilRoboter.Create(IP_Adresse: String);
+constructor TTXTMobilRoboter.Create(IP_Adresse: String; ID: Integer);
 begin
   inherited Create(IP_Adresse);
+
+  self.ID := ID;
 
   konfiguration.m_extension_id := 0;
   konfiguration.m_config.motor[0] := 1;
