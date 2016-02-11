@@ -1,4 +1,2 @@
-[Hinweis]  17:25:33  ServerIP Localhost:12345
-[Hinweis]  17:25:33  Roboter 0 192.168.58.2
-[Hinweis]  17:25:35  Suche Verbindung
-[Hinweis]  17:25:35  Verbindung zum Server Erfolgreich
+[Hinweis]  13:31:46  ServerIP Localhost:12345
+[Hinweis]  13:31:46  Roboter 0 192.168.58.2

@@ -11,7 +11,7 @@ type TKI = class(TObject)
   strict private
     class var Formular: THauptformular;
     class var ZeitLetzterFrames: TQueue<TDateTime>;
-    class var RoboterDaten: Array[TTeam] of Array of TRoboterDaten;
+    class var RoboterDaten: A_RoboterDaten;
     class var Roboter: Array of TTXTMobilRoboter;
     class var Spielfeld: TVektor;
     class var Client: TServerVerbindung;
@@ -47,18 +47,6 @@ begin
   else
     Formular.Log_Schreiben('Anmelden nicht erfolgreich', Fehler);
 
-<<<<<<< HEAD
-=======
-  while not Server.WarteAufSpielstart do
-  begin
-    if Server.WarteAufSpielstart then
-    begin
-      TKI.Steuern(Now); // TODO: Richtige Zeit einfÃ¼gen                                                                                       //!!!!!!!!
-      break;
-    end;
-  end;
-
->>>>>>> refs/remotes/origin/master
 
  if Client.WarteAufSpielstart then
   TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
@@ -76,7 +64,7 @@ begin
 
   if Zielvektor = NULLVEKTOR then exit;
 
-  //Roboter befindet sich in der NÃ¤he des Spielfeldrandes
+  //Roboter befindet sich in der Naehe des Spielfeldrandes
   //und darf nur in eine Richtung ablenken
   if aktPos.x > Spielfeld.x-RAND then begin
     if (Geschwindigkeit.x > 0) and (Zielvektor.x < 0) then
@@ -103,7 +91,7 @@ begin
       result := Geschwindigkeit.Drehen(-DegToRad(179));
   end;
 
-  //Roboter befindet sich auÃŸerhalb des Spielfeldes
+  //Roboter befindet sich ausserhalb des Spielfeldes
   if (aktPos.x>Spielfeld.x) or (aktPos.x<0) or (aktPos.y<0) or
     (aktPos.y>Spielfeld.y) then
     result := Spielfeld*0.5 - aktPos
@@ -116,22 +104,22 @@ begin
     result.x := -(Zielvektor.x);
     result.y := -(Zielvektor.y);
   end
-  //Oberen Spielfeldrand nicht Ã¼berfahren
+  //Oberen Spielfeldrand nicht ueberfahren
   else if (Zielposition.y > Spielfeld.y) then begin
     result.y := Spielfeld.y-aktPos.y;
     result.x := Sign(Zielvektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
-  //Unteren Spielfeldrand nicht Ã¼berfahren
+  //Unteren Spielfeldrand nicht ueberfahren
   else if Zielposition.y < 0 then begin
     result.y := -aktPos.y;
     result.x := Sign(Zielvektor.x) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.y));
   end
-  //Rechten Spielfeldrand nicht Ã¼berfahren
+  //Rechten Spielfeldrand nicht ueberfahren
   else if (Zielposition.x > Spielfeld.x) then begin
     result.x := Spielfeld.x-aktPos.x;
     result.y := Sign(Zielvektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
   end
-  //Linken Spielfeldrand nicht Ã¼berfahren
+  //Linken Spielfeldrand nicht ueberfahren
   else if (Zielposition.x < 0) then begin
     result.x := -aktPos.x;
     result.y := Sign(Zielvektor.y) * Sqrt(Sqr(LAENGE_FLIEHVEKTOR)-Sqr(result.x));
@@ -152,12 +140,7 @@ begin
   Geschwindigkeit := RoboterDaten[TEAM_BLAU,index].Geschwindigkeit;
   //Kollisionen mit TeamRobotern vermeiden
   if index = High(RoboterDaten[TEAM_BLAU]) then Exit;
-<<<<<<< HEAD
   if Geschwindigkeit.Winkel(Zielvektor) > AUSWEICHWINKEL then Exit;
-=======
-  if Geschwindigkeit.Winkel(vektor) > AUSWEICHWINKEL then Exit;
-
->>>>>>> refs/remotes/origin/master
 
   for i := index+1 to High(RoboterDaten[TEAM_BLAU]) do begin
     deltaP := aktPos - RoboterDaten[TEAM_BLAU,i].Position;
@@ -166,7 +149,7 @@ begin
       t := (deltaP.x*deltaV.x+deltaP.y*deltaV.y)/Power(deltaV.Betrag,2);
     except
       on EDivByZero do Continue; // Zu kleines deltaV => Roboter fahren parallel
-                                 // => kein Ausweichen nÃ¶tig
+                                 // => kein Ausweichen noetig
     end;
 
     if (t>=0) and (t<5) then
@@ -239,11 +222,7 @@ begin
         Roboter[i].Start;
         Formular.Log_Schreiben('Verbindung zum Server Erfolgreich', Hinweis);
     except
-<<<<<<< HEAD
-        formular.Log_Schreiben('Verbindung nicht möglich', Fehler);
-=======
-        Hauptformular.Log_Schreiben('Verbindung nicht mÃ¶glich', Fehler);
->>>>>>> refs/remotes/origin/master
+        formular.Log_Schreiben('Verbindung nicht moeglich', Fehler);
     end;
   end;
 end;
@@ -299,7 +278,7 @@ var Position: TVektor;
     KAbstand: Double;
 begin
    Position := RoboterDaten[TEAM_BLAU,index].Position;
-   //Berechnung der SeitenabstÃ¤nde mit der Annahame,
+   //Berechnung der Seitenabstaende mit der Annahame,
    //dass sich unten links der Koordinatenursprung befindet.
    Abstand[0] := Position.x;                //links
    Abstand[1] := Spielfeld.x-Position.x;    //rechts
@@ -348,7 +327,7 @@ var
 
 const
   Geschwindigkeit= 512;   // Standartgeschwindigkeit der Roboter
-  c_Radius = 2;         //Konstante zum dehen, auf Â° bezogen
+  c_Radius = 2;         //Konstante zum dehen, auf Grad bezogen
 
 begin
   Roboter_Blau:= Roboter[Index];
@@ -359,13 +338,8 @@ begin
     // Liegt der neue Vekter links oder rechts des Roboters
     if Zielvektor.Winkel(akt_Vektor)<pi then
     Roboter_Blau.Bewegenalle(Geschwindigkeit,
-<<<<<<< HEAD
                                  Geschwindigkeit- round(c_Radius*RadToDeg(Zielvektor.Winkel(akt_Vektor))))
-    // Der Kurvenradius hängt vom Winkel der 2 Vektoren ab, je größer der Winkle desto größer der Radius
-=======
-                                 Geschwindigkeit- round(c_Radius*RadToDeg(Vektor.Winkel(akt_Vektor))))
-    // Der Kurvenradius hÃ¤ngt vom Winkel der 2 Vektoren ab, je grÃ¶ÃŸer der Winkle desto grÃ¶ÃŸer der Radius
->>>>>>> refs/remotes/origin/master
+    // Der Kurvenradius hängt vom Winkel der 2 Vektoren ab, je groesser der Winkel desto größer der Radius
     else
     Roboter_Blau.Bewegenalle(Geschwindigkeit-
     round(c_Radius*RadToDeg(Zielvektor.Winkel(akt_Vektor))),Geschwindigkeit)
@@ -380,17 +354,16 @@ FahrVektor: TVektor;
 Aktion: TAktion;
 begin
   // Startaufstellung einnehmen
-  // Queues fÃ¼llen
+  // Queues fuellen
 
   while True do // Andere Bedingung
   begin
     ServerdatenEmpfangen;
-    // Gewindigkeiten werden in Serverdaten Empfangen Berechnet
+    // Gewindigkeiten werden in ServerdatenEmpfangen Berechnet
 
-    //FÃ¼r jeden Roboter wird ein Vektor festergelegt, den er entlang fahren soll
+    //Fuer jeden Roboter wird ein Vektor festergelegt, den er entlang fahren soll
     for einRoboter := low(Roboter)to High(Roboter) do
     begin
-
 
       if Roboterdaten[TEAM_BLAU,einRoboter].Aktiv then
       begin
@@ -414,7 +387,7 @@ begin
             );
             Formular.Log_Schreiben('Roboter: '+ Inttostr(einRoboter) + ' flieht', Hinweis)
           end
-          // oder fÃ¤ngt er
+          // oder faengt er
           else if Aktion=Fangen then
           begin
             FahrVektor:= FangvektorBerechnen(einRoboter,Ziel_R);
@@ -427,17 +400,12 @@ begin
       begin
         FahrVektor:=RausFahrvektorBerechnen(einRoboter);
       end;
-<<<<<<< HEAD
-      // Überprüfungsmechanismus auf Kreuzverkehr oder Spielfeldgrenzen
+      // Ueberpruefungsmechanismus auf Kreuzverkehr oder Spielfeldgrenzen
       FahrVektor:= RoboterAusweichVektorBerechnen(einRoboter, FahrVektor);
-=======
-      // ÃœberprÃ¼fungsmechanismus auf Kreuzverkehr oder Spielfeldgrenzen
-      FahrVektor:= AusweichVektorBerechnen(einRoboter, FahrVektor);
->>>>>>> refs/remotes/origin/master
       // Befehele werden an dern Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
-      Formular.Visualisieren(RoboterDaten, Fahrvektor);
     end;
+          Formular.Visualisieren(RoboterDaten, Fahrvektor);
   end;
 end;
 
