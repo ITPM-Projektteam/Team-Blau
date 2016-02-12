@@ -1,3 +1,4 @@
-[Hinweis]  13:54:54  ServerIP 192.168.0.102:12345
-[Hinweis]  13:54:54  Roboter 0 192.168.58.2
-[Hinweis]  13:56:34  Suche Verbi
+[Hinweis]  16:10:16  ServerIP 192.168.0.107:12345
+[Hinweis]  16:23:38  Suche Verbindung
+[Hinweis]  16:23:39  Anmelden erfolgreich
+[Hinweis]  16:23:46  Warte auf Spielstart

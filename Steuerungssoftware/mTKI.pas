@@ -49,8 +49,10 @@ begin
 
 
  if Client.WarteAufSpielstart then
+ begin
   Formular.Log_Schreiben('Warte auf Spielstart', Hinweis);
-  TKI.Steuern(Now); // TODO: Richtige Zeit einfügen                                                                                       //!!!!!!!!
+  Steuern(0); // TODO: Richtige Zeit einfügen
+ end                                                                               //!!!!!!!!
 end;
 
 class function TKI.RandAusweichvektorBerechnen(index: Integer;
@@ -209,13 +211,36 @@ end;
 
 class procedure TKI.Init(IP_Adressen: Array of String;
   Server_Adresse: String; Port: Integer; Formular: THauptformular);
-var i: Integer;
+var i,j: Integer;
+  Team: TTeam;
+  Spielfeld: TVektor;
 begin
   Client:= TServerVerbindung.create(Server_Adresse, Port);
 
-  self.Formular:=Formular;
+  ZeitLetzterFrames:= TQueue<TDateTime>.create;
+  ZeitLetzterFrames.Enqueue(Now);
+  ZeitLetzterFrames.Enqueue(Now);
+  ZeitLetzterFrames.Enqueue(Now);
+  ZeitLetzterFrames.Enqueue(Now);
 
   setlength(Roboter, Length(IP_Adressen));
+  for Team in [TEAM_ROT,TEAM_BLAU] do
+  begin
+    for j := Low(Roboter) to High(Roboter) do
+    begin
+      setlength(Roboterdaten[Team],Length(Roboterdaten[Team])+1);
+      Roboterdaten[team,j].Positionsverlauf:=TQueue<TVektor>.create;
+      Roboterdaten[team,j].Positionsverlauf.Enqueue(NULLVEKTOR);
+      Roboterdaten[team,j].Positionsverlauf.Enqueue(NULLVEKTOR);
+      Roboterdaten[team,j].Positionsverlauf.Enqueue(NULLVEKTOR);
+      Roboterdaten[team,j].Positionsverlauf.Enqueue(NULLVEKTOR);
+    end;
+  end;
+
+  self.Formular:=Formular;
+  Spielfeld.x := 200;
+  Spielfeld.y := 300;                                                                // DUMMMY MUSS GEAENDERT WERDEN
+
   for i:= Low(Roboter) to High(Roboter) do
   begin
     try
@@ -285,6 +310,10 @@ begin
    Abstand[1] := Spielfeld.x-Position.x;    //rechts
    Abstand[2] := Spielfeld.y-Position.y;    //oben
    Abstand[3] := Position.y;                //unten
+//   Formular.Log_Schreiben(FloatToStr(Abstand[0]), Hinweis);
+//   Formular.Log_Schreiben(FloatToStr(Abstand[1]), Hinweis);
+//   Formular.Log_Schreiben(FloatToStr(Abstand[2]), Hinweis);
+//   Formular.Log_Schreiben(FloatToStr(Abstand[3]), Hinweis);
    KAbstand := MinValue(Abstand);
    //in x- oder y-Richtung herausfahren
    if (KAbstand=Abstand[0]) or (KAbstand=Abstand[1]) then begin
@@ -306,17 +335,18 @@ begin
   Serverdaten:= Client.StatusEmpfangen;
   for Team in [Team_Blau,Team_Rot] do
   begin
-    for i := low(Roboterdaten[Team]) to High(Roboterdaten[Team]) do
+    for i := low(Roboter) to High(Roboter) do
     begin
       // Roboterdaten des Servers werden in eingene Arrays usw. verpackt
       Roboterdaten[Team,i].Position.x:=Serverdaten.Roboterpositionen[Team,i].x;
       Roboterdaten[Team,i].Position.y:=Serverdaten.Roboterpositionen[Team,i].y;
       Roboterdaten[Team,i].Aktiv:=Serverdaten.RoboterIstAktiv[Team,i];
+      Formular.Log_Schreiben(floattostr(Roboterdaten[Team,i].Position.x) +':'+ floattostr(Roboterdaten[Team,i].Position.y), Hinweis);
 
       Roboterdaten[Team,i].Positionsverlauf.
       Enqueue(Roboterdaten[Team,i].Position);
 
-      GeschwindigkeitenBerechnen(Serverdaten.Zeit);
+      GeschwindigkeitenBerechnen(TimeStampToDateTime(Serverdaten.Zeit));
     end;
   end;
 end;
@@ -406,7 +436,7 @@ begin
       // Befehele werden an dern Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
     end;
-          Formular.Visualisieren(RoboterDaten, Fahrvektor);
+          //Formular.Visualisieren(RoboterDaten, Fahrvektor);
   end;
 end;
 
