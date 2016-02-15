@@ -1,9 +1,11 @@
-\documentclass[titlepage=true,11pt,a4paper]{scrartcl}
+\documentclass[pagesize=auto,titlepage=true,11pt,a4paper]{scrartcl}
 
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{units}
+\usepackage[breaklinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{pdfpages}
@@ -15,15 +17,48 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{tabulary}
+\usepackage{capt-of}
+\usepackage{pgf-umlcd}
 
 \renewcommand\lstlistlistingname{Quellcodeverzeichnis}
+\renewcommand*\familydefault{\sfdefault}
+
+
+%---------Listing-Anfang----------
+
+ \definecolor{middlegray}{rgb}{0.5,0.5,0.5}
+ \definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+ \definecolor{orange}{rgb}{0.8,0.3,0.3}
+ \definecolor{yac}{rgb}{0.6,0.6,0.1}
+ 
+ \lstset{
+ 	basicstyle=\scriptsize\ttfamily,
+ 	keywordstyle=\bfseries\ttfamily\color{orange},
+ 	stringstyle=\color{green}\ttfamily,
+ 	commentstyle=\color{middlegray}\ttfamily,
+ 	emph={square}, 
+ 	emphstyle=\color{blue}\texttt,
+ 	emph={[2]root,base},
+ 	emphstyle={[2]\color{yac}\texttt},
+ 	showstringspaces=false,
+ 	flexiblecolumns=false,
+ 	tabsize=2,
+ 	numbers=left,
+ 	numberstyle=\tiny,
+ 	numberblanklines=true,
+ 	stepnumber=1,
+ 	numbersep=10pt,
+ 	xleftmargin=10pt
+ }
+ 
+ 
+%---------Listing-Ende----------
 
 \begin{document}
-	\vfill
 	\subject{Dokumentation}
 	\title{Roboter-Fangen}
-	\subtitle{Maschinenbauinformatik 3. \& 5. Semester}
-	\author{Michael Mertens, Jonah Vennemann, Sven Stegemann, Eugen Zwetzich}
+	\subtitle{Maschinenbauinformatik 3. Semester}
+	\author{Michael Mertens, \\Jonah Vennemann, \\Sven Stegemann, \\Eugen Zwetzich}
 	\date{\today}
 	\maketitle
 	\newpage
@@ -40,8 +75,10 @@
 	\input{Inhalt/FunctionpointVerfahren.tex}
 	\input{Inhalt/GitHub.tex}	
 	\input{Inhalt/ZenHub.tex}
+	\input{Inhalt/Bedienungsanleitung.tex}
 	\input{Inhalt/Systemaufbau.tex}
 	\input{Inhalt/Programmierung.tex}
+	\input{Inhalt/Arbeitspakete.tex}
 	\input{Inhalt/Fazit.tex}
 	\input{Inhalt/QuellCode.tex}
 	

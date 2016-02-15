@@ -1,0 +1,36 @@
+\section{Bedienungsanleitung}
+%\begin{enumerate}
+%	\item Vorbereitungen
+%	\item Spielstart
+%	\item Während des Spiels
+%	\item Spielende\\
+%\end{enumerate}
+\textbf{Vorbereitung:}\\
+Für das Spiel benötigt man 3 Computer, 8 Roboter und eine USB-Kamera. Außerdem werden in ausreichender Zahl Netzwerkadapter gebraucht, um die Roboter mit den Computern zu verbinden.
+
+Auf 2 Computern wird jeweils die Team-KI ausgeführt. Auf dem verbleibendem Computer wird das Server Programm gestartet.
+Unsere Roboter haben, durch einen Eingriff über die PuTTy und die Bash eine feste IP-Adresse bekommen, diese ist am hinteren Ende eines jeden Roboters angebracht.
+
+Alle IP-Adressen unserer Roboter müssen in der Datei "`Porjektordner/Steuerungssoftware/Win32/Debug/ip\_config.txt nachdem Eintrag "`Roboteradressen"' eingefügt werden.
+Nachdem dem Eintrag "`Serveradresse"' in der ip\_config.txt Datei wird die IP-Adresse des Servers, sowie dessen Port in der Form "`IP\:Port"' eingetragen.
+
+Nun müssen sich alle Roboter mittels einer WLAN-Verbindung und dem TCP/IP an dem jeweiligen Computer anmelden, der die Team-KI steuert. Die Roboter erstellen selbstständig einen Access Point, sodass ein einfaches Verbinden unter der Windows Oberfläche möglich ist.
+
+Die Ecken des Spielfeldes werden durch gelbe Kreise dargestellt. Die Roboter der beiden Teams werden gegenüber in Stellung gebracht.
+\\\\
+\textbf{Spielstart:}\\
+Wenn alle Vorbereitungen abgeschlossen sind und das Serverprogramm ausgeführt wurde, kann die Steuerungssoftware der beiden Teams gestartet werden. Die .exe Datei befindet sich im gleichnamigen Ordner wie die ip\_config.txt.
+
+Mit der Betätigung des Schaltknopfes "`Verbinden"' in der Benutzeroberfläche(GUI), wird die Verbindung zum Server initialisiert. Erst durch das anhacken des Kontrollkästchens "`Bereit"' melden sich die Roboter beim Server an und teilen den gleichzeitig mit, dass diese Bereit sind zum Spielstart.
+
+Beim erfolgreichen Anmelden erscheint ein Hinweis im Ereignisprotokollbereich, sowie beim Misserfolg des Anmeldens.
+\\\\
+\textbf{Während des Spiels:}\\
+Sobald das Spiel läuft, sind von dem Benutzer keine Eingaben erforderlich. 
+Der Spielverlauf und die Bewegungen der Roboter, können im Log-Bereich, sowie in der grafischen Ausgabe rechts neben dem Log-Bereich verfolgt werden.
+Im linken Teil der Anwendung ist es möglich sich das Geschehen aus Sicht der Roboter zu verfolgen.
+\\\\
+\textbf{Spielende:}\\
+Das Spiel wird beendet, wenn alle Roboter eines Teams gefangen wurden oder die Spielzeit(30min) verstrichen ist.
+In beiden Fällen schickt der Server eine Nachricht an beide Teams und die KI wird beendet.
+Die Roboter fahren \textbf{nicht} selbstständig in die Startaufstellungen und müssen für ein neues Spiel manuell auf die Startpositionen platziert werden.

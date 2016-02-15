@@ -1,15 +1,18 @@
 \section{Programmierung}
 \input{Inhalt/Skizze_KI.tex}
+
+\input{Inhalt/Klassendiagramm.tex}
+
 \subsection{Hauptformular}
 \begin{center}
-	\includegraphics[scale=0.4]{Bilder/GUI.pdf}
+	\includegraphics[width=\textwidth]{Bilder/GUI.pdf}
 \end{center}
 \begin{enumerate}
 	\item Anzeige der Bilder, von den USB-Kameras der Roboter 
-	\item Kontrollkästchen, das der Roboter bereit ist
+	\item Kontrollkästchen zum Signalisieren, dass die Roboter bereit sind
 	\item Anzeige von Fehler-, Hinweis- und Warnmeldungen
 	\item Schaltknopf zum Verbinden der Roboter mit dem Server
-	\item Grafische Anzeige der Bewegung, von den einzelnen Robotern\\
+	\item Grafische Anzeige der Roboterbewegungen\\
 \end{enumerate}
 \input{Inhalt/Hauptformular.tex}
 
@@ -23,7 +26,6 @@ Diese unterteilen sich in:
 	\item mKonstanten
 	\item mRoboterDaten
 \end{itemize}
-
 \subsubsection{mVektor}
 Die Klasse mVektor besteht aus dem Record TVektor.
 \\
@@ -31,8 +33,8 @@ Dieser hat folgende Funktionen, überladende Operatoren und Variablen:
 \input{Inhalt/mVektor.tex}
 
 \subsubsection{mTKI}
-Die Klasse mTKI hat einen Datentypen TAktion mit den Werten Fliehen und Fangen und eine abgeleitete Klasse TKI von TObject.
-
+Die Klasse mTKI hat einen Datentypen TAktion mit den Werten Fliehen und Fangen und eine abgeleitete Klasse TKI.
+\\
 Die abgeleitete Klasse TKI besteht aus foglenden Funktionen, Prozeduren und Variablen:\\
 \input{Inhalt/mTKI.tex}
 
