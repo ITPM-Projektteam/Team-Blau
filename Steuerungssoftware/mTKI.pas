@@ -7,7 +7,7 @@ uses mVektor,mTXTMobilRoboter,Client,ClientUndServer,DateUtils,mHauptformular,
 
 type TAktion = (FANGEN, FLIEHEN);
 
-type TKI = class(TObject)
+type TKI = class
   strict private
     class var Formular: THauptformular;
     class var ZeitLetzterFrames: TQueue<TDateTime>;
@@ -182,9 +182,41 @@ begin
 end;
 
 class function TKI.FangvektorBerechnen(index,ziel: Integer): TVektor;
+var DifVektor: TVektor;
+		DifPos: TVektor;
+		Winkel: Double;
 begin
-  result := RoboterDaten[TEAM_Rot,ziel].Position-
-  RoboterDaten[TEAM_BLAU,index].Position;
+	DifVektor := RoboterDaten[TEAM_ROT,ziel].Position -
+  						 RoboterDaten[TEAM_BLAU,index].Position;
+
+  DifPos := RoboterDaten[TEAM_ROT,ziel].Position -
+  					RoboterDaten[TEAM_ROT,ziel].Geschwindigkeit;
+
+  Winkel := RoboterDaten[TEAM_ROT,ziel].Geschwindigkeit.Winkel(DifVektor);
+
+  If (Winkel > DegToRad(45)) and (Winkel < DegToRad(135)) then
+  begin
+  	Result := (REDUPOS/DifPos.Betrag)*DifPos;
+  end
+  else if (Winkel < DegToRad(45)) and (Winkel > DegToRad(315)) then
+  begin
+    Result := DifPos - RoboterDaten[TEAM_BLAU,index].Position;
+  end
+  else if (Winkel < DegToRad(315)) and (Winkel > DegToRad(225)) then
+  begin
+    Result := (REDUPOS/DifPos.Betrag)*DifPos;
+  end
+  else if (Winkel > DegToRad(135)) and (Winkel < DegToRad(225)) then
+  begin
+    if Winkel > DegToRad(180) then
+    	Result := (RoboterDaten[TEAM_ROT,ziel].Position +
+    	RoboterDaten[TEAM_ROT,ziel].Geschwindigkeit.Drehen(-DegToRad(90))*REDUPOS)
+      -RoboterDaten[TEAM_BLAU,index].Position
+    else if Winkel < DegToRad(180) then
+    	Result := (RoboterDaten[TEAM_ROT,ziel].Position +
+    	RoboterDaten[TEAM_ROT,ziel].Geschwindigkeit.Drehen(DegToRad(90))*REDUPOS)-
+      RoboterDaten[TEAM_BLAU,index].Position
+  end;
 end;
 
 class function TKI.FliehvektorBerechnen(index,ziel: Integer): TVektor;
@@ -391,8 +423,7 @@ begin
           if Aktion=FLIEHEN then
           begin
             FahrVektor:= FliehvektorBerechnen(einRoboter,Ziel_R);
-            FahrVektor:= RandAusweichVektorBerechnen(einRoboter,FahrVektor
-            );
+            FahrVektor:= RandAusweichVektorBerechnen(einRoboter,FahrVektor);
             Formular.Log_Schreiben('Roboter: '+ Inttostr(einRoboter) + ' flieht', Hinweis)
           end
           // oder faengt er
@@ -410,7 +441,7 @@ begin
       end;
       // Ueberpruefungsmechanismus auf Kreuzverkehr oder Spielfeldgrenzen
       FahrVektor:= RoboterAusweichVektorBerechnen(einRoboter, FahrVektor);
-      // Befehele werden an dern Roboter gesendet
+      // Befehele werden an den Roboter gesendet
       SteuerbefehlSenden(einRoboter ,FahrVektor);
     end;
           Formular.Visualisieren(RoboterDaten, Fahrvektor);
