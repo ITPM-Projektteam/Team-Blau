@@ -1,0 +1,112 @@
+\subsection{Klassendiagramm}
+
+\begin{center}
+	\resizebox{\textwidth}{!}{
+		\begin{tikzpicture}[show background grid]
+		\begin{class}[text width=5cm]{THauptforumular}{-5,1.85}
+		\attribute{+ Anz\_Roboter: Integer}
+		\attribute{+ B\_Verbinden: TButton}
+		\attribute{+ CB\_Bereit: TCheckBox}
+		\attribute{+ G\_Steuerung: TGroupBox}
+		\attribute{+ I\_MiniMap: TImage}
+		\attribute{+ I\_Roboter1: TImage}
+		\attribute{+ I\_Roboter2: TImage}
+		\attribute{+ I\_Roboter3: TImage}
+		\attribute{+ I\_Roboter4: TImage}
+		\attribute{+ IP\_Adressen: Array of String}
+		\attribute{+ IPConfig: Textfile}2
+		\attribute{+ Label1: TLabel}
+		\attribute{+ M\_Log: TMemo}
+		\attribute{+ Port: Integer}
+		\attribute{+ Server\_IP: String}
+		\operation{+ B\_VerbindenClick}
+		\operation{+ CB\_BereitClick}
+		\operation{+ FormCreate}
+		\operation{+ KamerabilderAnzeigen}
+		\operation{+ Log\_Schreiben}
+		\operation{+ Visualisieren}
+		\end{class}
+		
+		\begin{class}[text width=6cm]{TKI}{3,2}
+		\attribute{- Client: TServerVerbindung}
+		\attribute{- Formular: THauptformular}
+		\attribute{- Roboter: Array of TTXTMobilRoboter}
+		\attribute{- RoboterDaten: Array[TTeam] of Array of TRoboterDaten}
+		\attribute{- Spielfeld: TVektor}
+		\attribute{- ZeitLetzterFrames: TQueue<TDateTime>}
+		\operation{+ Anmelden}
+		\operation{+ Init}
+		\operation{+ Steuern}
+		\operation{- FangvektorBerechnen: TVektor}
+		\operation{- FliehvektorBerechnen: TVektor}
+		\operation{- GeschwindigkeitenBerechnen}
+		\operation{- PrioritaetFestlegen: TAktion}
+		\operation{- RandAusweichvektorBerechnen: TVektor}
+		\operation{- RausfahrvektorBerechnen: TVektor}
+		\operation{- RoboterAusweichvektorBerechnen: TVektor}
+		\operation{- ServerdatenEmpfangen: Boolean}
+		\operation{- SteuerbefehlSenden}
+		\end{class}
+		
+		\begin{record}[text width=5.3cm]{TVektor}{11,-0.6}
+		\attribute{+ x: Double}
+		\attribute{+ y: Double}
+		\operation{+ Betrag: Double}
+		\operation{+ Drehen: TVektor}
+		\operation{+ operator Add: TVektor}
+		\operation{+ operator Equal: Boolean}
+		\operation{+ operator Multiply: TVektor}
+		\operation{+ operator Multiply: TVektor}
+		\operation{+ operator Subtract: TVektor}
+		\operation{+ Winkel: TVektor}
+		\operation{+ Winkel: TVektor}
+		\end{record}
+		
+		\begin{record}[text width=7cm]{TRoboterDaten}{11,-9}
+		\attribute{+ Aktiv: Boolean}
+		\attribute{+ Geschwindigkeit: TVektor}
+		\attribute{+ Position: TVektor}
+		\attribute{+ Positionsverlauf: TQueue<TVektor>}
+		\end{record}
+		
+		\begin{class}[text width=6cm]{TTXTMobilRoboter}{3,-12}
+		\attribute{+ ID: Integer}
+		\attribute{+ kamThread: TKameraThread}
+		\attribute{+ nwThread: TNetzwerkThread}
+		\operation{+ BewegenAlle}
+		\operation{+ BewegenAlleBis}
+		\operation{+ BewegenEiner}
+		\operation{+ BewegenEinerBis}
+		\operation{+ Create}
+		\operation{+ Destroy}
+		\operation{+ Ende}
+		\operation{+ HoleID: Integer}
+		\operation{+ Start}
+		\operation{+ ZielErreicht: Boolean}
+		\end{class}
+		
+		\begin{class}[text width=5cm]{TNetzwerkThread}{11,-13.95}
+		\attribute{callback: TCallback}
+		\attribute{delay: Integer}
+		\attribute{roboter: TTXTMobilRoboter}
+		\operation{+ Create}
+		\operation{+ Execute}
+		\end{class}
+		
+		\begin{class}[text width=5cm]{TKameraThread}{-5,-13.95}
+		\attribute{callback: TCallback}
+		\attribute{delay: Integer}
+		\attribute{roboter: TTXTMobilRoboter}
+		\operation{+ Create}
+		\operation{+ Execute}
+		\end{class}
+		
+		\association{TKI}{}{}{THauptforumular}{}{}
+		\composition{TKI}{}{}{TVektor}{}{}
+		\composition{TKI}{}{}{TRoboterDaten}{}{}
+		\association{TTXTMobilRoboter}{}{}{TKI}{}{}
+		\aggregation{TTXTMobilRoboter}{}{}{TNetzwerkThread}{}{}
+		\aggregation{TTXTMobilRoboter}{}{}{TKameraThread}{}{}
+		\end{tikzpicture}
+	}
+\end{center}
