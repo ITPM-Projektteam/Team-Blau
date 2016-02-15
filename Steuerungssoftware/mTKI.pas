@@ -34,11 +34,17 @@ type TKI = class
       Server_Adresse: String; Port: Integer; Formular: THauptformular);
     class procedure Steuern(Spielende: TDateTime);
     class procedure Anmelden(Teamwahl: TTeam);
+    class function getRoboter(index: Integer): TTXTMobilRoboter;
 end;
 
 implementation
 
 { TKuenstlicheIntelligenz }
+
+class function TKI.getRoboter(index: Integer): TTXTMobilRoboter;
+begin
+  result := Roboter[index];
+end;
 
 class procedure TKI.Anmelden(Teamwahl: TTeam);
 begin

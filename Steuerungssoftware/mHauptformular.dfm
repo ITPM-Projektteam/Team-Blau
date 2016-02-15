@@ -102,4 +102,13 @@ object Hauptformular: THauptformular
       TabOrder = 2
     end
   end
+  object B_Kamera: TButton
+    Left = 11
+    Top = 623
+    Width = 102
+    Height = 25
+    Caption = 'Kamera aktivieren'
+    TabOrder = 3
+    OnClick = B_KameraClick
+  end
 end

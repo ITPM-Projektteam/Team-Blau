@@ -34,6 +34,7 @@ type
     B_Verbinden: TButton;
     M_Log: TMemo;
     I_MiniMap: TImage;
+    B_Kamera: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Log_Schreiben(Meldung: string; Art: Log_Art);
     procedure Button2Click(Sender: TObject);
@@ -41,6 +42,7 @@ type
     procedure Visualisieren(RoboterDaten: A_RoboterDaten; ZielVektor: Tvektor);
     procedure CB_BereitClick(Sender: TObject);
     procedure KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
+    procedure B_KameraClick(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -49,6 +51,7 @@ type
     Port: Integer;
     IP_Adressen: Array of string;
     Anz_Roboter: Integer;
+    Kamerabilder: Array[1..4] of TImage;
     { Public-Deklarationen }
   end;
 
@@ -62,21 +65,16 @@ implementation
 
 uses mTKI;
 
-procedure THauptformular.KamerabilderAnzeigen(Roboter: TTXTMobilRoboter);
-begin
-  case Roboter.HoleID of
-   0: I_Roboter1.Picture.Graphic := Roboter.KamerabildJpeg;
-   1: I_Roboter2.Picture.Graphic := Roboter.KamerabildJpeg;
-   2: I_Roboter3.Picture.Graphic := Roboter.KamerabildJpeg;
-   3: I_Roboter4.Picture.Graphic := Roboter.KamerabildJpeg;
-  end;
-end;
-
 procedure THauptformular.FormCreate(Sender: TObject);
 var
   i: Integer;
   hilf: String;
 begin
+
+  Kamerabilder[1] := I_Roboter1;
+  Kamerabilder[2] := I_Roboter2;
+  Kamerabilder[3] := I_Roboter3;
+  Kamerabilder[4] := I_Roboter4;
 
   // Log Datei erzeugen
   assignfile(Log_Datei, 'Log.txt');
@@ -129,7 +127,14 @@ begin
   writeln(Log_Datei, Ausgabe);
 end;
 
-//Test
+
+procedure THauptformular.B_KameraClick(Sender: TObject);
+var i: Integer;
+begin
+  for i:= 1 to Anz_Roboter do
+    TKI.getRoboter(i-1).StarteKamera(Kamerabilder[i]);
+end;
+
 procedure THauptformular.Button2Click(Sender: TObject);
 begin
   Log_Schreiben('Meldung', Hinweis);
